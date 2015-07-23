@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-25 15:51+0100\n"
-"PO-Revision-Date: 2014-11-25 15:52+0100\n"
+"POT-Creation-Date: 2015-07-23 19:50+0200\n"
+"PO-Revision-Date: 2015-07-23 19:52+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -100,6 +100,7 @@ msgid "jeu-de-piste.sh"
 msgstr "treasure-hunt.sh"
 
 #: generate-step-A5.sh:35 generate-step-A5.sh:91 generate-step-E11.sh:35
+#: generate-step-editor.sh:8 generate-step-editor.sh:148
 #: upload-to-servers.sh:66 upload-to-servers.sh:86 upload-to-servers.sh:87
 #: generate-all.sh:25 generate-all.sh:26 generate-all.sh:27 generate-all.sh:30
 msgid "fr"
@@ -1113,6 +1114,51 @@ msgstr "Step"
 #, sh-format
 msgid "Quel est votre login ${school}? :"
 msgstr "What is your ${school} login? :"
+
+#: generate-step-editor.sh:12
+msgid ""
+"Ci-dessous un programme Ada à compiler, avec plusieurs problèmes:\n"
+"<ul>\n"
+"<li>L'ensemble du programme est commenté, il faudra donc supprimer les "
+"<code>--</code> en début de ligne</li>\n"
+"<li>L'auteur a utilisé des crochets [] au lieu des parenthèses ()</li>\n"
+"<li>Il reste quelques erreurs de syntaxes</li>\n"
+"</ul>\n"
+"La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d "
+"secondes, il va donc falloir être rapide pour faire toutes ces corrections. "
+"Préparez-vous, et rechargez la page pour relancer le compte à rebours.\n"
+msgstr ""
+"Below is an Ada program to compile, with several issues:\n"
+"<ul>\n"
+"<li>The whole program is commented-out. The <code>--</code> will\n"
+"therefore have to be removed before the program can properly be compiled.</li>\n"
+"<li>The author used brackets [] instead of parenthesis ()</li>\n"
+"<li>There are some syntax errors</li>\n"
+"</ul>\n"
+"Now, the bad news is: this program is valid only for %d seconds. You\n"
+"will therefore have to be quick to do all these corrections in your\n"
+"text editor. Get ready, and reload the page to reset the countdown and\n"
+"get a new program if needed."
+
+#: generate-step-editor.sh:20
+msgid "La réponse est :"
+msgstr "The answer is:"
+
+#: generate-step-editor.sh:21
+msgid ""
+"Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, "
+"désolé. Je génère un nouveau programme."
+msgstr ""
+"You took %01.1f seconds, and you need to finish in less than %d, sorry. "
+"Generating a new program."
+
+#: generate-step-editor.sh:22
+msgid "Programem compilé correctement en %01.1f secondes."
+msgstr "Program correctly compiled in %01.1f seconds."
+
+#: generate-step-editor.sh:23
+msgid "Ceci est un vrai commentaire inutile."
+msgstr "This is a useless but real comment"
 
 #: generate-step-F2.sh:35
 msgid "Non ..."
