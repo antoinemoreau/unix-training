@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-23 20:45+0200\n"
-"PO-Revision-Date: 2015-07-23 20:45+0200\n"
+"POT-Creation-Date: 2015-07-23 22:44+0200\n"
+"PO-Revision-Date: 2015-07-23 22:44+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: generate-step-A2.sh:24 generate-step-B1.sh:36 generate-step-B1.sh:38
 #: generate-step-B1.sh:53 generate-step-B1.sh:55 generate-step-C1.sh:7
-#: generate-step-C3.sh:34 generate-step-D1.sh:39 generate-step-D1.sh:40
+#: generate-step-C3.sh:35 generate-step-D1.sh:39 generate-step-D1.sh:40
 #: generate-step-D1.sh:78 generate-step-D1.sh:111 generate-step-D1.sh:113
 #: generate-step-D2.sh:43 generate-step-D2.sh:48 generate-step-D2.sh:50
 #: generate-step-D2.sh:52 generate-step-D2.sh:61 generate-step-D2.sh:66
@@ -99,8 +99,8 @@ msgstr ""
 msgid "jeu-de-piste.sh"
 msgstr "treasure-hunt.sh"
 
-#: generate-step-A5.sh:35 generate-step-A5.sh:91 generate-step-D3.sh:8
-#: generate-step-D3.sh:163 generate-step-E11.sh:35 upload-to-servers.sh:66
+#: generate-step-A5.sh:35 generate-step-A5.sh:91 generate-step-D3.sh:9
+#: generate-step-D3.sh:219 generate-step-E11.sh:35 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
 msgid "fr"
@@ -306,6 +306,7 @@ msgid ""
 "trouver\n"
 "l'endroit de chaque erreur de syntaxe en un clin d'oeil.\n"
 "\n"
+"Entrainez-vous à aller vite, vous en aurez bientôt besoin ...\n"
 msgstr ""
 "Here it is, this is an image in PNG format.\n"
 "\n"
@@ -337,8 +338,9 @@ msgstr ""
 "you'll\n"
 "be able to find the places of each syntax error in the twinkling of an eye.\n"
 "\n"
+"Practice a bit to do this quickly, you will need it soon...\n"
 
-#: generate-step-C3.sh:36
+#: generate-step-C3.sh:37
 msgid "etape-C3.png générée"
 msgstr "step-C3.png generated"
 
@@ -466,24 +468,36 @@ msgstr "step_d2.adb generated"
 msgid "etape_d2.c genere"
 msgstr "step_d2.c generated"
 
-#: generate-step-D3.sh:12
+#: generate-step-D3.sh:13
+msgid "Etape D3: édition de texte"
+msgstr "Step D3: Text editor"
+
+#: generate-step-D3.sh:14
 msgid ""
-"Ci-dessous un programme Ada à compiler, avec plusieurs problèmes:\n"
+"Ci-dessous un programme %s à compiler (<a href=\"?language=%s\">Cliquez ici "
+"pour une version en %s</a>),\n"
+"avec plusieurs problèmes :\n"
 "<ul>\n"
-"<li>L'ensemble du programme est commenté, il faudra donc supprimer les "
-"<code>--</code> en début de ligne</li>\n"
-"<li>L'auteur a utilisé des crochets [] au lieu des parenthèses ()</li>\n"
+"<li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>"
+"%s</code> en début de ligne</li>\n"
+"<li>L'auteur a utilisé parfois des crochets [] au lieu des parenthèses ()</"
+"li>\n"
 "<li>Il reste quelques erreurs de syntaxes</li>\n"
 "</ul>\n"
 "La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d "
 "secondes, il va donc falloir être rapide pour faire toutes ces corrections. "
 "Préparez-vous, et rechargez la page pour relancer le compte à rebours.\n"
+"<br />\n"
+"Si ce n'est pas déjà fait, lisez jusqu'au bout la page\n"
+"<a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada"
+"\">Premiers pas avec Emacs et Ada</a>\n"
+"sur EnsiWiki, elle contient des conseils pour aller plus vite.\n"
 msgstr ""
-"Below is an Ada program to compile, with several issues:\n"
+"Below is an Ada program to compile (<a href=\\\"?language=%s\\\">Click\n"
+"here for a %d version</a>), with several issues:\n"
 "<ul>\n"
 "<li>The whole program is commented-out. The <code>--</code> will\n"
-"therefore have to be removed before the program can properly be compiled.</"
-"li>\n"
+"therefore have to be removed before the program can properly be compiled.</li>\n"
 "<li>The author used brackets [] instead of parenthesis ()</li>\n"
 "<li>There are some syntax errors</li>\n"
 "</ul>\n"
@@ -491,12 +505,18 @@ msgstr ""
 "will therefore have to be quick to do all these corrections in your\n"
 "text editor. Get ready, and reload the page to reset the countdown and\n"
 "get a new program if needed.\n"
+"<br />\n"
+"If you haven't done so already, read the page\n"
+"<a\n"
+"href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada\">Premiers\n"
+"pas avec Emacs et Ada</a> on EnsiWiki, it contains many advices to be\n"
+"more efficient.\n"
 
-#: generate-step-D3.sh:20
+#: generate-step-D3.sh:27
 msgid "La réponse est :"
 msgstr "The answer is:"
 
-#: generate-step-D3.sh:21
+#: generate-step-D3.sh:28
 msgid ""
 "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, "
 "désolé. Je génère un nouveau programme."
@@ -504,11 +524,11 @@ msgstr ""
 "You took %01.1f seconds, and you need to finish in less than %d, sorry. "
 "Generating a new program."
 
-#: generate-step-D3.sh:22
+#: generate-step-D3.sh:29
 msgid "Programme compilé correctement en %01.1f secondes."
 msgstr "Program correctly compiled in %01.1f seconds."
 
-#: generate-step-D3.sh:23
+#: generate-step-D3.sh:30
 #, sh-format
 msgid ""
 "L'étape suivante se trouve dans le fichier\n"
@@ -537,9 +557,13 @@ msgstr ""
 "Depending on your configuration, you may need to rename (or copy) the\n"
 "file to give it the usual extension for this type of file.\n"
 
-#: generate-step-D3.sh:37
+#: generate-step-D3.sh:44
 msgid "Ceci est un vrai commentaire inutile."
 msgstr "This is a useless but real comment"
+
+#: generate-step-D3.sh:45
+msgid "Entrez la sortie du programme compilé ici :"
+msgstr "Enter the output of the compiled program here:"
 
 #: generate-step-E10.sh:9
 msgid ""

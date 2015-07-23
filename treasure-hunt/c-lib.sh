@@ -47,3 +47,12 @@ c_obfuscate_full() {
 c_comment_out () {
     sed -e 's@^.*$@/* \0 */@'
 }
+
+c_noise () {
+    for i in a b $(seq $(($RANDOM % 10))); do
+	for j in c d $(seq $(($RANDOM % 3))); do
+	    printf "   if (0 != 0) printf(\"$RANDOM\");"
+	done
+	echo ''
+    done
+}

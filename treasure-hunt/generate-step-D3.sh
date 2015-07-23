@@ -4,18 +4,25 @@
 . ./spy-lib.sh
 . ./i18n-lib.sh
 . ./adalib.sh
+. ./c-lib.sh
 
 file=text-editor-$(gettext fr).php
 
 echo '<?php' >"$file"
 
-instructions=$(gettext "Ci-dessous un programme Ada à compiler, avec plusieurs problèmes:
+title=$(gettext "Etape D3: édition de texte")
+instructions=$(gettext "Ci-dessous un programme %s à compiler (<a href=\"?language=%s\">Cliquez ici pour une version en %s</a>),
+avec plusieurs problèmes :
 <ul>
-<li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>--</code> en début de ligne</li>
-<li>L'auteur a utilisé des crochets [] au lieu des parenthèses ()</li>
+<li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>%s</code> en début de ligne</li>
+<li>L'auteur a utilisé parfois des crochets [] au lieu des parenthèses ()</li>
 <li>Il reste quelques erreurs de syntaxes</li>
 </ul>
 La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d secondes, il va donc falloir être rapide pour faire toutes ces corrections. Préparez-vous, et rechargez la page pour relancer le compte à rebours.
+<br />
+Si ce n'est pas déjà fait, lisez jusqu'au bout la page
+<a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada\">Premiers pas avec Emacs et Ada</a>
+sur EnsiWiki, elle contient des conseils pour aller plus vite.
 ")
 the_answer_is=$(gettext "La réponse est :")
 you_took=$(gettext "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, désolé. Je génère un nouveau programme.")
@@ -37,36 +44,88 @@ de fichier.
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
 enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
 
-for v in instructions the_answer_is you_took correctly_compiled next_step useless_comment enter_value_here
+for v in title instructions the_answer_is you_took correctly_compiled \
+         next_step useless_comment enter_value_here
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"
 done
 
 cat >>"$file" <<EOF
-\$noise = array();
-\$noise[] = '$(Noise | tr '()' '[]')';
-\$noise[] = '$(Noise | tr '()' '[]')';
-\$noise[] = '$(Noise | tr '()' '[]')';
-\$noise[] = '$(Noise | tr '()' '[]')';
-\$noise[] = '$(Noise | tr '()' '[]')';
+\$noise_ada = array();
+\$noise_ada[] = '$(Noise | tr '()' '[]')';
+\$noise_ada[] = '$(Noise)';
+\$noise_ada[] = '$(Noise)';
+\$noise_ada[] = '$(Noise)';
+\$noise_ada[] = '$(Noise)';
+\$noise_c = array();
+\$noise_c[] = '$(c_noise | tr '()' '[]')';
+\$noise_c[] = '$(c_noise)';
+\$noise_c[] = '$(c_noise)';
+\$noise_c[] = '$(c_noise)';
+\$noise_c[] = '$(c_noise)';
 ?>
 EOF
 
 cat >>"$file" <<\EOF
 <!DOCTYPE html>
 <head>
-<title>Text Editor</title>
+<title><?php echo $title ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<h1>Text editor</h1>
+<h1><?php echo $title ?></h1>
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 session_name('text_editor');
 session_start();
+
+$language = 'ada';
+if (isset($_GET['language']) && $_GET['language'] == 'c') {
+	$language = 'c';
+}
+
+if ($language == 'c') {
+	$prog_header = '#include <stdio.h>
+
+int main(void) {';
+	$prog_footer = '}';
+	$language_name = 'C';
+	$comment_prefix = '//';
+	$new_line = 'printf("\n");';
+	$the_answer_is_prog = sprintf('printf("%%s ", "%s");', $the_answer_is);
+	$noise = $noise_c;
+	$error1 = "if (0 == 0) printf(\"\")\n";
+	$error2 = "if (0 == 0) printf(\"\";\n";
+	$error3 = "if (0 = 0)  printf(\"\");\n";
+	function display_value($i, $char) {
+		return 'printf("%c", ' . (ord($char) - $i) ." + $i);";
+	}
+	$otherlanguage = 'ada';
+	$otherlanguage_name = 'Ada';
+} else {
+	$prog_header = 'with Ada.Text_Io;
+	use  Ada.Text_Io;
+
+	procedure Text_Editor is
+	begin';
+	$prog_footer = 'end;';
+	$language_name = 'Ada';
+	$comment_prefix = '--';
+	$new_line = 'New_Line;';
+	$the_answer_is_prog = sprintf('put("%s ");', $the_answer_is);
+	$noise = $noise_ada;
+	$error1 = "if 0 = 0 then Put(\"\"); end if\n";
+	$error2 = "if 0 = 0 then Put(\"\"; end if;\n";
+	$error3 = "if 0 == 0 then Put(\"\"); end if;\n";
+	function display_value($i, $char) {
+		return "Put(\"\" & Character'Val(". (ord($char) - $i) ." + $i));";
+	}
+	$otherlanguage = 'c';
+	$otherlanguage_name = 'C';
+}
 
 function reset_session() {
 	global $id_actual;
@@ -87,7 +146,7 @@ if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 };
 
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
-$max_duration = 60.0;
+$max_duration = 90.0;
 
 if ($duration > $max_duration) {
 	printf($you_took, $duration, $max_duration);
@@ -97,54 +156,51 @@ if ($duration > $max_duration) {
 
 $id_expect = $_SESSION['id_expect'];
 
+function useless_comment_maybe($cond) {
+	global $prog, $comment_prefix, $useless_comment;
+	if ($cond) {
+		$prog .= $comment_prefix . $useless_comment . "\n";
+	}
+}
+
 if ($id_expect == $id_actual) {
 	printf($correctly_compiled, $duration);
 	echo '<br />';
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
 	$prog = '';
-	$prog = '-- ' . $id_expect . "\n"; // Comment in real-life ;-)
+	// $prog = $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
 	$i = 0;
 
-	$prog .= sprintf('
-	with Ada.Text_Io;
-	use  Ada.Text_Io;
-
-	procedure Text_Editor is
-	begin
-	put("%s ");
-	', $the_answer_is);
+	$prog .= $prog_header . "\n";
+	$prog .= $the_answer_is_prog;
 	foreach (str_split($id_expect) as $char) {
 		$i++;
 		$prog .= $noise[($i + 2) % count($noise)];
-		$prog .= "Put[\"\" & Character'Val(". (ord($char) - $i) ." + $i)];";
-		if ($i % 2 == 0) {
-			$prog .= "-- " . $useless_comment . "\n";
+		$prog .= strtr(display_value($i, $char), '()', '[]');;
+		useless_comment_maybe($i % 2 == 0);
+		if ($i % 3 == 0) {
+			$prog .= $noise[$i % count($noise)];
 		}
-		$prog .= $noise[$i % count($noise)];
-		if ($i % 2 == 1) {
-			$prog .= "-- " . $useless_comment . "\n";
-		}
+		useless_comment_maybe($i % 2 == 1);
 		if ($i == 1 || $i == 3 || $i == 7) {
-			$prog .= "if 0 = 0 then Put(\"\"); end if\n";
+			$prog .= "\n" . $error1 . "\n";
 		}
 
 		if ($i == 6) {
-			$prog .= "if 0 = 0 then Put(\"\"; end if;\n";
+			$prog .= "\n" . $error2 . "\n";
 		}
 
 		if ($i == 8) {
-			$prog .= "if 0 == 0 then Put(\"\"); end if;\n";
+			$prog .= "\n" . $error3 . "\n";
 		}
 	}
-	$prog .= '
-	New_Line;
-	end;
-	';
+	$prog .= $new_line . "\n";
+	$prog .= $prog_footer;
 
-	$prog = preg_replace('/^/m', '-- ', $prog);
+	$prog = preg_replace('/^/m', $comment_prefix . ' ', $prog);
 
-	printf($instructions, $max_duration);
+	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
 	echo '<br />';
 	?>
 	<textarea rows="10" cols="80">

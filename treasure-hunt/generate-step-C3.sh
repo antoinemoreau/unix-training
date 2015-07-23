@@ -31,6 +31,7 @@ Il est conseillé d'utiliser Emacs (ou un autre bon éditeur de texte) pour cett
 partie : avec la commande Goto Line décrite sur le Wiki, vous pourrez trouver
 l'endroit de chaque erreur de syntaxe en un clin d'oeil.
 
+Entrainez-vous à aller vite, vous en aurez bientôt besoin ...
 " | envsubst | txt2img $(gettext etape)-C3.png
 
 gettext "etape-C3.png générée"
