@@ -68,13 +68,6 @@ cat >>"$file" <<EOF
 EOF
 
 cat >>"$file" <<\EOF
-<!DOCTYPE html>
-<head>
-<title><?php echo $title ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-<h1><?php echo $title ?></h1>
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
@@ -162,7 +155,16 @@ function useless_comment_maybe($cond) {
 		$prog .= $comment_prefix . $useless_comment . "\n";
 	}
 }
+?>
 
+<!DOCTYPE html>
+<head>
+<title><?php echo $title ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<h1><?php echo $title ?></h1>
+<?php
 if ($id_expect == $id_actual) {
 	printf($correctly_compiled, $duration);
 	echo '<br />';
