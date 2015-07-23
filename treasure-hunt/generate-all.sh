@@ -17,6 +17,7 @@ generate_all () {
 
     ./generate-step-D1.sh
     ./generate-step-D2.sh
+    ./generate-step-D3.sh
 
     ./generate-step-E10.sh
     ./generate-step-E11.sh

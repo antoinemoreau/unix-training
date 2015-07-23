@@ -13,21 +13,15 @@ Le programme est coupé en 3 morceaux.
 Assemblez-les puis compilez le programme.
 ")
 
+# Pas d'accent sur la fin du texte, le copier-coller ne marcherait pas
+# forcément.
 body=$(gettext "Visiblement, le copier-coller a marché !
 
-L'etape suivante se trouve dans le fichier
+La suite se trouve ici :
 
-\$maindir_tilde/oaue/etape-E1
+\$web_url/4ba3/text-editor-fr.php
 
-La personne qui a créé ce fichier l'a nommé étrangement :
-il n'a pas mis d'extension (i.e. le nom de fichier ne se 
-termine pas par .quelquechose). Pour savoir de quel type
-de fichier il s'agit, utilisez la commande 'file', et
-utilisez ensuite l'outil adapté pour l'ouvrir.
-
-Selon votre configuration, vous aurez peut-être besoin de renommer (ou
-copier) le fichier pour lui donner l'extension habituelle pour ce type
-de fichier.
+Ouvrez cette page dans votre navigateur et laissez-vous guider.
 " | envsubst)
 
 # Ada

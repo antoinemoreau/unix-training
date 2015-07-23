@@ -19,11 +19,25 @@ La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d seconde
 ")
 the_answer_is=$(gettext "La réponse est :")
 you_took=$(gettext "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, désolé. Je génère un nouveau programme.")
-correctly_compiled=$(gettext "Programem compilé correctement en %01.1f secondes.")
+correctly_compiled=$(gettext "Programme compilé correctement en %01.1f secondes.")
+next_step=$(gettext "L'étape suivante se trouve dans le fichier
+
+\$maindir_tilde/oaue/etape-E1
+
+La personne qui a créé ce fichier l'a nommé étrangement :
+il n'a pas mis d'extension (i.e. le nom de fichier ne se 
+termine pas par .quelquechose). Pour savoir de quel type
+de fichier il s'agit, utilisez la commande 'file', et
+utilisez ensuite l'outil adapté pour l'ouvrir.
+
+Selon votre configuration, vous aurez peut-être besoin de renommer (ou
+copier) le fichier pour lui donner l'extension habituelle pour ce type
+de fichier.
+" | envsubst)
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
+enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
 
-
-for v in instructions the_answer_is you_took correctly_compiled useless_comment
+for v in instructions the_answer_is you_took correctly_compiled next_step useless_comment enter_value_here
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"
@@ -86,6 +100,7 @@ $id_expect = $_SESSION['id_expect'];
 if ($id_expect == $id_actual) {
 	printf($correctly_compiled, $duration);
 	echo '<br />';
+	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
 	$prog = '';
 	$prog = '-- ' . $id_expect . "\n"; // Comment in real-life ;-)
@@ -136,7 +151,7 @@ if ($id_expect == $id_actual) {
 	<?php echo $prog ?>
 	</textarea>
 	<form method="POST">
-		<input name="id_actual" type="text"   value="" />
+		<?php echo $enter_value_here ?> <input name="id_actual" type="text"   value="" />
 		<input type="submit" />
 	</form>
 	<?php
