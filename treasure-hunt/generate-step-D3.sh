@@ -203,9 +203,7 @@ if ($id_expect == $id_actual) {
 	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
 	echo '<br />';
 	?>
-	<textarea rows="10" cols="80">
-	<?php echo $prog ?>
-	</textarea>
+	<textarea rows="10" cols="80"><?php echo $prog ?></textarea>
 	<form method="POST">
 		<?php echo $enter_value_here ?> <input name="id_actual" type="text"   value="" />
 		<input type="submit" />
