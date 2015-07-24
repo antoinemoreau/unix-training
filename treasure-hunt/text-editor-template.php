@@ -80,13 +80,6 @@ if ($id_actual == "moretime") {
 	$_SESSION['max_duration'] = 2 * $max_duration_base;
 }
 
-if ($duration > $_SESSION['max_duration']) {
-	printf($you_took, $duration, $_SESSION['max_duration']);
-	echo '<br />';
-	reset_session();
-}
-
-
 function useless_comment_maybe($cond) {
 	global $prog, $comment_prefix, $useless_comment;
 	if ($cond) {
@@ -103,6 +96,13 @@ function useless_comment_maybe($cond) {
 <body>
 <h1><?php echo $title ?></h1>
 <?php
+
+if ($duration > $_SESSION['max_duration']) {
+	printf($you_took, $duration, $_SESSION['max_duration']);
+	echo '<br />';
+	reset_session();
+}
+
 if ($id_expect == $id_actual) {
 	printf($correctly_compiled, $duration);
 	echo '<br />';
@@ -114,7 +114,8 @@ if ($id_expect == $id_actual) {
 		printf($invalid_answer . '<br />', $id_actual, $duration);
 	}
 	$prog = '';
-	// $prog = $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
+	$prog .= $comment_prefix . ' ' . date("Y-m-d H:i:s", $_SESSION['timestamp']) . "\n";
+	// $prog .= $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
 	$i = 0;
 
 	$prog .= $prog_header . "\n";
