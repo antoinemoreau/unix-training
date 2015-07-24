@@ -2,8 +2,10 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-session_name('text_editor');
+session_name('hunt_text_editor');
 session_start();
+
+$max_duration_base = 90.0;
 
 $language = 'ada';
 if (isset($_GET['language']) && $_GET['language'] == 'c') {
@@ -30,10 +32,10 @@ int main(void) {';
 	$otherlanguage_name = 'Ada';
 } else {
 	$prog_header = 'with Ada.Text_Io;
-	use  Ada.Text_Io;
+use  Ada.Text_Io;
 
-	procedure Text_Editor is
-	begin';
+procedure Text_Editor is
+begin';
 	$prog_footer = 'end;';
 	$language_name = 'Ada';
 	$comment_prefix = '--';
@@ -51,9 +53,12 @@ int main(void) {';
 }
 
 function reset_session() {
-	global $id_actual;
+	global $id_actual, $max_duration_base;
 	$_SESSION['id_expect'] = uniqid('', true);
 	$_SESSION['timestamp'] = gettimeofday(true);
+	if (!isset($_SESSION['max_duration'])) {
+		$_SESSION['max_duration'] = $max_duration_base;
+	}
 	$id_actual = "";
 }
 
@@ -69,15 +74,18 @@ if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 };
 
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
-$max_duration = 90.0;
+$id_expect = $_SESSION['id_expect'];
 
-if ($duration > $max_duration) {
-	printf($you_took, $duration, $max_duration);
+if ($id_actual == "moretime") {
+	$_SESSION['max_duration'] = 2 * $max_duration_base;
+}
+
+if ($duration > $_SESSION['max_duration']) {
+	printf($you_took, $duration, $_SESSION['max_duration']);
 	echo '<br />';
 	reset_session();
 }
 
-$id_expect = $_SESSION['id_expect'];
 
 function useless_comment_maybe($cond) {
 	global $prog, $comment_prefix, $useless_comment;
@@ -100,6 +108,11 @@ if ($id_expect == $id_actual) {
 	echo '<br />';
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
+	if ($id_actual == "moretime") {
+		echo 'Extra time!<br />';
+	} else if ($id_actual != "") {
+		printf($invalid_answer . '<br />', $id_actual, $duration);
+	}
 	$prog = '';
 	// $prog = $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
 	$i = 0;
@@ -132,7 +145,7 @@ if ($id_expect == $id_actual) {
 
 	$prog = preg_replace('/^/m', $comment_prefix . ' ', $prog);
 
-	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
+	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $_SESSION['max_duration']);
 	echo '<br />';
 	?>
 	<textarea rows="10" cols="80"><?php echo $prog ?></textarea>

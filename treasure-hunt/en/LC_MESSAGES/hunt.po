@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-23 22:44+0200\n"
-"PO-Revision-Date: 2015-07-23 22:44+0200\n"
+"POT-Creation-Date: 2015-07-24 12:18+0200\n"
+"PO-Revision-Date: 2015-07-24 12:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -100,7 +100,7 @@ msgid "jeu-de-piste.sh"
 msgstr "treasure-hunt.sh"
 
 #: generate-step-A5.sh:35 generate-step-A5.sh:91 generate-step-D3.sh:9
-#: generate-step-D3.sh:219 generate-step-E11.sh:35 upload-to-servers.sh:66
+#: generate-step-D3.sh:74 generate-step-E11.sh:35 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
 msgid "fr"
@@ -497,7 +497,8 @@ msgstr ""
 "here for a %d version</a>), with several issues:\n"
 "<ul>\n"
 "<li>The whole program is commented-out. The <code>--</code> will\n"
-"therefore have to be removed before the program can properly be compiled.</li>\n"
+"therefore have to be removed before the program can properly be compiled.</"
+"li>\n"
 "<li>The author used brackets [] instead of parenthesis ()</li>\n"
 "<li>There are some syntax errors</li>\n"
 "</ul>\n"
@@ -508,7 +509,8 @@ msgstr ""
 "<br />\n"
 "If you haven't done so already, read the page\n"
 "<a\n"
-"href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada\">Premiers\n"
+"href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada"
+"\">Premiers\n"
 "pas avec Emacs et Ada</a> on EnsiWiki, it contains many advices to be\n"
 "more efficient.\n"
 
@@ -517,6 +519,10 @@ msgid "La réponse est :"
 msgstr "The answer is:"
 
 #: generate-step-D3.sh:28
+msgid "Réponse incorrecte : \"%s\" (en %01.1f secondes)."
+msgstr "Invalid answer \"%s\" (in %01.1f seconds)."
+
+#: generate-step-D3.sh:29
 msgid ""
 "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, "
 "désolé. Je génère un nouveau programme."
@@ -524,11 +530,11 @@ msgstr ""
 "You took %01.1f seconds, and you need to finish in less than %d, sorry. "
 "Generating a new program."
 
-#: generate-step-D3.sh:29
+#: generate-step-D3.sh:30
 msgid "Programme compilé correctement en %01.1f secondes."
 msgstr "Program correctly compiled in %01.1f seconds."
 
-#: generate-step-D3.sh:30
+#: generate-step-D3.sh:31
 #, sh-format
 msgid ""
 "L'étape suivante se trouve dans le fichier\n"
@@ -557,11 +563,11 @@ msgstr ""
 "Depending on your configuration, you may need to rename (or copy) the\n"
 "file to give it the usual extension for this type of file.\n"
 
-#: generate-step-D3.sh:44
+#: generate-step-D3.sh:45
 msgid "Ceci est un vrai commentaire inutile."
 msgstr "This is a useless but real comment"
 
-#: generate-step-D3.sh:45
+#: generate-step-D3.sh:46
 msgid "Entrez la sortie du programme compilé ici :"
 msgstr "Enter the output of the compiled program here:"
 

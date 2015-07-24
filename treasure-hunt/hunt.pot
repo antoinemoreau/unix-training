@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-23 22:44+0200\n"
+"POT-Creation-Date: 2015-07-24 12:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,7 +82,7 @@ msgid "jeu-de-piste.sh"
 msgstr ""
 
 #: generate-step-A5.sh:35 generate-step-A5.sh:91 generate-step-D3.sh:9
-#: generate-step-D3.sh:219 generate-step-E11.sh:35 upload-to-servers.sh:66
+#: generate-step-D3.sh:74 generate-step-E11.sh:35 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
 msgid "fr"
@@ -356,16 +356,20 @@ msgid "La réponse est :"
 msgstr ""
 
 #: generate-step-D3.sh:28
+msgid "Réponse incorrecte : \"%s\" (en %01.1f secondes)."
+msgstr ""
+
+#: generate-step-D3.sh:29
 msgid ""
 "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, "
 "désolé. Je génère un nouveau programme."
 msgstr ""
 
-#: generate-step-D3.sh:29
+#: generate-step-D3.sh:30
 msgid "Programme compilé correctement en %01.1f secondes."
 msgstr ""
 
-#: generate-step-D3.sh:30
+#: generate-step-D3.sh:31
 #, sh-format
 msgid ""
 "L'étape suivante se trouve dans le fichier\n"
@@ -383,11 +387,11 @@ msgid ""
 "de fichier.\n"
 msgstr ""
 
-#: generate-step-D3.sh:44
+#: generate-step-D3.sh:45
 msgid "Ceci est un vrai commentaire inutile."
 msgstr ""
 
-#: generate-step-D3.sh:45
+#: generate-step-D3.sh:46
 msgid "Entrez la sortie du programme compilé ici :"
 msgstr ""
 

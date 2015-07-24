@@ -25,6 +25,7 @@ Si ce n'est pas déjà fait, lisez jusqu'au bout la page
 sur EnsiWiki, elle contient des conseils pour aller plus vite.
 ")
 the_answer_is=$(gettext "La réponse est :")
+invalid_answer=$(gettext 'Réponse incorrecte : "%s" (en %01.1f secondes).')
 you_took=$(gettext "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, désolé. Je génère un nouveau programme.")
 correctly_compiled=$(gettext "Programme compilé correctement en %01.1f secondes.")
 next_step=$(gettext "L'étape suivante se trouve dans le fichier
@@ -44,7 +45,8 @@ de fichier.
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
 enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
 
-for v in title instructions the_answer_is you_took correctly_compiled \
+for v in title instructions the_answer_is invalid_answer \
+         you_took correctly_compiled \
          next_step useless_comment enter_value_here
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
