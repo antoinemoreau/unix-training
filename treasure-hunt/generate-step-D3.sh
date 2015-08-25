@@ -15,7 +15,7 @@ instructions=$(gettext "Ci-dessous un programme %s à compiler (<a href=\"?langu
 avec plusieurs problèmes :
 <ul>
 <li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>%s</code> en début de ligne</li>
-<li>L'auteur a utilisé parfois des crochets [] au lieu des parenthèses (). Il n'y a aucun [] dans le code valide.</li>
+<li>L'auteur a utilisé des crochets [] au lieu des parenthèses (). Il n'y a aucun [] dans le code valide.</li>
 <li>Il reste quelques erreurs de syntaxes</li>
 </ul>
 La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d secondes, il va donc falloir être rapide pour faire toutes ces corrections. Préparez-vous, et rechargez la page pour relancer le compte à rebours.
