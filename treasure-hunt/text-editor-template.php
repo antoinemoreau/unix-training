@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 session_name('hunt_text_editor');
 session_start();
 
-$max_duration_base = 90.0;
+$max_duration_base = 120.0;
 
 $language = 'ada';
 if (isset($_GET['language']) && $_GET['language'] == 'c') {
@@ -77,7 +77,7 @@ $duration = gettimeofday(true) - $_SESSION['timestamp'];
 $id_expect = $_SESSION['id_expect'];
 
 if ($id_actual == "moretime") {
-	$_SESSION['max_duration'] = 2 * $max_duration_base;
+	$_SESSION['max_duration'] = $max_duration_base + 100;
 }
 
 function useless_comment_maybe($cond) {
