@@ -40,7 +40,7 @@ function echo_result($result, $format=null, $count=False) {
 						$counts[$key]++;
 					}
 					$value = htmlspecialchars($value);
-					if ($format[$key]) {
+					if (isset($format[$key]) && $format[$key]) {
 						$snbsp = str_replace(" ", "&nbsp;", $value);
 						$value = str_replace(array("%b", "%s"),
 								     array($snbsp, $value),

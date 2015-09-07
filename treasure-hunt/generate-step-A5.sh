@@ -98,9 +98,9 @@ if (\$_GET['code'] != '$token') {
 \$to   = \$_GET['to'];
 
 \$subject = "$subject";
-\$body = "$body";
+\$body = "$body\n";
 
-if (\$_GET['HUNT_FORCE'] == 'yes') {
+if (isset(\$_GET['HUNT_FORCE']) && \$_GET['HUNT_FORCE'] == 'yes') {
 	echo(\$body);
 	exit(0);
 }
