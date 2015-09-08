@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:10+0200\n"
-"PO-Revision-Date: 2015-08-25 18:25+0200\n"
+"POT-Creation-Date: 2015-09-08 15:21+0200\n"
+"PO-Revision-Date: 2015-09-08 15:22+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -1388,14 +1388,18 @@ msgstr ""
 "Here is the content of the message:\n"
 
 #: mail-lib-runtime.sh:4
-msgid "Entrez votre mot de passe Ensimag : "
-msgstr "Enter your Ensimag password: "
+msgid ""
+"Entrez votre mot de passe Ensimag ci-dessous.\n"
+"(Si rien ne s'affiche pendant que vous écrivez, c'est normal !)"
+msgstr ""
+"Enter your Ensimag password below.\n"
+"(If nothing is displayed while you type, it's normal!)"
 
-#: mail-lib-runtime.sh:17
+#: mail-lib-runtime.sh:19
 msgid "Echec. Entrez à nouveau votre mot de passe Ensimag : "
 msgstr "Failed. Please enter your Ensimag password again: "
 
-#: mail-lib-runtime.sh:20
+#: mail-lib-runtime.sh:23
 msgid "Echec de la récupération d'adresse email via LDAP."
 msgstr "Failed to get email address from LDAP, sorry."
 
@@ -1406,3 +1410,6 @@ msgstr "next-step"
 #: test-i18n.sh:7
 msgid "message-id\n"
 msgstr "Message in english\n"
+
+#~ msgid "Entrez votre mot de passe Ensimag : "
+#~ msgstr "Enter your Ensimag password: "

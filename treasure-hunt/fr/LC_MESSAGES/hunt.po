@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 15:10+0200\n"
+"POT-Creation-Date: 2015-09-08 15:21+0200\n"
 "PO-Revision-Date: 2013-08-05 18:17+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -881,14 +881,16 @@ msgid ""
 msgstr ""
 
 #: mail-lib-runtime.sh:4
-msgid "Entrez votre mot de passe Ensimag : "
+msgid ""
+"Entrez votre mot de passe Ensimag ci-dessous.\n"
+"(Si rien ne s'affiche pendant que vous écrivez, c'est normal !)"
 msgstr ""
 
-#: mail-lib-runtime.sh:17
+#: mail-lib-runtime.sh:19
 msgid "Echec. Entrez à nouveau votre mot de passe Ensimag : "
 msgstr ""
 
-#: mail-lib-runtime.sh:20
+#: mail-lib-runtime.sh:23
 msgid "Echec de la récupération d'adresse email via LDAP."
 msgstr ""
 
