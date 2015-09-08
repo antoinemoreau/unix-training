@@ -1,6 +1,6 @@
 #! /bin/sh
 
-absyear=2014
+absyear=2015
 groups="ori_ast2a 1a_g1 1a_g2 1a_g3 1a_g4 1a_g5 1a_g6 1a_g7 1a_g8 1aa phelma ri_ech"
 
 

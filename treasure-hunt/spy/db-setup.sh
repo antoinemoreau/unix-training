@@ -14,4 +14,4 @@ exam_dbpass=
 exam_dbtype=mysql
 
 # Suffix for hunt_* table names
-exam_suffix=_2014
+exam_suffix=_2015
