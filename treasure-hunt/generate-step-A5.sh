@@ -116,10 +116,20 @@ if (!$check_email_function_php(\$to)) {
 	die(sprintf("Sorry, email '%s' is not in the allowed list.\n", \$to));
 }
 
-\$headers = 'From: $from_addr' . "\r\n" .
-            'Content-type: text/plain; charset=utf-8' . "\r\n";
+// Set Message-ID manually. Not used as of now.
+//\$mid = sha1('$from_addr' . \$to . uniqid() . time()) . '@' . gethostname();
+//\$mid = 'Message-ID: <' . \$mid . ">\r\n";
 
-mail(\$to, \$subject, \$body, \$headers);
+\$headers = 'From: $from_addr' . "\r\n" .
+            'Content-type: text/plain; charset=utf-8' . "\r\n" .
+            // send error message to $from_addr
+            'Return-Path: $from_addr' . "\r\n";
+
+// Setting Return-Path in headers does not always work. Adding -faddr
+// can help.
+\$args = '-f$from_addr';
+
+mail(\$to, \$subject, \$body, \$headers, \$args);
 
 printf("OK");
 printf("$email_ok_msg", \$to);
