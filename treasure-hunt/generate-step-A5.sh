@@ -95,6 +95,8 @@ if (\$_GET['code'] != '$token') {
 	die("Sorry, access denied\n");
 }
 
+header("Content-Type: text/plain; charset=utf-8");
+
 \$to   = \$_GET['to'];
 
 \$subject = "$subject";
@@ -131,7 +133,7 @@ if (!$check_email_function_php(\$to)) {
 
 mail(\$to, \$subject, \$body, \$headers, \$args);
 
-printf("OK");
+printf("OK\n");
 printf("$email_ok_msg", \$to);
 ?>
 EOF
