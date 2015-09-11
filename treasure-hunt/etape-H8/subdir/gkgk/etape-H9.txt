@@ -19,7 +19,7 @@ trouve dans le même répertoire que cette question. Il est réparti en
 deux fichiers, nommés bizarement :
 
 * -n (oui, c'est un nom bizare pour un fichier, mais on a le droit)
-* etape H10.txt (avec un espace entre "etape" et "H9")
+* etape H10.txt (avec un espace entre "etape" et "H10")
 
 Concaténez ces deux fichiers pour avoir les instructions pour l'étape
 suivante.
