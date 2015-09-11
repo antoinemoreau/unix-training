@@ -14,6 +14,8 @@ A1: web (site de Matthieu Moy) (Chap 3)
 A2: google (encodage rot13) (Chap 3)
 A3: EnsiWiki (onglet discussion) (Chap 3)
 A4: EnsiWiki (voir le source de la page) (Chap 3)
+A5: Chamilo (docs)
+A6: Chamilo (forum)
 A5: script qui envoie un mail à l'étudiant, avec les instructions dans
    le corps du message. (Chap 3)
 
@@ -30,6 +32,7 @@ D1: programme Ada comme 1:, mais non-compilable (manque un « ; »
       quelque part par exemple)
 D2: programme Ada découpé en morceaux (1 fichier OOo, un fichier
       texte, ...) => copier-coller entre applications.
+D3: editeur de texte rapide (timeout)
 
 Chapitre 7 : Commandes et outils
 E1: commande 'file', ouverture de PDF. (Chap 7 ou avant)
@@ -54,11 +57,10 @@ F2: Control-z, Control-d
 
 Idées à faire :
 F3: regarder le contenu d'un fichier texte appelé *.txt (quote)
-F4: regarder le contenu d'un fichier texte appelé -n (less ./-n)
 
 Chapitre 9 : accès distant
-G1: sftp sur ensilinux (Chap 9)
-G2: ssh -X sur ensilinux, executer un binaire qui donne le résultat
+G1: sftp sur pcserveur (Chap 9)
+G2: ssh -X sur pcserveur, executer un binaire qui donne le résultat
       dans une fenetre X11 (à base de system("xterm -e"); si besoin).
 
 Étapes bonnus :
