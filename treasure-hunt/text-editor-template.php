@@ -6,6 +6,7 @@ session_name('hunt_text_editor');
 session_start();
 
 $max_duration_base = 120.0;
+$extra_time1 = 100.0;
 
 $language = 'ada';
 if (isset($_GET['language']) && $_GET['language'] == 'c') {
@@ -86,7 +87,7 @@ if ($id_actual == "moretime") {
 	
 
 if ($_SESSION['moretime']) {
-	$max_duration += 100;
+	$max_duration += $extra_time1;
 }
 
 function useless_comment_maybe($cond) {
