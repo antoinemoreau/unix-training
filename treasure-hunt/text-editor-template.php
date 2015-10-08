@@ -84,6 +84,10 @@ if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 	$id_actual = "";
 }
 
+if (isset($_POST['nickname'])) {
+	$_SESSION['nickname'] = $_POST['nickname'];
+}
+
 $max_duration = $max_duration_base;
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
 $id_expect = trim($_SESSION['id_expect']);
@@ -154,6 +158,80 @@ function generate_obfuscated_prog($id_actual) {
 	$prog = preg_replace('/^/m', $comment_prefix . ' ', $prog);
 	return $prog;
 }
+
+function sort_score($a, $b) {
+	if($a['duration'] == $b['duration']) {
+		return 0;
+	}
+	return ($a['duration'] > $b['duration']) ? 1 : -1;
+}
+
+function high_scores($duration) {
+	global $id_actual;
+	$lockname = "/tmp/unix-hunt-highscores.lock";
+	$dataname = "/tmp/unix-hunt-highscores.json";
+	$fp = fopen($lockname, "w+");
+
+	if ((!isset($_SESSION['highscore'])) ||
+	    $duration < $_SESSION['highscore']) {
+		$_SESSION['highscore'] = $duration;
+	}
+
+	if (!isset($_SESSION['nickname'])) {
+		if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			$_SESSION['nickname'] = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else {
+			$_SESSION['nickname'] = $_SERVER['REMOTE_ADDR'];
+		}
+	}
+
+	if (flock($fp, LOCK_EX)) {
+		if (file_exists($dataname)) {
+			$high = json_decode(file_get_contents($dataname),
+					    True);
+		} else {
+			$high = array();
+		}
+		$high[session_id()] = array('duration' => $_SESSION['highscore'],
+					    'name' => $_SESSION['nickname']);
+		uasort($high, 'sort_score');
+		array_splice($high, 20);
+		file_put_contents($dataname, json_encode($high));
+		flock($fp, LOCK_UN);
+		echo "Meilleurs scores récents :<ol>";
+		$current_has_highscore = False;
+		foreach ($high as $id => $player) {
+			if ($id == session_id()) {
+				$fmt1 = '<strong>';
+				$fmt2 = '</strong>';
+				$current_has_highscore = True;
+			} else {
+				$fmt1 = '';
+				$fmt2 = '';
+			}
+			printf("<li>%s%01.1f secondes : %s%s</li>", $fmt1, $player['duration'], htmlspecialchars($player['name']), $fmt2);
+		}
+		echo "</ol>";
+		if ($current_has_highscore) { ?>
+		<form method="POST">
+			Entrez un pseudo ici qui apparaitra dans le highscore : <input name="nickname" type="text"   value="" />
+			<input name="id_actual" type="hidden"   value="<?php echo htmlspecialchars($id_actual); ?>" />
+			<input type="submit" />
+		</form> <?php
+		}
+		?>
+		<form method="POST">
+			<?php echo "Pour réessayer, cliquez ici :" ?>
+			<input name="reset_session" type="hidden" value="yesPlease" />
+			<input type="submit" value="Génération" />
+		</form>
+		 <?php
+	} else {
+		echo "Impossible de verrouiller le fichier !";
+	}
+
+	fclose($fp);
+}
 ?>
 
 <!DOCTYPE html>
@@ -186,6 +264,8 @@ if ($duration > $max_duration) {
 
 if ($id_expect == $id_actual) {
 	printf($correctly_compiled, $duration);
+	echo '<br />';
+	high_scores($duration);
 	echo '<br />';
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
