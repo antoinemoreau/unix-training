@@ -73,7 +73,7 @@ if (isset($_POST['reset_session'])) {
 	// Explicit reset. Redirect to the same page without POST
 	// arguments to avoid weird behavior on reload.
 	reset_session();
-	$_SESSION['message'] = "Génération d'un nouveau programme.";
+	$_SESSION['message'] = $regenerating;
 	header('Location: ' . $_SERVER[REQUEST_URI]);
 	exit;
 }
@@ -175,9 +175,9 @@ if ($duration > $max_duration) {
 	echo '<br />';
 	if ($id_actual != "") {
 		if ($id_expect == $id_actual) {
-			printf("Pour information, votre réponse \"%s\" était correcte. Soyez plus rapide la prochaine fois.", $id_actual);
+			printf($was_correct, $id_actual);
 		} else {
-			printf("Pour information, votre réponse \"%s\" était incorrecte (attendu : %s).", $id_actual, $id_expect);
+			printf($was_incorrect, $id_actual, $id_expect);
 		}
 		echo '<br />';
 	}
