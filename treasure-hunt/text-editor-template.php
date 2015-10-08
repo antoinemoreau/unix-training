@@ -53,12 +53,15 @@ begin';
 	$otherlanguage_name = 'C';
 }
 
+$session_restored = False;
+
 function reset_session() {
-	global $id_actual, $max_duration_base;
+	global $id_actual, $session_restored;
 	$_SESSION['id_expect'] = uniqid('', true);
 	$_SESSION['timestamp'] = gettimeofday(true);
 	$_SESSION['moretime'] = False;
 	$id_actual = "";
+	$session_restored = True;
 }
 
 if (!isset($_SESSION['id_expect']) || !isset($_SESSION['timestamp'])) {
@@ -193,6 +196,10 @@ if ($id_expect == $id_actual) {
 
 	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
 	echo '<br />';
+	if (!$session_restored) {
+		printf($remaining_text, $max_duration - $duration);
+		echo '<br />';
+	}
 	?>
 	<textarea rows="10" cols="80"><?php echo $prog ?></textarea>
 	<form method="POST">

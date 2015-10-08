@@ -18,7 +18,7 @@ avec plusieurs problèmes :
 <li>L'auteur a utilisé des crochets [] au lieu des parenthèses (). Il n'y a aucun [] dans le code valide.</li>
 <li>Il reste quelques erreurs de syntaxes</li>
 </ul>
-La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d secondes, il va donc falloir être rapide pour faire toutes ces corrections. Préparez-vous, et rechargez la page pour relancer le compte à rebours.
+La mauvaise nouvelle, c'est que ce programme n'est valide que pendant %d secondes, il va donc falloir être rapide pour faire toutes ces corrections. Préparez-vous, et générez un nouveau programme pour relancer le compte à rebours.
 <br />
 Si ce n'est pas déjà fait, lisez jusqu'au bout la page
 <a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada\">Premiers pas avec Emacs et Ada</a>
@@ -45,10 +45,12 @@ de fichier.
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
 enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
 click_here_to_reset=$(gettext "Cliquez ici pour générer un nouveau programme :")
+remaining_text=$(gettext "Il reste %d secondes.")
 
 for v in title instructions the_answer_is invalid_answer \
          you_took correctly_compiled \
-         next_step useless_comment enter_value_here click_here_to_reset
+         next_step useless_comment enter_value_here click_here_to_reset \
+	 remaining_text
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"
