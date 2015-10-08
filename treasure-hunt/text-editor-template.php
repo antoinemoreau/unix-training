@@ -168,15 +168,18 @@ function sort_score($a, $b) {
 }
 
 function high_scores($duration) {
-	global $id_actual;
+	global $id_actual, $id_expect;
 	global $seconds, $recent_highscores, $enter_nickname, $try_again;
+	// system("rm -f /tmp/unix-hunt*");
 	$lockname = "/tmp/unix-hunt-highscores.lock";
 	$dataname = "/tmp/unix-hunt-highscores.json";
 	$fp = fopen($lockname, "w+");
 
-	if ((!isset($_SESSION['highscore'])) ||
-	    $duration < $_SESSION['highscore']) {
-		$_SESSION['highscore'] = $duration;
+	if ($id_actual == $id_expect) {
+		if ((!isset($_SESSION['highscore'])) ||
+		    $duration < $_SESSION['highscore']) {
+			$_SESSION['highscore'] = $duration;
+		}
 	}
 
 	if (!isset($_SESSION['nickname'])) {
@@ -194,8 +197,10 @@ function high_scores($duration) {
 		} else {
 			$high = array();
 		}
-		$high[session_id()] = array('duration' => $_SESSION['highscore'],
-					    'name' => $_SESSION['nickname']);
+		if ($id_actual == $id_expect) {
+			$high[session_id()] = array('duration' => $_SESSION['highscore'],
+						    'name' => $_SESSION['nickname']);
+		}
 		uasort($high, 'sort_score');
 		array_splice($high, 20);
 		file_put_contents($dataname, json_encode($high));
@@ -222,11 +227,6 @@ function high_scores($duration) {
 		</form> <?php
 		}
 		?>
-		<form method="POST">
-			<?php echo $try_again; ?>
-			<input name="reset_session" type="hidden" value="yesPlease" />
-			<input type="submit" value="Génération" />
-		</form>
 		 <?php
 	} else {
 		echo "Could not lock highscore file, sorry.";
@@ -269,6 +269,13 @@ if ($id_expect == $id_actual) {
 	echo '<br />';
 	high_scores($duration);
 	echo '<br />';
+	?>
+		<form method="POST">
+			<?php echo $try_again; ?>
+			<input name="reset_session" type="hidden" value="yesPlease" />
+			<input type="submit" value="Génération" />
+		</form>
+	<?php
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
 	if ($id_actual != "") {
@@ -294,6 +301,7 @@ if ($id_expect == $id_actual) {
 		<input type="submit" value="Génération" />
 	</form>
 	<?php
+		 high_scores($duration);
 }
 ?>
 </body>
