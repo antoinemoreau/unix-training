@@ -66,7 +66,7 @@ if (!isset($_SESSION['id_expect']) || !isset($_SESSION['timestamp'])) {
 }
 
 if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
-	$id_actual = $_POST['id_actual'];
+	$id_actual = trim($_POST['id_actual']);
 } else {
 	$id_actual = "";
 	reset_session();
@@ -74,7 +74,7 @@ if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 
 $max_duration = $max_duration_base;
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
-$id_expect = $_SESSION['id_expect'];
+$id_expect = trim($_SESSION['id_expect']);
 $message = null;
 
 if ($id_actual == "moretime") {
