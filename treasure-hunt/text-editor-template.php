@@ -74,7 +74,7 @@ if (isset($_POST['reset_session'])) {
 	// arguments to avoid weird behavior on reload.
 	reset_session();
 	$_SESSION['message'] = $regenerating;
-	header('Location: ' . $_SERVER[REQUEST_URI]);
+	header('Location: ' . $_SERVER['REQUEST_URI']);
 	exit;
 }
 
@@ -103,7 +103,7 @@ if ($id_actual == "moretime") {
 	$message = 'Extra time canceled!';
 	$id_actual = '';
 }
-	
+
 
 if ($_SESSION['moretime']) {
 	$max_duration += $extra_time1;
@@ -175,9 +175,9 @@ if ($duration > $max_duration) {
 	echo '<br />';
 	if ($id_actual != "") {
 		if ($id_expect == $id_actual) {
-			printf($was_correct, $id_actual);
+			printf($was_correct, htmlspecialchars($id_actual));
 		} else {
-			printf($was_incorrect, $id_actual, $id_expect);
+			printf($was_incorrect, htmlspecialchars($id_actual), htmlspecialchars($id_expect));
 		}
 		echo '<br />';
 	}
@@ -207,7 +207,7 @@ if ($id_expect == $id_actual) {
 		<input type="submit" />
 	</form>
 	<form method="POST">
-		<?php echo $click_here_to_reset ?> 
+		<?php echo $click_here_to_reset ?>
 		<input name="reset_session" type="hidden" value="yesPlease" />
 		<input type="submit" value="Génération" />
 	</form>
