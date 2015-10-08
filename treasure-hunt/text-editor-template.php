@@ -56,11 +56,12 @@ begin';
 $session_restored = False;
 
 function reset_session() {
-	global $id_actual, $session_restored;
+	global $id_actual, $session_restored, $id_expect;
 	$_SESSION['id_expect'] = uniqid('', true);
 	$_SESSION['timestamp'] = gettimeofday(true);
 	$_SESSION['moretime'] = False;
 	$id_actual = "";
+	$id_expect = $_SESSION['id_expect'];
 	$session_restored = True;
 }
 
