@@ -79,11 +79,11 @@ $message = null;
 
 if ($id_actual == "moretime") {
 	$_SESSION['moretime'] = True;
-	$message = 'Extra time!<br />';
+	$message = 'Extra time!';
 	$id_actual = '';
 } else if ($id_actual == "lesstime") {
 	$_SESSION['moretime'] = False;
-	$message = 'Extra time canceled!<br />';
+	$message = 'Extra time canceled!';
 	$id_actual = '';
 }
 	
@@ -150,6 +150,7 @@ function generate_obfuscated_prog($id_actual) {
 
 if ($message != null) {
 	echo $message;
+	echo '<br />';
 }
 
 if ($duration > $max_duration) {
