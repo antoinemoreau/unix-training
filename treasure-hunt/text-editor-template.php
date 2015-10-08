@@ -205,6 +205,9 @@ function high_scores($duration) {
 		array_splice($high, 20);
 		file_put_contents($dataname, json_encode($high));
 		flock($fp, LOCK_UN);
+		if (empty($high)) {
+			return;
+		}
 		echo $recent_highscores . "<ol>";
 		$current_has_highscore = False;
 		foreach ($high as $id => $player) {
