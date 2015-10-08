@@ -56,9 +56,7 @@ function reset_session() {
 	global $id_actual, $max_duration_base;
 	$_SESSION['id_expect'] = uniqid('', true);
 	$_SESSION['timestamp'] = gettimeofday(true);
-	if (!isset($_SESSION['max_duration'])) {
-		$_SESSION['max_duration'] = $max_duration_base;
-	}
+	$_SESSION['moretime'] = False;
 	$id_actual = "";
 }
 
@@ -73,11 +71,22 @@ if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 	reset_session();
 };
 
+$max_duration = $max_duration_base;
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
 $id_expect = $_SESSION['id_expect'];
+$message = null;
 
 if ($id_actual == "moretime") {
-	$_SESSION['max_duration'] = $max_duration_base + 100;
+	$_SESSION['moretime'] = True;
+	$message = 'Extra time!<br />';
+} else if ($id_actual == "lesstime") {
+	$_SESSION['moretime'] = False;
+	$message = 'Extra time canceled!<br />';
+}
+	
+
+if ($_SESSION['moretime']) {
+	$max_duration += 100;
 }
 
 function useless_comment_maybe($cond) {
@@ -97,8 +106,8 @@ function useless_comment_maybe($cond) {
 <h1><?php echo $title ?></h1>
 <?php
 
-if ($duration > $_SESSION['max_duration']) {
-	printf($you_took, $duration, $_SESSION['max_duration']);
+if ($duration > $max_duration) {
+	printf($you_took, $duration, $max_duration);
 	echo '<br />';
 	reset_session();
 }
@@ -108,8 +117,8 @@ if ($id_expect == $id_actual) {
 	echo '<br />';
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
-	if ($id_actual == "moretime") {
-		echo 'Extra time!<br />';
+	if ($message != null) {
+		echo $message;
 	} else if ($id_actual != "") {
 		printf($invalid_answer . '<br />', $id_actual, $duration);
 	}
@@ -146,7 +155,7 @@ if ($id_expect == $id_actual) {
 
 	$prog = preg_replace('/^/m', $comment_prefix . ' ', $prog);
 
-	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $_SESSION['max_duration']);
+	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
 	echo '<br />';
 	?>
 	<textarea rows="10" cols="80"><?php echo $prog ?></textarea>
