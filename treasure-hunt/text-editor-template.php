@@ -62,20 +62,34 @@ function reset_session() {
 }
 
 if (!isset($_SESSION['id_expect']) || !isset($_SESSION['timestamp'])) {
+	// First visit?
 	reset_session();
+}
+
+if (isset($_POST['reset_session'])) {
+	// Explicit reset. Redirect to the same page without POST
+	// arguments to avoid weird behavior on reload.
+	reset_session();
+	$_SESSION['message'] = "Génération d'un nouveau programme.";
+	header('Location: ' . $_SERVER[REQUEST_URI]);
+	exit;
 }
 
 if (isset($_POST['id_actual']) && $_POST['id_actual'] != '') {
 	$id_actual = trim($_POST['id_actual']);
 } else {
 	$id_actual = "";
-	reset_session();
-};
+}
 
 $max_duration = $max_duration_base;
 $duration = gettimeofday(true) - $_SESSION['timestamp'];
 $id_expect = trim($_SESSION['id_expect']);
 $message = null;
+
+if (isset($_SESSION['message'])) {
+	$message = $_SESSION['message'];
+	unset($_SESSION['message']);
+}
 
 if ($id_actual == "moretime") {
 	$_SESSION['moretime'] = True;
@@ -184,6 +198,11 @@ if ($id_expect == $id_actual) {
 	<form method="POST">
 		<?php echo $enter_value_here ?> <input name="id_actual" type="text"   value="" />
 		<input type="submit" />
+	</form>
+	<form method="POST">
+		<?php echo $click_here_to_reset ?> 
+		<input name="reset_session" type="hidden" value="yesPlease" />
+		<input type="submit" value="Génération" />
 	</form>
 	<?php
 }

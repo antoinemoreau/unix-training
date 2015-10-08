@@ -44,10 +44,11 @@ de fichier.
 " | envsubst)
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
 enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
+click_here_to_reset=$(gettext "Cliquez ici pour générer un nouveau programme :")
 
 for v in title instructions the_answer_is invalid_answer \
          you_took correctly_compiled \
-         next_step useless_comment enter_value_here
+         next_step useless_comment enter_value_here click_here_to_reset
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"
