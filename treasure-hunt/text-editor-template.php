@@ -80,9 +80,11 @@ $message = null;
 if ($id_actual == "moretime") {
 	$_SESSION['moretime'] = True;
 	$message = 'Extra time!<br />';
+	$id_actual = '';
 } else if ($id_actual == "lesstime") {
 	$_SESSION['moretime'] = False;
 	$message = 'Extra time canceled!<br />';
+	$id_actual = '';
 }
 	
 
@@ -146,9 +148,21 @@ function generate_obfuscated_prog($id_actual) {
 <h1><?php echo $title ?></h1>
 <?php
 
+if ($message != null) {
+	echo $message;
+}
+
 if ($duration > $max_duration) {
 	printf($you_took, $duration, $max_duration);
 	echo '<br />';
+	if ($id_actual != "") {
+		if ($id_expect == $id_actual) {
+			printf("Pour information, votre réponse \"%s\" était correcte. Soyez plus rapide la prochaine fois.", $id_actual);
+		} else {
+			printf("Pour information, votre réponse \"%s\" était incorrecte (attendu : %s).", $id_actual, $id_expect);
+		}
+		echo '<br />';
+	}
 	reset_session();
 }
 
@@ -157,9 +171,7 @@ if ($id_expect == $id_actual) {
 	echo '<br />';
 	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
 } else {
-	if ($message != null) {
-		echo $message;
-	} else if ($id_actual != "") {
+	if ($id_actual != "") {
 		printf($invalid_answer . '<br />', $id_actual, $duration);
 	}
 	$prog = generate_obfuscated_prog($id_expect);
