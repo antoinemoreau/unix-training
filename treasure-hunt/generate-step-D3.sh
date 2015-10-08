@@ -52,11 +52,16 @@ remaining_text=$(gettext "Il reste %d secondes.")
 was_correct=$(gettext "Pour information, votre réponse \"%s\" était correcte. Soyez plus rapide la prochaine fois.")
 was_incorrect=$(gettext "Pour information, votre réponse \"%s\" était incorrecte (attendu : \"%s\").")
 regenerating=$(gettext "Génération d'un nouveau programme.")
+seconds=$(gettext secondes)
+recent_highscores=$(gettext "Meilleurs scores récents :")
+enter_nickname=$(gettext "Entrez un pseudo ici qui apparaitra dans le highscore :")
+try_again=$(gettext "Pour réessayer, cliquez ici :")
 
 for v in title instructions the_answer_is invalid_answer \
          you_took correctly_compiled \
          next_step useless_comment enter_value_here click_here_to_reset \
-	 remaining_text was_correct was_incorrect regenerating
+	 remaining_text was_correct was_incorrect regenerating \
+	 seconds recent_highscores enter_nickname try_again
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"

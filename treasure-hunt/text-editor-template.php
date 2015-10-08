@@ -169,6 +169,7 @@ function sort_score($a, $b) {
 
 function high_scores($duration) {
 	global $id_actual;
+	global $seconds, $recent_highscores, $enter_nickname, $try_again;
 	$lockname = "/tmp/unix-hunt-highscores.lock";
 	$dataname = "/tmp/unix-hunt-highscores.json";
 	$fp = fopen($lockname, "w+");
@@ -199,7 +200,7 @@ function high_scores($duration) {
 		array_splice($high, 20);
 		file_put_contents($dataname, json_encode($high));
 		flock($fp, LOCK_UN);
-		echo "Meilleurs scores récents :<ol>";
+		echo $recent_highscores . "<ol>";
 		$current_has_highscore = False;
 		foreach ($high as $id => $player) {
 			if ($id == session_id()) {
@@ -210,25 +211,25 @@ function high_scores($duration) {
 				$fmt1 = '';
 				$fmt2 = '';
 			}
-			printf("<li>%s%01.1f secondes : %s%s</li>", $fmt1, $player['duration'], htmlspecialchars($player['name']), $fmt2);
+			printf("<li>%s%01.1f %s : %s%s</li>", $fmt1, $player['duration'], $seconds, htmlspecialchars($player['name']), $fmt2);
 		}
 		echo "</ol>";
 		if ($current_has_highscore) { ?>
 		<form method="POST">
-			Entrez un pseudo ici qui apparaitra dans le highscore : <input name="nickname" type="text"   value="" />
+			<?php echo $enter_nickname; ?> <input name="nickname" type="text"   value="" />
 			<input name="id_actual" type="hidden"   value="<?php echo htmlspecialchars($id_actual); ?>" />
 			<input type="submit" />
 		</form> <?php
 		}
 		?>
 		<form method="POST">
-			<?php echo "Pour réessayer, cliquez ici :" ?>
+			<?php echo $try_again; ?>
 			<input name="reset_session" type="hidden" value="yesPlease" />
 			<input type="submit" value="Génération" />
 		</form>
 		 <?php
 	} else {
-		echo "Impossible de verrouiller le fichier !";
+		echo "Could not lock highscore file, sorry.";
 	}
 
 	fclose($fp);

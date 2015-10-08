@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 17:09+0200\n"
+"POT-Creation-Date: 2015-10-08 18:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: generate-step-D3.sh:9 generate-step-D3.sh:83 generate-step-E11.sh:35
+#: generate-step-D3.sh:9 generate-step-D3.sh:88 generate-step-E11.sh:35
 #: generate-step-A5.sh:35 generate-step-A5.sh:91 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
@@ -116,6 +116,22 @@ msgstr ""
 
 #: generate-step-D3.sh:54
 msgid "Génération d'un nouveau programme."
+msgstr ""
+
+#: generate-step-D3.sh:55
+msgid "secondes"
+msgstr ""
+
+#: generate-step-D3.sh:56
+msgid "Meilleurs scores récents :"
+msgstr ""
+
+#: generate-step-D3.sh:57
+msgid "Entrez un pseudo ici qui apparaitra dans le highscore :"
+msgstr ""
+
+#: generate-step-D3.sh:58
+msgid "Pour réessayer, cliquez ici :"
 msgstr ""
 
 #: generate-step-C1.sh:7 generate-step-E6.sh:7 generate-step-E6.sh:8
