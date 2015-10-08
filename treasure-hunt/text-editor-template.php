@@ -95,33 +95,11 @@ function useless_comment_maybe($cond) {
 		$prog .= $comment_prefix . $useless_comment . "\n";
 	}
 }
-?>
 
-<!DOCTYPE html>
-<head>
-<title><?php echo $title ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-<h1><?php echo $title ?></h1>
-<?php
-
-if ($duration > $max_duration) {
-	printf($you_took, $duration, $max_duration);
-	echo '<br />';
-	reset_session();
-}
-
-if ($id_expect == $id_actual) {
-	printf($correctly_compiled, $duration);
-	echo '<br />';
-	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
-} else {
-	if ($message != null) {
-		echo $message;
-	} else if ($id_actual != "") {
-		printf($invalid_answer . '<br />', $id_actual, $duration);
-	}
+function generate_obfuscated_prog($id_actual) {
+	global $prog_header, $the_answer_is_prog, $id_expect, $noise, $noise,
+		$error1, $error2, $error3,
+		$new_line, $prog_footer, $comment_prefix;
 	$prog = '';
 	$prog .= $comment_prefix . ' ' . date("Y-m-d H:i:s", $_SESSION['timestamp']) . "\n";
 	// $prog .= $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
@@ -154,6 +132,36 @@ if ($id_expect == $id_actual) {
 	$prog .= $prog_footer;
 
 	$prog = preg_replace('/^/m', $comment_prefix . ' ', $prog);
+	return $prog;
+}
+?>
+
+<!DOCTYPE html>
+<head>
+<title><?php echo $title ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<h1><?php echo $title ?></h1>
+<?php
+
+if ($duration > $max_duration) {
+	printf($you_took, $duration, $max_duration);
+	echo '<br />';
+	reset_session();
+}
+
+if ($id_expect == $id_actual) {
+	printf($correctly_compiled, $duration);
+	echo '<br />';
+	echo preg_replace('/\n\n/', '<br /><br />', $next_step);
+} else {
+	if ($message != null) {
+		echo $message;
+	} else if ($id_actual != "") {
+		printf($invalid_answer . '<br />', $id_actual, $duration);
+	}
+	$prog = generate_obfuscated_prog($id_expect);
 
 	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
 	echo '<br />';
