@@ -254,7 +254,7 @@ if ($message != null) {
 	echo '<br />';
 }
 
-if ($duration > $max_duration) {
+if ((!$_SESSION['already_done']) && $duration > $max_duration) {
 	printf($you_took, $duration, $max_duration);
 	echo '<br />';
 	if ($id_actual != "") {
@@ -268,7 +268,7 @@ if ($duration > $max_duration) {
 	reset_session();
 }
 
-if ($id_expect == $id_actual) {
+if ($id_expect == $id_actual || $_SESSION['already_done']) {
 	if (!$_SESSION['already_done']) {
 		printf($correctly_compiled, $duration);
 	}
