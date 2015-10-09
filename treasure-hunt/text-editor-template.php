@@ -60,6 +60,7 @@ function reset_session() {
 	$_SESSION['id_expect'] = uniqid('', true);
 	$_SESSION['timestamp'] = gettimeofday(true);
 	$_SESSION['moretime'] = False;
+	$_SESSION['already_done'] = False;
 	$id_actual = "";
 	$id_expect = $_SESSION['id_expect'];
 	$session_restored = True;
@@ -268,7 +269,10 @@ if ($duration > $max_duration) {
 }
 
 if ($id_expect == $id_actual) {
-	printf($correctly_compiled, $duration);
+	if (!$_SESSION['already_done']) {
+		printf($correctly_compiled, $duration);
+	}
+	$_SESSION['already_done'] = True;
 	echo '<br />';
 	high_scores($duration);
 	echo '<br />';
