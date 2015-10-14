@@ -111,7 +111,8 @@ echo "</ul></li>\n";
 </ul></div>
 
 <p><a href="grades.php">See grades</a></p>
-<p><a href="change-machine.php">Change student associated to a machine</a></p>
+<p><a href="change-student.php">Change student associated to a machine</a></p>
+<p><a href="change-machine.php">Change information for a machine</a></p>
 <p><a href="answers.php">See student's answers</a></p>
 <?php if (isset($_GET['verbose']) && $_GET['verbose'] === 'yes') { ?>
     <p><a href="?verbose=no">See non-verbose stats</a></p>

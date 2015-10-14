@@ -73,6 +73,14 @@ if (isset($_GET['session_to_edit'])) {
 	$confirm = False;
 }
 
+if (isset($_GET['hidden_login_to_edit']) &&
+    $_GET['hidden_login_to_edit'] != $login_to_edit) {
+	$family_name = "";
+	$first_name = "";
+	$student_id = "";
+	$old_machine = "";
+}
+
 if ($confirm) {
 	$query_new = "UPDATE exam_unix_logins
                     SET login = '". exam_escape_string($login_to_edit) ."',
@@ -110,6 +118,8 @@ WHERE login ='" . exam_escape_string($login_to_edit) . "';";
 
 	$num_rows = exam_num_rows($result_login);
 
+	echo "<h2>Student to move</h2>";
+
 	exam_display_result($result_login);
 
 	$result_login = exam_query($query); // Brute force, redo the
@@ -146,6 +156,8 @@ WHERE machine ='" . exam_escape_string($new_machine) . "'
   AND session ='" . exam_escape_string($session_to_edit) . "';");
 
 	$num_rows = exam_num_rows($result_machine);
+
+	echo "<h2>Spare machine to use</h2>";
 	
 	exam_display_result($result_machine);
 
@@ -159,6 +171,7 @@ WHERE machine ='" . exam_escape_string($new_machine) . "'
 ?>
 <form action="change-student.php" method="get">
 	<fieldset class="invisiblefieldset">
+	Login : <input type="hidden" name="hidden_login_to_edit" value="<?php echo htmlspecialchars($login_to_edit) ?>" />
 	Login : <input type="text" name="login_to_edit" value="<?php echo htmlspecialchars($login_to_edit) ?>" />
 	Session : <input type="text" name="session_to_edit" value="<?php echo htmlspecialchars($session_to_edit) ?>" />
 	<br />
@@ -176,6 +189,8 @@ WHERE machine ='" . exam_escape_string($new_machine) . "'
 	<input type="submit" value="<?php if ($cango) { echo "GO"; } else { echo "Get information"; }; ?>" />
 	</fieldset>
 </form>
+<p><a href="stats.php">See stats</a></p>
+
 <?php
 
 exam_footer();

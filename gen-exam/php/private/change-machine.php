@@ -5,7 +5,7 @@ include_once './inc/common.php';
 include_once './inc/authentication.php';
 
 if ($mode == 'demo')
-	die("Changing machine not available in demo mode");
+	die("No answer available in demo mode");
 
 if ($mode == "sql") {
 	isset($subject) or die("FATAL ERROR: Subject not specified, please check config.php.");
@@ -87,7 +87,7 @@ $initial_familly_name = $line['initial_familly_name'];
 $initial_student_id = $line['initial_student_id'];
 
 if ($login == "")
-	die("FATAL ERROR: Can not find machine $machine_to_edit for subject $subject in database");
+	die("FATAL ERROR: Can not find login $login for subject $subject in database");
 
 function display_was($old, $new) {
 	if ($old == $new) {
