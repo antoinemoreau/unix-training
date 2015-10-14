@@ -6,6 +6,8 @@ include_once './inc/authentication.php';
 
 exam_header('Private part of the exam', '..');
 
+echo "<p>Logged in as " . htmlspecialchars($_SERVER['PHP_AUTH_USER']) . ".</p>";
+
 foreach(scandir("private") as $entry) {
 	if (preg_match('/\.php$/', $entry) &&
 		$entry != "index.php") {
