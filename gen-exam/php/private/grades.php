@@ -23,7 +23,7 @@ isset($subject) or die("FATAL ERROR: Subject not specified");
 $query = "SELECT exam_unix_subject_questions.coeff as ". exam_field('grade') .",
                  exam_unix_logins.login as ". exam_field('login') .",
                  exam_unix_logins.first_name as ". exam_field('first_name') .",
-                 exam_unix_logins.familly_name as ". exam_field('familly_name') .",
+                 exam_unix_logins.family_name as ". exam_field('family_name') .",
                  exam_unix_logins.student_id as ". exam_field('student_id') .",
                  exam_unix_question.student_answer as ". exam_field('student_answer') .",
                  exam_unix_question.correct_answer as ". exam_field('correct_answer') ."
@@ -42,15 +42,15 @@ $result = exam_query($query);
 
 header("Content-type: text/plain;charset=utf-8");
 
-echo "login;student id;first name;familly name;grade\n";
+echo "login;student id;first name;family name;grade\n";
 $previous_login=NULL;
 $previous_first_name=NULL;
-$previous_familly_name=NULL;
+$previous_family_name=NULL;
 $previous_student_id=NULL;
 $accumulated_grade=0;
 function display_and_flush() {
-	global $previous_login, $previous_familly_name, $previous_first_name, $previous_student_id, $accumulated_grade;
-	echo $previous_login .";". $previous_student_id .";". $previous_first_name .";". $previous_familly_name .";".
+	global $previous_login, $previous_family_name, $previous_first_name, $previous_student_id, $accumulated_grade;
+	echo $previous_login .";". $previous_student_id .";". $previous_first_name .";". $previous_family_name .";".
 		$accumulated_grade ."\n";
 	$accumulated_grade = 0;
 }
@@ -63,8 +63,8 @@ while ($line = exam_fetch_array($result)) {
 			if ($line["first_name"] != $previous_first_name) {
 				die("Different first names (". $line["first_name"] ." and ". $previous_first_name .") for the same login (" . $line["login"] .").");
 			}
-			if ($line["familly_name"] != $previous_familly_name) {
-				die("Different familly names (". $line["familly_name"] ." and ". $previous_familly_name .") for the same login (" . $line["login"] .").");
+			if ($line["family_name"] != $previous_family_name) {
+				die("Different family names (". $line["family_name"] ." and ". $previous_family_name .") for the same login (" . $line["login"] .").");
 			}
 			if ($line["student_id"] != $previous_student_id) {
 				die("Different student ID (". $line["student_id"] ." and ". $previous_student_id .") for the same login (" . $line["login"] .").");
@@ -76,7 +76,7 @@ while ($line = exam_fetch_array($result)) {
 	}
 	$previous_login = $line["login"];
 	$previous_first_name = $line["first_name"];
-	$previous_familly_name = $line["familly_name"];
+	$previous_family_name = $line["family_name"];
 	$previous_student_id = $line["student_id"];
 }
 display_and_flush();

@@ -85,7 +85,7 @@ if ($confirm) {
 	$query_new = "UPDATE exam_unix_logins
                     SET login = '". exam_escape_string($login_to_edit) ."',
                    first_name = '". exam_escape_string($first_name) ."',
-                 familly_name = '". exam_escape_string($family_name) ."',
+                 family_name = '". exam_escape_string($family_name) ."',
                    student_id = '". exam_escape_string($student_id) ."'
                 WHERE machine = '". exam_escape_string($new_machine) ."'
                   AND session = '". exam_escape_string($session_to_edit) ."'
@@ -94,7 +94,7 @@ if ($confirm) {
 	$query_old = "UPDATE exam_unix_logins
                     SET login = 'disabled',
                    first_name = 'disabled',
-                 familly_name = 'disabled',
+                 family_name = 'disabled',
                    student_id = 'disabled'
                 WHERE machine = '". exam_escape_string($old_machine) ."'
                   AND session = '". exam_escape_string($session_to_edit) ."'
@@ -134,7 +134,7 @@ WHERE login ='" . exam_escape_string($login_to_edit) . "';";
 		$first_name = $result_login['first_name'];
 	}
 	if ($family_name == "") {
-		$family_name = $result_login['familly_name'];
+		$family_name = $result_login['family_name'];
 	}
 	if ($student_id == "") {
 		$student_id = $result_login['student_id'];

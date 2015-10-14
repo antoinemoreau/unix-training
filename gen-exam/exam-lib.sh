@@ -73,7 +73,7 @@ get_first_name () {
     grep "^$1;" "$list_students" | cut -d \; -f 2
 }
 
-get_familly_name () {
+get_family_name () {
     grep "^$1;" "$list_students" | cut -d \; -f 3
 }
     

@@ -43,7 +43,7 @@ $line = get_login_info($login, $subject);
 $machine = $line['machine'];
 $session = $line['session'];
 $first_name = $line['first_name'];
-$familly_name = $line['familly_name'];
+$family_name = $line['family_name'];
 
 if ($machine == "")
 	die("FATAL ERROR: Can not find login $login for subject $subject in database");
@@ -55,7 +55,7 @@ if ($machine == "")
 <li><strong>Machine: <?php echo htmlspecialchars($machine) ?></strong></li>
 <li><strong>Session: <?php echo htmlspecialchars($session) ?></strong></li>
 <li><strong>Login: <?php echo htmlspecialchars($login) ?></strong></li>
-<li><strong>Name: <?php echo htmlspecialchars($first_name ." ". $familly_name) ?></strong></li>
+<li><strong>Name: <?php echo htmlspecialchars($first_name ." ". $family_name) ?></strong></li>
 <li><strong><?php echo $count ?> questions</strong></li>
 <li><strong><?php echo $points ?> points</strong></li>
 </ul></div>

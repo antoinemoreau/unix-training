@@ -61,7 +61,7 @@ function get_form_array($question, $machine, $session, $subject) {
 }
 
 function get_login ($machine, $session, $subject) {
-	return array('login' => "guest", 'first_name' => "guest", 'familly_name' => "",
+	return array('login' => "guest", 'first_name' => "guest", 'family_name' => "",
 		     'student_id' => 'N/A');
 }
 

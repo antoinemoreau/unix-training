@@ -160,7 +160,7 @@ WHERE exam_unix_forms.id = '". exam_escape_string($question) ."'
 
 function get_login ($machine, $session, $subject) {
 	exam_connect_maybe();
-	$query = "SELECT login, initial_login, first_name, initial_first_name, familly_name, initial_familly_name, student_id, initial_student_id
+	$query = "SELECT login, initial_login, first_name, initial_first_name, family_name, initial_family_name, student_id, initial_student_id
 FROM exam_unix_logins
 WHERE id_subject = '". exam_escape_string($subject) ."'
   AND session    = '". exam_escape_string($session) ."'
@@ -173,7 +173,7 @@ WHERE id_subject = '". exam_escape_string($subject) ."'
 
 function get_login_info ($login, $subject) {
 	exam_connect_maybe();
-	$query = "SELECT first_name, familly_name, session, machine
+	$query = "SELECT first_name, family_name, session, machine
 FROM exam_unix_logins
 WHERE id_subject = '". exam_escape_string($subject) ."'
   AND login      = '". exam_escape_string($login) ."'

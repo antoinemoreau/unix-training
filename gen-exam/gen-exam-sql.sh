@@ -159,18 +159,18 @@ for login in $(get_logins); do
     session=$(get_session "$login")
     machine=$(get_machine "$login")
     first_name=$(get_first_name "$login" | sql_escape_pipe)
-    familly_name=$(get_familly_name "$login" | sql_escape_pipe)
+    family_name=$(get_family_name "$login" | sql_escape_pipe)
     student_id=$(get_student_id "$login" | sql_escape_pipe)
-    echo "login = $login; session = $session; machine = $machine; first_name = $first_name; familly_name = $familly_name"
+    echo "login = $login; session = $session; machine = $machine; first_name = $first_name; family_name = $family_name"
     studentdir="$outdir/php/subjects/$session/$machine"
     mkdir -p "$studentdir"
     cd "$studentdir"
 
     sql_comment "Etudiant $login"
-    sql_echo "Importing questions/answers for $first_name $familly_name ($login)"
+    sql_echo "Importing questions/answers for $first_name $family_name ($login)"
     sql_raw "INSERT INTO exam_unix_logins
-                    (id_subject,   session,    machine,    login, initial_login,    first_name, initial_first_name,    familly_name, initial_familly_name,    student_id, initial_student_id)
-             VALUES ('$subject', '$session', '$machine', '$login',      '$login', '$first_name',      '$first_name', '$familly_name',      '$familly_name', '$student_id',      '$student_id');"
+                    (id_subject,   session,    machine,    login, initial_login,    first_name, initial_first_name,    family_name, initial_family_name,    student_id, initial_student_id)
+             VALUES ('$subject', '$session', '$machine', '$login',      '$login', '$first_name',      '$first_name', '$family_name',      '$family_name', '$student_id',      '$student_id');"
 
     all_questions
 
