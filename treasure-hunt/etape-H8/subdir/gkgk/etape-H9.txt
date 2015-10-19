@@ -47,4 +47,4 @@ Il faut donc faire deux choses :
 
 * dire au shell de ne pas couper en deux "etape H10.txt". On peut le
   faire en ajoutant des guillemets doubles ou simples autour, ou en
-  utilisant un backslash devant l'espace (comem ceci : \ ).
+  utilisant un backslash devant l'espace (comme ceci : \ ).
