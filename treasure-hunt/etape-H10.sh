@@ -21,7 +21,7 @@ assez amusants.
 Concrètement, le code source du jeu de piste est disponible à l'URL
 suivante :
 
-  http://gitorious.org/unix-training/unix-training/trees/master
+  https://gitlab.com/unix-training/unix-training
 
 Si vous savez utiliser Git, vous pouvez cloner ce dépôt, le modifier
 chez vous et envoyer vos améliorations si vous pensez qu'elles sont
