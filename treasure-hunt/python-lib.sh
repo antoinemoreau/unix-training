@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Set of functions useful to generate a Python exam.
+. rotlib.sh
+
+# Set of functions useful to generate a Python exam/hunt.
 
 # Run a piece of code using Python3 conventions.
 python3_run () {
@@ -70,13 +72,17 @@ python_print_line() {
 
 python_header() {
     cat <<EOF
-dec = str.maketrans("vwxyz/()_abcdefghijklmnopqrtsu",
-                    "abcdefghijklmnopqrtsuvwxyz/()_")
+dec = str.maketrans("$full_alphabetdecale",
+                    "$full_alphabet")
 EOF
 }
 
 python_obfuscate_code() {
     python_header
+    python_obfuscate_lines
+}
+
+python_obfuscate_lines() {
     (
 	IFS='\n'
 	while read -r line;
@@ -87,18 +93,42 @@ python_obfuscate_code() {
 	    else
 		indent="${line%%[^ ]*}"
 		coded=$(printf "%s" "$line" | \
-			       tr "abcdefghijklmnopqrtsuvwxyz/()_" "vwxyz/()_abcdefghijklmnopqrtsu" | \
+			       sed 's/^[ \t]*//' | \
+			       decalepipe | \
 			       python_escape_string)
-		printf "%seval('%s'.translate(dec))\n" "$indent" "$coded"
+		printf "%sexec('%s'.translate(dec))\n" "$indent" "$coded"
 	    fi
 	done
     )
 }
 
-python_obfuscate_text() {
+python_noise() {
+    echo 'if 1 == 0: print("'$RANDOM$RANDOM'")' | python_obfuscate_lines
+    echo 'if 1234 != 1234: print("'$RANDOM'")' | python_obfuscate_lines
+    printf '# %s\n' "$(uuid)"
+    echo 'while False: print("'$(uuid)'")'
+}
+
+python_obfuscate_text_verbose() {
+    python_header
+    python_printify | python_obfuscate_lines | (
+	IFS='\n'
+	while read -r line;
+	do
+	    printf '%s\n' "$line"
+	    python_noise
+	done
+    )
+
+}
+
+python_printify() {
     python_escape_string | \
-	sed "s/.*/print('\0')/" | \
-	python_obfuscate_code
+	sed "s/.*/print('\0')/"
+}
+
+python_obfuscate_text() {
+    python_printify | python_obfuscate_code
 }
 
 python_comment_out() {

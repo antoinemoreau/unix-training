@@ -4,6 +4,7 @@
 . i18n-lib.sh
 . c-lib.sh
 . adalib.sh
+. python-lib.sh
 
 header=$(gettext "Fichier source pour l'etape D1.
 Ce programme doit etre dans un fichier etape_d1.adb
@@ -38,6 +39,7 @@ Et le dernier est ici :
 ./generate-step-D2.sh
 part_d2_ada=$(sed 's/"/""/g' $(gettext etape)_d2-3-ada.txt)
 part_d2_c=$(sed 's/"/\"/g' $(gettext etape)_d2-3-c.txt)
+part_d2_py=$(python_escape_string < $(gettext etape)_d2-3-py.txt)
 
 part3=$(gettext "A vous de faire les copier-coller pour remettre le tout ensemble")
 
@@ -113,3 +115,44 @@ gettext "etape_d1.adb genere
 gettext "$(gettext etape)_d1.c genere
 " >&2
 
+(
+    echo '#! /usr/bin/env python3'
+    echo '"""'
+    gettext "Fichier source pour l'étape D1.
+Corrigez les erreurs de syntaxe qu'il contient et
+exécutez-le avec la commande python3 pour continuer.
+
+Le fichier est volontairement illisible pour rendre l'exercice plus
+\"amusant\".
+" 
+    echo '"""'
+
+    
+    echo "$part1" | sed 's/_d1\.adb/_d1.py/' | python_obfuscate_text
+
+    # missing ')'
+    echo
+#    echo 'print(""'
+    echo
+
+    printf "$part2" Python -py -py | python_obfuscate_text
+
+    echo "print('# $(gettext "debut du code")'); print()"
+    echo "$part_d2_py" | python_obfuscate_text
+    echo "print(); print('# $(gettext "fin du code")')"
+
+    # missing '('
+    echo
+#    echo 'print "")'
+    echo
+
+    echo "print()"
+
+    echo "$part3" | python_obfuscate_text
+
+) > $(gettext etape)_d1.py
+
+chmod +x $(gettext etape)_d1.py
+
+gettext "$(gettext etape)_d1.py genere
+" >&2

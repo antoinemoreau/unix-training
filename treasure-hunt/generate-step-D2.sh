@@ -4,6 +4,7 @@
 . ./i18n-lib.sh
 . ./adalib.sh
 . ./c-lib.sh
+. ./python-lib.sh
 . ./odtlib.sh
 
 HUNT_DIR=$(pwd)
@@ -68,3 +69,32 @@ sed -ne '1,19p' $(gettext etape)_d2.c | txt2odt $(gettext etape)_d2-1-c.odt
 sed -ne '20,39p' $(gettext etape)_d2.c > $(gettext etape)_d2-2-c.txt
 
 sed -ne '40,$p' $(gettext etape)_d2.c > $(gettext etape)_d2-3-c.txt
+
+
+# Python
+(
+    echo "$header" | python_comment_out
+
+    echo "def sayit():"
+    echo "$body" | python_obfuscate_text_verbose | sed 's/^/    /'
+
+    echo; echo
+
+    echo "def foo():
+    print('bar')"
+
+    echo; echo
+
+    # Make sure the program is unusable without the last part
+    # (otherwise an incomplete cut-and-paste would work).
+    echo "sayit()"
+) > $(gettext etape)_d2.py
+
+gettext "etape_d2.py genere" >&2
+echo >&2
+
+sed -ne '1,19p' $(gettext etape)_d2.py | txt2odt $(gettext etape)_d2-1-py.odt
+
+sed -ne '20,39p' $(gettext etape)_d2.py > $(gettext etape)_d2-2-py.txt
+
+sed -ne '40,$p' $(gettext etape)_d2.py > $(gettext etape)_d2-3-py.txt

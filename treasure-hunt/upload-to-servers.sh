@@ -65,14 +65,14 @@ upload_lang () {
     rsync $(gettext etape)-A2.txt "$web"/
     rsync email-$(gettext fr).php "$web"/
 
-    rsync $(gettext etape)_b1.{adb,c} "$dir"
+    rsync -E $(gettext etape)_b1.{adb,c,py} "$dir"
     rsync $(gettext etape)-C1.tex "$web"
     rsync $(gettext etape)-C2.odt $(gettext etape)-C3.png "$dir"
 
     mkdir -p "$web"/abc/ "$web"/4ba3/
-    rsync $(gettext etape)_d1.adb $(gettext etape)_d1.c "$web"/abc/
-    rsync $(gettext etape)_d2-1-{c,ada}.odt "$web"
-    rsync $(gettext etape)_d2-2-{c,ada}.txt "$dir"
+    rsync $(gettext etape)_d1.{c,adb,py} "$web"/abc/
+    rsync $(gettext etape)_d2-1-{c,ada,py}.odt "$web"
+    rsync $(gettext etape)_d2-2-{c,ada,py}.txt "$dir"
     rsync text-editor-$(gettext fr).php "$web"/4ba3/
 
     ssh "$upload_user@$mainmachine" "cd \"$maindir_upload/\" && mkdir -p ./oaue/ ./kmcv/ ./kmcvoaue/ ./123654/ ./979b5c3/"
