@@ -7,3 +7,4 @@ PATH="$HUNT_DIR":"$PATH"
 . textlib.sh
 . imglib.sh
 . odtlib.sh
+. python-lib.sh

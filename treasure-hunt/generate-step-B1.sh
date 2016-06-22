@@ -2,6 +2,7 @@
 
 . ./treasure-setup.sh
 . ./c-lib.sh
+. ./python-lib.sh
 . ./adalib.sh
 . ./i18n-lib.sh
 

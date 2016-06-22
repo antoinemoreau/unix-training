@@ -42,13 +42,10 @@ body=$(gettext "Bonjour,
 Cet email vous est envoyé par le script jeu-de-piste.sh. Il fait
 partie du TP 'Jeu de piste'.
 
-L'étape suivante est une compilation de programme Ada. Un programme
-Ada se trouve dans le fichier etape_b1.adb dans le répertoire
-jeu-de-piste sur le compte de l'utilisateur \${main_user}.
-
-Si vous préférez le langage C, une version C se trouve dans le même
-répertoire, dans le fichier etape_b1.c (à compiler avec la commande
-gcc).
+L'étape suivante est une exécution de programme Python (si vous
+préférez le C ou l'Ada, voir ci-dessous). Le programme se trouve dans
+le fichier etape_b2.py dans le répertoire jeu-de-piste sur le compte
+de l'utilisateur \${main_user}.
 
 Vous n'avez pas le droit d'utiliser la commande 'ls' dans ce
 répertoire (vous pouvez essayer, mais ça ne marchera pas), mais vous
@@ -62,8 +59,17 @@ Récupérez ce fichier chez vous, par exemple avec
 
 (~ veut dire 'mon répertoire personnel')
 
-Puis revenez dans votre répertoire personnel et compilez le fichier
+Puis revenez dans votre répertoire personnel et exécutez ce fichier
 avec la commande
+
+  python3 etape_b1.py
+
+Le programme vous donnera les indications pour aller a l'étape
+suivante.
+
+Si vous préférez le langage Ada, un programme Ada se trouve dans le
+fichier etape_b1.adb dans le répertoire jeu-de-piste sur le compte de
+l'utilisateur \${main_user}. Compilez-le avec la commande :
 
   gnatmake etape_b1
 
@@ -71,8 +77,10 @@ puis exécutez-le avec
 
   ./etape_b1
 
-Le programme généré vous donnera les indications pour aller a l'étape
-suivante.
+Si vous préférez le langage C, une version C se trouve dans le même
+répertoire, dans le fichier etape_b1.c (à compiler avec la commande
+gcc).
+
 " | envsubst)
 token=92d62c27-2971-412e-9cc2-2741e406891a
 
