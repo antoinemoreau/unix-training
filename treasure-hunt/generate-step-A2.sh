@@ -41,8 +41,10 @@ la main, on trouve rapidement son bonheur (et c'etait bien le but de
 l'exercice !). Les Emacsiens auront prefere M-x rot13-region RET, mais
 c'est une autre histoire.
 
-Pour l'etape suivante (A3), il faudra vous rendre sur EnsiWiki :
-retournez sur la page de depart du jeu de piste
-(http://ensiwiki.ensimag.fr/index.php/TP_Unix_-_Jeu_de_piste),
-et ouvrez l'onglet 'discussion'. On se retrouve la bas !
+Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible
+depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).
+Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :
+introduction et programmation shell. Ouvrez l'outil « Documents » :
+vous trouverez un document qui est l'étape A3 du jeu de piste.
+
 " | rotpipe

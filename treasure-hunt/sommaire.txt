@@ -10,12 +10,10 @@ Les nouveaux noms sont du type A1/B2/... pour permettre d'insérer plus
 facilement des étapes sans tout renuméroter.
 
 Chapitre 3 : internet
-A1: web (site de Matthieu Moy) (Chap 3)
+A1: EnsiWiki page privée
 A2: google (encodage rot13) (Chap 3)
-A3: EnsiWiki (onglet discussion) (Chap 3)
-A4: EnsiWiki (voir le source de la page) (Chap 3)
-A5: Chamilo (docs)
-A6: Chamilo (forum)
+A3: Chamilo (docs)
+A4: Chamilo (forum)
 A5: script qui envoie un mail à l'étudiant, avec les instructions dans
    le corps du message. (Chap 3)
 
