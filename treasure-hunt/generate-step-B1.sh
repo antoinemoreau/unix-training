@@ -54,3 +54,21 @@ echo "end;"
 ) > $(gettext etape)_b1.adb
 
 echo $(gettext etape)_b1.adb "generated" >&2
+
+(
+    echo '#! /usr/bin/env python3'
+    echo '"""'
+    gettext "Fichier source pour l'étape B1.
+Ce programme doit être dans un fichier avec l'extension .py.
+Exécutez-le avec la commande python3 pour continuer.
+" 
+    echo '"""'
+
+    echo "$body" | python_obfuscate_text
+
+) > $(gettext etape)_b1.py
+
+chmod +x $(gettext etape)_b1.py
+
+echo $(gettext etape)_b1.py "generated" >&2
+

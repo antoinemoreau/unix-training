@@ -67,3 +67,44 @@ python_print_line() {
     done
     printf "${dechashes[$i]}]"
 }
+
+python_header() {
+    cat <<EOF
+dec = str.maketrans("vwxyz/()_abcdefghijklmnopqrtsu",
+                    "abcdefghijklmnopqrtsuvwxyz/()_")
+EOF
+}
+
+python_obfuscate_code() {
+    python_header
+    (
+	IFS='\n'
+	while read -r line;
+	do
+	    if printf "%s" "$line" | grep -q ':[ \t]*$'; then
+		# Don't obfuscate control-flow
+		printf '%s\n' "$line"
+	    else
+		indent="${line%%[^ ]*}"
+		coded=$(printf "%s" "$line" | \
+			       tr "abcdefghijklmnopqrtsuvwxyz/()_" "vwxyz/()_abcdefghijklmnopqrtsu" | \
+			       python_escape_string)
+		printf "%seval('%s'.translate(dec))\n" "$indent" "$coded"
+	    fi
+	done
+    )
+}
+
+python_obfuscate_text() {
+    python_escape_string | \
+	sed "s/.*/print('\0')/" | \
+	python_obfuscate_code
+}
+
+python_comment_out() {
+    sed 's/^/# /'
+}
+
+python_escape_string() {
+    sed -e "s/['\\]/\\\\\0/g"
+}
