@@ -82,6 +82,10 @@ python_obfuscate_code() {
     python_obfuscate_lines
 }
 
+python_cut_string() {
+    perl -pe 's/^(exec\('\''([^\\'\'']|\\.){45})/\1'\''\n     '\''/'
+}
+
 python_obfuscate_lines() {
     (
 	IFS='\n'
@@ -95,7 +99,8 @@ python_obfuscate_lines() {
 		coded=$(printf "%s" "$line" | \
 			       sed 's/^[ \t]*//' | \
 			       decalepipe | \
-			       python_escape_string)
+			       python_escape_string
+		     )
 		printf "%sexec('%s'.translate(dec))\n" "$indent" "$coded"
 	    fi
 	done
@@ -106,7 +111,8 @@ python_noise() {
     echo 'if 1 == 0: print("'$RANDOM$RANDOM'")' | python_obfuscate_lines
     echo 'if 1234 != 1234: print("'$RANDOM'")' | python_obfuscate_lines
     printf '# %s\n' "$(uuid)"
-    echo 'while False: print("'$(uuid)'")'
+    echo 'while False:
+    print("'$(uuid)'")'
 }
 
 python_obfuscate_text_verbose() {
@@ -118,8 +124,7 @@ python_obfuscate_text_verbose() {
 	    printf '%s\n' "$line"
 	    python_noise
 	done
-    )
-
+    ) | python_cut_string
 }
 
 python_printify() {
@@ -128,7 +133,7 @@ python_printify() {
 }
 
 python_obfuscate_text() {
-    python_printify | python_obfuscate_code
+    python_printify | python_obfuscate_code | python_cut_string
 }
 
 python_comment_out() {

@@ -30,7 +30,7 @@ D1: programme Ada comme 1:, mais non-compilable (manque un « ; »
       quelque part par exemple)
 D2: programme Ada découpé en morceaux (1 fichier OOo, un fichier
       texte, ...) => copier-coller entre applications.
-D3: editeur de texte rapide (timeout)
+D3: editeur de texte rapide (Ada/C/Python) (timeout)
 
 Chapitre 7 : Commandes et outils
 E1: commande 'file', ouverture de PDF. (Chap 7 ou avant)

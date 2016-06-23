@@ -137,9 +137,11 @@ Le fichier est volontairement illisible pour rendre l'exercice plus
 
     printf "$part2" Python -py -py | python_obfuscate_text
 
-    echo "print('# $(gettext "debut du code")'); print()"
+    echo "print('# $(gettext "debut du code")')"
+    echo "print()"
     echo "$part_d2_py" | python_obfuscate_text
-    echo "print(); print('# $(gettext "fin du code")')"
+    echo "print()"
+    echo "print('# $(gettext "fin du code")')"
 
     # missing '('
     echo

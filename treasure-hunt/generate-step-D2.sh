@@ -73,8 +73,11 @@ sed -ne '40,$p' $(gettext etape)_d2.c > $(gettext etape)_d2-3-c.txt
 
 # Python
 (
-    echo "$header" | python_comment_out
+    echo '"""'
+    echo "$header"
+    echo '"""'
 
+    echo; echo
     echo "def sayit():"
     echo "$body" | python_obfuscate_text_verbose | sed 's/^/    /'
 
