@@ -5,6 +5,7 @@
 . ./i18n-lib.sh
 . ./adalib.sh
 . ./c-lib.sh
+. ./python-lib.sh
 
 file=text-editor-$(gettext fr).php
 
@@ -67,6 +68,10 @@ do
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"
 done
 
+shell_escape_string() {
+    sed "s/'/\\\\'/g"
+}
+
 cat >>"$file" <<EOF
 \$noise_ada = array();
 \$noise_ada[] = '$(Noise | tr '()' '[]')';
@@ -80,6 +85,15 @@ cat >>"$file" <<EOF
 \$noise_c[] = '$(c_noise)';
 \$noise_c[] = '$(c_noise)';
 \$noise_c[] = '$(c_noise)';
+\$noise_python = array();
+\$noise_python[] = '$(python_noise | shell_escape_string | tr '()' '[]')';
+\$noise_python[] = '$(python_noise | shell_escape_string)';
+\$noise_python[] = '$(python_noise | shell_escape_string)';
+\$noise_python[] = '$(python_noise | shell_escape_string)';
+\$noise_python[] = '$(python_noise | shell_escape_string)';
+\$python_prog_header = 'from __future__ import print_function
+
+$(python_header | shell_escape_string)';
 ?>
 EOF
 

@@ -8,6 +8,8 @@ session_start();
 $max_duration_base = 120.0;
 $extra_time1 = 100.0;
 
+$prog_shebang = '';
+
 $language = 'ada';
 if (isset($_GET['language'])) {
 	if ($_GET['language'] == 'c') {
@@ -57,6 +59,24 @@ begin';
 	}
 	$otherlanguage = 'c';
 	$otherlanguage_name = 'C';
+	break;
+case 'python':
+	$prog_shebang = "#! /usr/bin/env python3\n";
+	$prog_header = $python_prog_header;
+	$prog_footer = '';
+	$language_name = 'Python';
+	$comment_prefix = '#';
+	$new_line = 'print()';
+	$the_answer_is_prog = 'print("' . $the_answer_is . '")' . "\n";
+	$noise = $noise_python;
+	$error1 = "if 0 = 0:\n    print('', end='')\n";
+	$error2 = "if 0 != 0:\n    print(')\n";
+	$error3 = "if 0 == 0\n    print('', end='')\n";
+	function display_value($i, $char) {
+		return "print(chr(". (ord($char) - $i) ." + $i), end='')\n";
+	}
+	$otherlanguage = 'ada';
+	$otherlanguage_name = 'Ada';
 	break;
 default:
 	die("No such language.");
@@ -132,10 +152,10 @@ function useless_comment_maybe($cond) {
 }
 
 function generate_obfuscated_prog($id_actual) {
-	global $prog_header, $the_answer_is_prog, $id_expect, $noise, $noise,
+	global $prog_shebang, $prog_header, $the_answer_is_prog, $id_expect, $noise,
 		$error1, $error2, $error3,
 		$new_line, $prog_footer, $comment_prefix;
-	$prog = '';
+	$prog = $prog_shebang;
 	$prog .= $comment_prefix . ' ' . date("Y-m-d H:i:s", $_SESSION['timestamp']) . "\n";
 	// $prog .= $comment_prefix . $id_expect . "\n"; // Comment out in real-life ;-)
 	$i = 0;
@@ -144,11 +164,11 @@ function generate_obfuscated_prog($id_actual) {
 	$prog .= $the_answer_is_prog;
 	foreach (str_split($id_expect) as $char) {
 		$i++;
-		$prog .= $noise[($i + 2) % count($noise)];
+		$prog .= $noise[($i + 2) % count($noise)] . "\n";
 		$prog .= strtr(display_value($i, $char), '()', '[]');;
 		useless_comment_maybe($i % 2 == 0);
 		if ($i % 3 == 0) {
-			$prog .= $noise[$i % count($noise)];
+			$prog .= $noise[$i % count($noise)] . "\n";
 		}
 		useless_comment_maybe($i % 2 == 1);
 		if ($i == 1 || $i == 3 || $i == 7) {
