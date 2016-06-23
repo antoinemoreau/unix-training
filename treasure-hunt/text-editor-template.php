@@ -9,11 +9,16 @@ $max_duration_base = 120.0;
 $extra_time1 = 100.0;
 
 $language = 'ada';
-if (isset($_GET['language']) && $_GET['language'] == 'c') {
-	$language = 'c';
+if (isset($_GET['language'])) {
+	if ($_GET['language'] == 'c') {
+		$language = 'c';
+	} else if ($_GET['language'] == 'python') {
+		$language = 'python';
+	}	
 }
 
-if ($language == 'c') {
+switch ($language) {
+case 'c':
 	$prog_header = '#include <stdio.h>
 
 int main(void) {';
@@ -31,7 +36,8 @@ int main(void) {';
 	}
 	$otherlanguage = 'ada';
 	$otherlanguage_name = 'Ada';
-} else {
+	break;
+case 'ada':
 	$prog_header = 'with Ada.Text_Io;
 use  Ada.Text_Io;
 
@@ -51,6 +57,9 @@ begin';
 	}
 	$otherlanguage = 'c';
 	$otherlanguage_name = 'C';
+	break;
+default:
+	die("No such language.");
 }
 
 $session_restored = False;
