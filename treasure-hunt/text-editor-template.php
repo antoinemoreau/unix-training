@@ -10,14 +10,16 @@ $extra_time1 = 100.0;
 
 $prog_shebang = '';
 
+$languages = array('ada', 'c', 'python');
+$languages_names = array('ada' => 'Ada', 'c' => 'C', 'python' => 'Python'); 
+
 $language = 'ada';
-if (isset($_GET['language'])) {
-	if ($_GET['language'] == 'c') {
-		$language = 'c';
-	} else if ($_GET['language'] == 'python') {
-		$language = 'python';
-	}	
+if (isset($_GET['language']) && isset($languages_names[$_GET['language']])) {
+	$language = $_GET['language'];
 }
+
+$otherlanguages = $languages_names;
+unset($otherlanguages[$language]);
 
 switch ($language) {
 case 'c':
@@ -36,8 +38,6 @@ int main(void) {';
 	function display_value($i, $char) {
 		return 'printf("%c", ' . (ord($char) - $i) ." + $i);";
 	}
-	$otherlanguage = 'ada';
-	$otherlanguage_name = 'Ada';
 	break;
 case 'ada':
 	$prog_header = 'with Ada.Text_Io;
@@ -57,8 +57,6 @@ begin';
 	function display_value($i, $char) {
 		return "Put(\"\" & Character'Val(". (ord($char) - $i) ." + $i));";
 	}
-	$otherlanguage = 'c';
-	$otherlanguage_name = 'C';
 	break;
 case 'python':
 	$prog_shebang = "#! /usr/bin/env python3\n";
@@ -75,8 +73,6 @@ case 'python':
 	function display_value($i, $char) {
 		return "print(chr(". (ord($char) - $i) ." + $i), end='')\n";
 	}
-	$otherlanguage = 'ada';
-	$otherlanguage_name = 'Ada';
 	break;
 default:
 	die("No such language.");
@@ -319,7 +315,18 @@ if ($id_expect == $id_actual || $_SESSION['already_done']) {
 	}
 	$prog = generate_obfuscated_prog($id_expect);
 
-	printf($instructions, $language_name, $otherlanguage, $otherlanguage_name, $comment_prefix, $max_duration);
+	$otherlanguages_links = '';
+	$first = True;
+	foreach ($otherlanguages as $lang => $name) {
+		if ($first) {
+			$first = False;
+		} else {
+			$otherlanguages_links .= ', ';
+		}
+		$otherlanguages_links .= '<a href="?language='. $lang . '">' . $name . '</a>';
+	}
+
+	printf($instructions, $language_name, $otherlanguages_links, $comment_prefix, $max_duration);
 	echo '<br />';
 	if (!$session_restored) {
 		printf($remaining_text, $max_duration - $duration);

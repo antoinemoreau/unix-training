@@ -12,7 +12,7 @@ file=text-editor-$(gettext fr).php
 echo '<?php' >"$file"
 
 title=$(gettext "Etape D3: édition de texte")
-instructions=$(gettext "Ci-dessous un programme %s à compiler (<a href=\"?language=%s\">Cliquez ici pour une version en %s</a>),
+instructions=$(gettext "Ci-dessous un programme %s à compiler (autres versions : %s),
 avec plusieurs problèmes :
 <ul>
 <li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>%s</code> en début de ligne</li>
