@@ -1,7 +1,7 @@
 <?php
 defined('_VALID_INCLUDE') or die('Direct access not allowed.');
 // Uncomment for debugging
-//ini_set('display_errors', 'On');error_reporting(E_ALL);
+//ini_set('display_errors', 'On'); error_reporting(E_ALL);
 
 // In case register_globals is active (useless with recent enough PHP
 // versions, but who knows), unset variables tested with isset()
