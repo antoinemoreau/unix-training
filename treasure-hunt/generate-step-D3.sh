@@ -25,8 +25,7 @@ corrections. Préparez-vous, et générez un nouveau programme pour
 relancer le compte à rebours.
 <br />
 Si ce n'est pas déjà fait, lisez jusqu'au bout la page
-<a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada\">Premiers pas avec Emacs et Ada</a>
-sur EnsiWiki, elle contient des conseils pour aller plus vite.
+%s, elle contient des conseils pour aller plus vite.
 ")
 the_answer_is=$(gettext "La réponse est :")
 invalid_answer=$(gettext 'Réponse incorrecte : "%s" (en %01.1f secondes).')
@@ -57,12 +56,18 @@ seconds=$(gettext secondes)
 recent_highscores=$(gettext "Meilleurs scores récents :")
 enter_nickname=$(gettext "Entrez un pseudo ici qui apparaitra dans le highscore :")
 try_again=$(gettext "Pour réessayer, cliquez ici :")
+doc_ada=$(gettext '<a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada">Premiers pas avec Emacs et Ada</a>
+sur EnsiWiki')
+doc_python=$(gettext '<a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Python">Premiers pas avec Emacs et Python</a>
+sur EnsiWiki')
+doc_c=$doc_ada
 
 for v in title instructions the_answer_is invalid_answer \
          you_took correctly_compiled \
          next_step useless_comment enter_value_here click_here_to_reset \
 	 remaining_text was_correct was_incorrect regenerating \
-	 seconds recent_highscores enter_nickname try_again
+	 seconds recent_highscores enter_nickname try_again \
+	 doc_ada doc_python doc_c
 do
     value=$(eval "printf '%s\n\n' \"\$$v\"" | sed "s/'/\\\\'/g")
     printf "\$%s = '%s';\n" "$v" "$value" >> "$file"

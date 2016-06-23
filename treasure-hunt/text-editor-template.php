@@ -38,6 +38,7 @@ int main(void) {';
 	function display_value($i, $char) {
 		return 'printf("%c", ' . (ord($char) - $i) ." + $i);";
 	}
+	$doc = $doc_c;
 	break;
 case 'ada':
 	$prog_header = 'with Ada.Text_Io;
@@ -57,6 +58,7 @@ begin';
 	function display_value($i, $char) {
 		return "Put(\"\" & Character'Val(". (ord($char) - $i) ." + $i));";
 	}
+	$doc = $doc_ada;
 	break;
 case 'python':
 	$prog_shebang = "#! /usr/bin/env python3\n";
@@ -73,6 +75,7 @@ case 'python':
 	function display_value($i, $char) {
 		return "print(chr(". (ord($char) - $i) ." + $i), end='')\n";
 	}
+	$doc = $doc_python;
 	break;
 default:
 	die("No such language.");
@@ -326,7 +329,7 @@ if ($id_expect == $id_actual || $_SESSION['already_done']) {
 		$otherlanguages_links .= '<a href="?language='. $lang . '">' . $name . '</a>';
 	}
 
-	printf($instructions, $language_name, $otherlanguages_links, $comment_prefix, $max_duration);
+	printf($instructions, $language_name, $otherlanguages_links, $comment_prefix, $max_duration, $doc);
 	echo '<br />';
 	if (!$session_restored) {
 		printf($remaining_text, $max_duration - $duration);
