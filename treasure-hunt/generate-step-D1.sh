@@ -132,7 +132,7 @@ Le fichier est volontairement illisible pour rendre l'exercice plus
 
     # missing ')'
     echo
-#    echo 'print(""'
+    echo 'print(""'
     echo
 
     printf "$part2" Python -py -py | python_obfuscate_text
@@ -145,12 +145,15 @@ Le fichier est volontairement illisible pour rendre l'exercice plus
 
     # missing '('
     echo
-#    echo 'print "")'
+    echo 'print "")'
     echo
 
     echo "print()"
 
     echo "$part3" | python_obfuscate_text
+
+    # extra-indentation
+    echo " print('')"
 
 ) > $(gettext etape)_d1.py
 
