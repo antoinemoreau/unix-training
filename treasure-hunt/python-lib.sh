@@ -70,6 +70,13 @@ python_print_line() {
     printf "${dechashes[$i]}]"
 }
 
+python_shebang_docstring() {
+    echo "#! /usr/bin/env python3"
+    if [ -n "$1" ]; then
+	printf '"""\n%s\n"""\n\n' "$1"
+    fi
+}
+
 python_header() {
     cat <<EOF
 dec = str.maketrans("$full_alphabetdecale",
@@ -111,8 +118,12 @@ python_noise() {
     echo 'if 1 == 0: print("'$RANDOM$RANDOM'")' | python_obfuscate_lines
     echo 'if 1234 != 1234: print("'$RANDOM'")' | python_obfuscate_lines
     printf '# %s\n' "$(uuid)"
-    echo 'while False:
+    if [ -n "$PYTHON_NO_MULTILINE" ]; then
+	echo 'while False: print("'$(uuid)'")'
+    else
+	echo 'while False:
     print("'$(uuid)'")'
+    fi
 }
 
 python_obfuscate_text_verbose() {
