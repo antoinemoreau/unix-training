@@ -18,6 +18,10 @@ while test $# -ne 0; do
             usage
             exit 0
             ;;
+	"--web-user")
+	    shift
+	    exam_webuser="$1"
+	    ;;
         "--web-passwd")
 	    shift
 	    exam_webpass="$1"
