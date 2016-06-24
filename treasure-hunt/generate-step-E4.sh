@@ -29,8 +29,8 @@ deux filtres differents.
 Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le
 compiler comme le premier.
 
-Vous devriez, en une ligne de commande, executer quelque chose comme
-cela :
+Vous devriez, en une (seule) ligne de commande, executer quelque chose
+comme cela :
 
 fichier ----> decoder.py -----> decoder_bis.py ----> affichage
 

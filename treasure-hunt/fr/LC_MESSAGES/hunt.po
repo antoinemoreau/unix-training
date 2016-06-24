@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 18:44+0200\n"
+"POT-Creation-Date: 2016-06-24 11:01+0200\n"
 "PO-Revision-Date: 2013-08-05 18:17+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,21 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: generate-step-D3.sh:9 generate-step-D3.sh:88 generate-step-E11.sh:35
-#: generate-step-A5.sh:35 generate-step-A5.sh:91 upload-to-servers.sh:66
+#: generate-step-D3.sh:10 generate-step-D3.sh:107 generate-step-E11.sh:35
+#: generate-step-A5.sh:35 generate-step-A5.sh:99 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
 msgid "fr"
 msgstr ""
 
-#: generate-step-D3.sh:13
+#: generate-step-D3.sh:14
 msgid "Etape D3: édition de texte"
 msgstr ""
 
-#: generate-step-D3.sh:14
+#: generate-step-D3.sh:15
 msgid ""
-"Ci-dessous un programme %s à compiler (<a href=\"?language=%s\">Cliquez ici "
-"pour une version en %s</a>),\n"
+"Ci-dessous un programme %s à compiler (autres versions : %s),\n"
 "avec plusieurs problèmes :\n"
 "<ul>\n"
 "<li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>"
@@ -45,9 +44,7 @@ msgid ""
 "relancer le compte à rebours.\n"
 "<br />\n"
 "Si ce n'est pas déjà fait, lisez jusqu'au bout la page\n"
-"<a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada"
-"\">Premiers pas avec Emacs et Ada</a>\n"
-"sur EnsiWiki, elle contient des conseils pour aller plus vite.\n"
+"%s, elle contient des conseils pour aller plus vite.\n"
 msgstr ""
 
 #: generate-step-D3.sh:30
@@ -133,23 +130,41 @@ msgstr ""
 msgid "Pour réessayer, cliquez ici :"
 msgstr ""
 
-#: generate-step-C1.sh:7 generate-step-E6.sh:7 generate-step-E6.sh:8
-#: generate-step-E6.sh:9 generate-step-E4.sh:7 generate-step-E4.sh:35
-#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
-#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:10
-#: generate-step-E3.sh:27 generate-step-E3.sh:29 generate-step-E3.sh:30
-#: generate-step-E3.sh:31 generate-step-E3.sh:32 generate-step-G2.sh:8
-#: generate-step-G2.sh:69 generate-step-D2.sh:43 generate-step-D2.sh:48
-#: generate-step-D2.sh:50 generate-step-D2.sh:52 generate-step-D2.sh:61
-#: generate-step-D2.sh:66 generate-step-D2.sh:68 generate-step-D2.sh:70
-#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-A2.sh:24
-#: generate-step-E10.sh:7 generate-step-D1.sh:39 generate-step-D1.sh:40
-#: generate-step-D1.sh:78 generate-step-D1.sh:111 generate-step-D1.sh:113
-#: generate-step-E5.sh:17 generate-step-E2.sh:17 generate-step-B1.sh:36
-#: generate-step-B1.sh:38 generate-step-B1.sh:53 generate-step-B1.sh:55
-#: generate-step-E1.sh:29 generate-step-E1.sh:31 generate-step-E1.sh:32
-#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-E13.sh:7
-#: generate-step-E13.sh:19 generate-step-E13.sh:73 generate-step-E13.sh:74
+#: generate-step-D3.sh:59
+msgid ""
+"<a href=\"http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada"
+"\">Premiers pas avec Emacs et Ada</a>\n"
+"sur EnsiWiki"
+msgstr ""
+
+#: generate-step-D3.sh:61
+msgid ""
+"<a href=\"http://ensiwiki.ensimag.fr/index.php/"
+"Premiers_pas_avec_Emacs_et_Python\">Premiers pas avec Emacs et Python</a>\n"
+"sur EnsiWiki"
+msgstr ""
+
+#: generate-step-C1.sh:7 generate-step-E1.sh:29 generate-step-E1.sh:31
+#: generate-step-E1.sh:32 generate-step-E6.sh:7 generate-step-E6.sh:8
+#: generate-step-E6.sh:9 generate-step-E13.sh:7 generate-step-E13.sh:19
+#: generate-step-E13.sh:73 generate-step-E13.sh:74 generate-step-E4.sh:7
+#: generate-step-E4.sh:38 generate-step-E11.sh:10 generate-step-E11.sh:11
+#: generate-step-E11.sh:39 generate-step-E11.sh:40 generate-step-E3.sh:7
+#: generate-step-E3.sh:11 generate-step-E3.sh:30 generate-step-E3.sh:32
+#: generate-step-E3.sh:33 generate-step-E3.sh:34 generate-step-E3.sh:35
+#: generate-step-E3.sh:36 generate-step-G2.sh:8 generate-step-G2.sh:69
+#: generate-step-D2.sh:44 generate-step-D2.sh:49 generate-step-D2.sh:51
+#: generate-step-D2.sh:53 generate-step-D2.sh:62 generate-step-D2.sh:67
+#: generate-step-D2.sh:69 generate-step-D2.sh:71 generate-step-D2.sh:94
+#: generate-step-D2.sh:99 generate-step-D2.sh:101 generate-step-D2.sh:103
+#: generate-step-E5.sh:31 generate-step-F2.sh:7 generate-step-C3.sh:35
+#: generate-step-A2.sh:24 generate-step-E9.sh:6 generate-step-E9.sh:29
+#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
+#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
+#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
+#: generate-step-E2.sh:17 generate-step-B1.sh:37 generate-step-B1.sh:39
+#: generate-step-B1.sh:54 generate-step-B1.sh:56 generate-step-B1.sh:69
+#: generate-step-B1.sh:71 generate-step-B1.sh:73 generate-step-E10.sh:7
 #: i18n-lib.sh:31 upload-to-servers.sh:65 upload-to-servers.sh:68
 #: upload-to-servers.sh:69 upload-to-servers.sh:70 upload-to-servers.sh:73
 #: upload-to-servers.sh:74 upload-to-servers.sh:75 upload-to-servers.sh:79
@@ -175,6 +190,21 @@ msgid ""
 "L'etape suivante se trouve dans le fichier jeu-de-piste/etape-C2.odt\n"
 "sur le compte de l'utilisateur ${main_user}. Il vous reste à trouver avec\n"
 "quelle application ouvrir ce fichier ..."
+msgstr ""
+
+#: generate-step-E1.sh:16
+#, sh-format
+msgid ""
+"Et oui, c'est bien un fichier PDF (si vous lisez ceci, je suppose\n"
+"que vous l'avez ouvert avec un outil comme kpdf, evince ou acroread).\n"
+"\n"
+"Pour l'étape suivante, elle se trouve dans le répertoire suivant :\n"
+"\n"
+"\\verb|${maindir_tilde}/kmcv/|\n"
+"\n"
+"Il y a un fichier par langue (français, anglais), mais ces fichiers\n"
+"sont cachés, donc, vous ne les verrez pas forcément immédiatement ...\n"
+"\n"
 msgstr ""
 
 #: generate-step-E6.sh:43
@@ -295,6 +325,61 @@ msgid ""
 "\n"
 msgstr ""
 
+#: generate-step-E13.sh:9
+msgid ""
+"Voila, vous terminez ainsi la partie E du jeu de piste.\n"
+"\n"
+"L'étape suivante se trouve dans le répertoire F1 de ce répertoire\n"
+"(dans la même archive etape-E13.tar.gz).\n"
+"\n"
+"C'est le seul fichier dont le nom commence par x, et terminant par\n"
+"autre chose qu'un z.\n"
+"\n"
+"La solution est très simple si on sait ce qu'est un wildcard (le\n"
+"polycopié vous l'apprendra si vous ne le savez pas déjà).\n"
+msgstr ""
+
+#: generate-step-E13.sh:32
+msgid ""
+"Oui, c'est bien celui là.\n"
+"\n"
+"Beaucoup d'entre vous tentent des solutions bien compliquées comme\n"
+"\n"
+"  ls | grep '^x.*[^z]$'\n"
+"\n"
+"C'est une assez mauvaise idée pour plusieurs raisons : d'une part, la\n"
+"sortie de 'ls' n'est pas faite pour être lue par une commande ('grep'\n"
+"ici) mais par un être humain. Si votre 'ls' est configuré pour\n"
+"afficher des caractères en plus (e.g. @ pour les liens, / pour les\n"
+"répertoires, ...) alors ces caractères sont lus par 'grep' par exemple.\n"
+"D'autre part, on utilise deux processus ('ls' et 'grep') alors qu'un\n"
+"aurait suffit. Et puis, l'argument de 'grep' est une expression\n"
+"régulière (vous apprendrez bientôt ce que c'est en théorie des\n"
+"langages), c'est très puissant mais un peu lourd à utiliser (par\n"
+"exemple, * ne veut pas dire « n'importe quelle chaîne », mais\n"
+"« caractère précédent répété un nombre quelconque de fois »).\n"
+"\n"
+"Une solution plus simple :\n"
+"\n"
+"  ls x*[^z]\n"
+"\n"
+"Cette fois-ci, c'est le shell et non grep qui interprête ce x*[^z]\n"
+"(qui est un wildcard et non une expression régulière). Et comme c'est\n"
+"le shell et non la commande ls qui fait le travail, on peut même\n"
+"écrire directement :\n"
+"\n"
+"  less x*[^z]\n"
+"\n"
+"Pour afficher le fichier avec la commande 'less' en une ligne.\n"
+"\n"
+"Pour l'étape suivante, exécutez (sur votre machine de travail) le script\n"
+"\n"
+"  $maindir_tilde/979b5c3/etape-F2.sh\n"
+"\n"
+"et laissez-vous guider par les instructions. Le chapitre 8 du\n"
+"polycopié devrait vous aider.\n"
+msgstr ""
+
 #: generate-step-E4.sh:9
 msgid ""
 "Bien, vous avez reussi a decoder le message.\n"
@@ -302,13 +387,16 @@ msgid ""
 "La solution la plus élégante était d'utiliser une redirection, comme\n"
 "ceci :\n"
 "\n"
-"  ./decoder < etape-E4.txt\n"
+"  ./decoder.py < etape-E4.txt\n"
 "\n"
 "Si on veut sauvegarder le résultat, on peut aussi écrire\n"
 "\n"
-"  ./decoder < etape-E4.txt > etape-E4-decodee.txt\n"
+"  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt\n"
 "\n"
 "puis regarder le contenu du fichier etape-E4-decodee.txt.\n"
+"\n"
+"(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé\n"
+"un langage autre que Python bien sûr).\n"
 "\n"
 "Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais\n"
 "il est doublement code : pour le decoder, il va falloir passer dans\n"
@@ -320,7 +408,7 @@ msgid ""
 "Vous devriez, en une ligne de commande, executer quelque chose comme\n"
 "cela :\n"
 "\n"
-"fichier ----> decoder -----> decoder_bis ----> affichage\n"
+"fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
 "\n"
 "(en utilisant la notion de \"pipe\").\n"
 msgstr ""
@@ -353,13 +441,15 @@ msgid ""
 "\n"
 msgstr ""
 
-#: generate-step-E3.sh:11
+#: generate-step-E3.sh:12
 msgid ""
 "Jouons maintenant un peu avec les redirections.\n"
 "\n"
-"Vous trouverez dans cette archive un fichier decoder.adb. Compilez-le\n"
-"(si vous préférez le C, le programme decoder.c fait la même chose, à\n"
-"compiler avec gcc).\n"
+"Vous trouverez dans cette archive un fichier decoder.py. Rendez-le\n"
+"exécutable avec 'chmod +x' (si vous préférez le C, le programme\n"
+"decoder.c fait la même chose, à compiler avec gcc, et si vous préférez\n"
+"l'Ada, decoder.adb fait également la même chose, à compiler avec\n"
+"gnatmake).\n"
 "\n"
 "Ce fichier lit sur son entree une suite de caractères \"codee\", et\n"
 "affiche sur sa sortie une version \"decodee\" de cette suite de\n"
@@ -420,14 +510,14 @@ msgid ""
 "le cours d'Unix avancé si vous êtes en 1A Ensimag.\n"
 msgstr ""
 
-#: generate-step-D2.sh:11
+#: generate-step-D2.sh:12
 msgid ""
 "Fichier source pour l'etape D2.\n"
 "Le programme est coupé en 3 morceaux.\n"
 "Assemblez-les puis compilez le programme.\n"
 msgstr ""
 
-#: generate-step-D2.sh:18
+#: generate-step-D2.sh:19
 #, sh-format
 msgid ""
 "Visiblement, le copier-coller a marché !\n"
@@ -439,20 +529,24 @@ msgid ""
 "Ouvrez cette page dans votre navigateur et laissez-vous guider.\n"
 msgstr ""
 
-#: generate-step-D2.sh:33
+#: generate-step-D2.sh:34
 msgid "procedure Etape_D2 is"
 msgstr ""
 
-#: generate-step-D2.sh:40
+#: generate-step-D2.sh:41
 msgid "end Etape_D2;"
 msgstr ""
 
-#: generate-step-D2.sh:45
+#: generate-step-D2.sh:46
 msgid "etape_d2.adb genere"
 msgstr ""
 
-#: generate-step-D2.sh:63
+#: generate-step-D2.sh:64
 msgid "etape_d2.c genere"
+msgstr ""
+
+#: generate-step-D2.sh:96
+msgid "etape_d2.py genere"
 msgstr ""
 
 #: generate-step-A5.sh:24 generate-step-A5.sh:27 upload-to-servers.sh:61
@@ -478,13 +572,10 @@ msgid ""
 "Cet email vous est envoyé par le script jeu-de-piste.sh. Il fait\n"
 "partie du TP 'Jeu de piste'.\n"
 "\n"
-"L'étape suivante est une compilation de programme Ada. Un programme\n"
-"Ada se trouve dans le fichier etape_b1.adb dans le répertoire\n"
-"jeu-de-piste sur le compte de l'utilisateur ${main_user}.\n"
-"\n"
-"Si vous préférez le langage C, une version C se trouve dans le même\n"
-"répertoire, dans le fichier etape_b1.c (à compiler avec la commande\n"
-"gcc).\n"
+"L'étape suivante est une exécution de programme Python (si vous\n"
+"préférez le C ou l'Ada, voir ci-dessous). Le programme se trouve dans\n"
+"le fichier etape_b2.py dans le répertoire jeu-de-piste sur le compte\n"
+"de l'utilisateur ${main_user}.\n"
 "\n"
 "Vous n'avez pas le droit d'utiliser la commande 'ls' dans ce\n"
 "répertoire (vous pouvez essayer, mais ça ne marchera pas), mais vous\n"
@@ -498,8 +589,17 @@ msgid ""
 "\n"
 "(~ veut dire 'mon répertoire personnel')\n"
 "\n"
-"Puis revenez dans votre répertoire personnel et compilez le fichier\n"
+"Puis revenez dans votre répertoire personnel et exécutez ce fichier\n"
 "avec la commande\n"
+"\n"
+"  python3 etape_b1.py\n"
+"\n"
+"Le programme vous donnera les indications pour aller a l'étape\n"
+"suivante.\n"
+"\n"
+"Si vous préférez le langage Ada, un programme Ada se trouve dans le\n"
+"fichier etape_b1.adb dans le répertoire jeu-de-piste sur le compte de\n"
+"l'utilisateur ${main_user}. Compilez-le avec la commande :\n"
 "\n"
 "  gnatmake etape_b1\n"
 "\n"
@@ -507,8 +607,38 @@ msgid ""
 "\n"
 "  ./etape_b1\n"
 "\n"
-"Le programme généré vous donnera les indications pour aller a l'étape\n"
-"suivante.\n"
+"Si vous préférez le langage C, une version C se trouve dans le même\n"
+"répertoire, dans le fichier etape_b1.c (à compiler avec la commande\n"
+"gcc).\n"
+"\n"
+msgstr ""
+
+#: generate-step-E5.sh:7
+#, sh-format
+msgid ""
+"Bravo !\n"
+"\n"
+"La solution la plus simple était :\n"
+"\n"
+"  ./decoder.py < etape-E5.txt | ./decoder_bis.py\n"
+"\n"
+"Attention il faut bien distinguer les redirections vers/depuis les\n"
+"fichiers (< et >) et les pipes (|). Si nous avions écrit par exemple\n"
+"\n"
+"  ./decoder.py < etape-E5.txt > ./decoder_bis.py\n"
+"\n"
+"nous aurions envoyé la sortie de decoder.py vers le *fichier*\n"
+"decoder_bis.py au lieu d'exécuter la commande decoder_bis.py. Ça\n"
+"n'aurait bien sûr pas marché, et en plus nous aurions écrasé le\n"
+"fichier decoder_bis.py !\n"
+"\n"
+"L'etape suivante est accessible depuis votre machine de travail, dans\n"
+"le repertoire\n"
+"\n"
+"  ${maindir_tilde}/kmcvoaue/${step}-E6/\n"
+"\n"
+"Les instructions sont dans le seul fichier de ce repertoire (et de ses\n"
+"sous-répertoires) dont le nom se termine par .txt.\n"
 msgstr ""
 
 #: generate-step-F2.sh:35
@@ -626,10 +756,158 @@ msgid ""
 "l'exercice !). Les Emacsiens auront prefere M-x rot13-region RET, mais\n"
 "c'est une autre histoire.\n"
 "\n"
-"Pour l'etape suivante (A3), il faudra vous rendre sur EnsiWiki :\n"
-"retournez sur la page de depart du jeu de piste\n"
-"(http://ensiwiki.ensimag.fr/index.php/TP_Unix_-_Jeu_de_piste),\n"
-"et ouvrez l'onglet 'discussion'. On se retrouve la bas !\n"
+"Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible\n"
+"depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).\n"
+"Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :\n"
+"introduction et programmation shell. Ouvrez l'outil « Documents » :\n"
+"vous trouverez un document qui est l'étape A3 du jeu de piste.\n"
+"\n"
+msgstr ""
+
+#: generate-step-E9.sh:23
+msgid "Etape"
+msgstr ""
+
+#: generate-step-E9.sh:30
+#, sh-format
+msgid "Quel est votre login ${school}? :"
+msgstr ""
+
+#: generate-step-D1.sh:9
+msgid ""
+"Fichier source pour l'etape D1.\n"
+"Ce programme doit etre dans un fichier etape_d1.adb\n"
+"Corrigez les erreurs, puis\n"
+"compilez-le et executez-le pour continuer.\n"
+"\n"
+"Le fichier est volontairement illisible pour rendre l'exercice plus\n"
+"\"amusant\".\n"
+msgstr ""
+
+#: generate-step-D1.sh:18
+msgid ""
+"Bonjour,\n"
+"\n"
+"Si vous lisez ceci, c'est probablement que vous avez reussi a\n"
+"compiler le fichier etape_d1.adb.\n"
+msgstr ""
+
+#: generate-step-D1.sh:24
+#, sh-format
+msgid ""
+"L'etape suivante est aussi un programme %s a compiler,\n"
+"mais il a ete decoupe en plusieurs morceaux. Le premier est\n"
+"dans un fichier OpenDocument (LibreOffice, OpenOffice.org, ...) qui se\n"
+"trouve ici :\n"
+"\n"
+"  $web_url/etape_d2-1%s.odt\n"
+"\n"
+"Le second est dans un fichier texte qui se trouve dans\n"
+"\n"
+"  $maindir_tilde/etape_d2-2%s.txt\n"
+"\n"
+"Et le dernier est ici :\n"
+"\\n\\n\n"
+msgstr ""
+
+#: generate-step-D1.sh:44
+msgid "A vous de faire les copier-coller pour remettre le tout ensemble"
+msgstr ""
+
+#: generate-step-D1.sh:51
+msgid "procedure Etape_D1 is"
+msgstr ""
+
+#: generate-step-D1.sh:78
+msgid "end Mauvais_Nom_Qui_Devrait_Etre_Etape_D1;\n"
+msgstr ""
+
+#: generate-step-D1.sh:82
+msgid "etape_d1.adb genere\n"
+msgstr ""
+
+#: generate-step-D1.sh:111
+msgid "] /* Ce crochet devrait être une accolade */\n"
+msgstr ""
+
+#: generate-step-D1.sh:121
+msgid ""
+"Fichier source pour l'étape D1.\n"
+"Corrigez les erreurs de syntaxe qu'il contient et\n"
+"exécutez-le avec la commande python3 pour continuer.\n"
+"\n"
+"Le fichier est volontairement illisible pour rendre l'exercice plus\n"
+"\"amusant\".\n"
+msgstr ""
+
+#: generate-step-D1.sh:140
+msgid "debut du code"
+msgstr ""
+
+#: generate-step-D1.sh:144
+msgid "fin du code"
+msgstr ""
+
+#: generate-step-E2.sh:7
+#, sh-format
+msgid ""
+"Bien joué !\n"
+"\n"
+"Les fichiers cachés sont simplement ceux dont le nom commence par un\n"
+"point, on peut les manipuler comme les autres, mais \"ls\" ne les\n"
+"affiche pas. Par contre, \"ls -a\" les affiche.\n"
+"\n"
+"Les étapes suivantes se trouvent dans une archive TAR compressée,\n"
+"disponible ici :\n"
+"\n"
+"$web_url/etape-E3.tar.gz\n"
+msgstr ""
+
+#: generate-step-B1.sh:10
+#, sh-format
+msgid ""
+"Bonjour,\n"
+"\n"
+"Si vous lisez ceci, c'est que vous avez reussi l'etape B1\n"
+"du jeu de piste.\n"
+"\n"
+"L'etape suivante se trouve dans le fichier.\n"
+"$web_url/etape-C1.tex\n"
+"\n"
+"Cette fois-ci, c'est un fichier LaTeX. LaTeX est un format de fichier\n"
+"qui permet de faire de jolis documents avec une mise en page\n"
+"automatique. Vous pouvez compiler ce fichier avec la commande\n"
+"\n"
+"  pdflatex etape-C1.tex\n"
+"\n"
+"pour obtenir un fichier PDF, que vous ouvrirez ensuite avec le\n"
+"logiciel approprie.\n"
+msgstr ""
+
+#: generate-step-B1.sh:29
+msgid ""
+"Fichier source pour l'etape B1.\n"
+"Compilez-le et executez-le pour continuer.\n"
+"\n"
+msgstr ""
+
+#: generate-step-B1.sh:43
+msgid ""
+"Fichier source pour l'etape B1.\n"
+"Ce programme doit etre dans un fichier etape_b1.adb\n"
+"Compilez-le et executez-le pour continuer.\n"
+"\n"
+msgstr ""
+
+#: generate-step-B1.sh:49
+msgid "procedure Etape_B1 is"
+msgstr ""
+
+#: generate-step-B1.sh:61
+msgid ""
+"Fichier source pour l'étape B1.\n"
+"Ce programme doit être dans un fichier avec l'extension .py.\n"
+"Exécutez-le avec la commande python3 pour continuer.\n"
 msgstr ""
 
 #: generate-step-E10.sh:9
@@ -690,211 +968,6 @@ msgstr ""
 
 #: generate-step-E10.sh:60
 msgid "ETAPE-E10"
-msgstr ""
-
-#: generate-step-D1.sh:8
-msgid ""
-"Fichier source pour l'etape D1.\n"
-"Ce programme doit etre dans un fichier etape_d1.adb\n"
-"Corrigez les erreurs, puis\n"
-"compilez-le et executez-le pour continuer.\n"
-"\n"
-"Le fichier est volontairement illisible pour rendre l'exercice plus\n"
-"\"amusant\".\n"
-msgstr ""
-
-#: generate-step-D1.sh:17
-msgid ""
-"Bonjour,\n"
-"\n"
-"Si vous lisez ceci, c'est probablement que vous avez reussi a\n"
-"compiler le fichier etape_d1.adb.\n"
-msgstr ""
-
-#: generate-step-D1.sh:23
-#, sh-format
-msgid ""
-"L'etape suivante est aussi un programme %s a compiler,\n"
-"mais il a ete decoupe en plusieurs morceaux. Le premier est\n"
-"dans un fichier OpenDocument (LibreOffice, OpenOffice.org, ...) qui se\n"
-"trouve ici :\n"
-"\n"
-"  $web_url/etape_d2-1%s.odt\n"
-"\n"
-"Le second est dans un fichier texte qui se trouve dans\n"
-"\n"
-"  $maindir_tilde/etape_d2-2%s.txt\n"
-"\n"
-"Et le dernier est ici :\n"
-"\\n\\n\n"
-msgstr ""
-
-#: generate-step-D1.sh:42
-msgid "A vous de faire les copier-coller pour remettre le tout ensemble"
-msgstr ""
-
-#: generate-step-D1.sh:49
-msgid "procedure Etape_D1 is"
-msgstr ""
-
-#: generate-step-D1.sh:76
-msgid "end Mauvais_Nom_Qui_Devrait_Etre_Etape_D1;\n"
-msgstr ""
-
-#: generate-step-D1.sh:80
-msgid "etape_d1.adb genere\n"
-msgstr ""
-
-#: generate-step-D1.sh:109
-msgid "] /* Ce crochet devrait être une accolade */\n"
-msgstr ""
-
-#: generate-step-E5.sh:7
-#, sh-format
-msgid ""
-"Bravo !\n"
-"\n"
-"L'etape suivante est accessible depuis votre machine de travail, dans\n"
-"le repertoire\n"
-"\n"
-"  ${maindir_tilde}/kmcvoaue/${step}-E6/\n"
-"\n"
-"Les instructions sont dans le seul fichier de ce repertoire (et de ses\n"
-"sous-répertoires) dont le nom se termine par .txt.\n"
-msgstr ""
-
-#: generate-step-E2.sh:7
-#, sh-format
-msgid ""
-"Bien joué !\n"
-"\n"
-"Les fichiers cachés sont simplement ceux dont le nom commence par un\n"
-"point, on peut les manipuler comme les autres, mais \"ls\" ne les\n"
-"affiche pas. Par contre, \"ls -a\" les affiche.\n"
-"\n"
-"Les étapes suivantes se trouvent dans une archive TAR compressée,\n"
-"disponible ici :\n"
-"\n"
-"$web_url/etape-E3.tar.gz\n"
-msgstr ""
-
-#: generate-step-B1.sh:9
-#, sh-format
-msgid ""
-"Bonjour,\n"
-"\n"
-"Si vous lisez ceci, c'est que vous avez reussi l'etape B1\n"
-"du jeu de piste.\n"
-"\n"
-"L'etape suivante se trouve dans le fichier.\n"
-"$web_url/etape-C1.tex\n"
-"\n"
-"Cette fois-ci, c'est un fichier LaTeX. LaTeX est un format de fichier\n"
-"qui permet de faire de jolis documents avec une mise en page\n"
-"automatique. Vous pouvez compiler ce fichier avec la commande\n"
-"\n"
-"  pdflatex etape-C1.tex\n"
-"\n"
-"pour obtenir un fichier PDF, que vous ouvrirez ensuite avec le\n"
-"logiciel approprie.\n"
-msgstr ""
-
-#: generate-step-B1.sh:28
-msgid ""
-"Fichier source pour l'etape B1.\n"
-"Compilez-le et executez-le pour continuer.\n"
-"\n"
-msgstr ""
-
-#: generate-step-B1.sh:42
-msgid ""
-"Fichier source pour l'etape B1.\n"
-"Ce programme doit etre dans un fichier etape_b1.adb\n"
-"Compilez-le et executez-le pour continuer.\n"
-"\n"
-msgstr ""
-
-#: generate-step-B1.sh:48
-msgid "procedure Etape_B1 is"
-msgstr ""
-
-#: generate-step-E1.sh:16
-#, sh-format
-msgid ""
-"Et oui, c'est bien un fichier PDF (si vous lisez ceci, je suppose\n"
-"que vous l'avez ouvert avec un outil comme kpdf, evince ou acroread).\n"
-"\n"
-"Pour l'étape suivante, elle se trouve dans le répertoire suivant :\n"
-"\n"
-"\\verb|${maindir_tilde}/kmcv/|\n"
-"\n"
-"Il y a un fichier par langue (français, anglais), mais ces fichiers\n"
-"sont cachés, donc, vous ne les verrez pas forcément immédiatement ...\n"
-"\n"
-msgstr ""
-
-#: generate-step-E9.sh:23
-msgid "Etape"
-msgstr ""
-
-#: generate-step-E9.sh:30
-#, sh-format
-msgid "Quel est votre login ${school}? :"
-msgstr ""
-
-#: generate-step-E13.sh:9
-msgid ""
-"Voila, vous terminez ainsi la partie E du jeu de piste.\n"
-"\n"
-"L'étape suivante se trouve dans le répertoire F1 de ce répertoire\n"
-"(dans la même archive etape-E13.tar.gz).\n"
-"\n"
-"C'est le seul fichier dont le nom commence par x, et terminant par\n"
-"autre chose qu'un z.\n"
-"\n"
-"La solution est très simple si on sait ce qu'est un wildcard (le\n"
-"polycopié vous l'apprendra si vous ne le savez pas déjà).\n"
-msgstr ""
-
-#: generate-step-E13.sh:32
-msgid ""
-"Oui, c'est bien celui là.\n"
-"\n"
-"Beaucoup d'entre vous tentent des solutions bien compliquées comme\n"
-"\n"
-"  ls | grep '^x.*[^z]$'\n"
-"\n"
-"C'est une assez mauvaise idée pour plusieurs raisons : d'une part, la\n"
-"sortie de 'ls' n'est pas faite pour être lue par une commande ('grep'\n"
-"ici) mais par un être humain. Si votre 'ls' est configuré pour\n"
-"afficher des caractères en plus (e.g. @ pour les liens, / pour les\n"
-"répertoires, ...) alors ces caractères sont lus par 'grep' par exemple.\n"
-"D'autre part, on utilise deux processus ('ls' et 'grep') alors qu'un\n"
-"aurait suffit. Et puis, l'argument de 'grep' est une expression\n"
-"régulière (vous apprendrez bientôt ce que c'est en théorie des\n"
-"langages), c'est très puissant mais un peu lourd à utiliser (par\n"
-"exemple, * ne veut pas dire « n'importe quelle chaîne », mais\n"
-"« caractère précédent répété un nombre quelconque de fois »).\n"
-"\n"
-"Une solution plus simple :\n"
-"\n"
-"  ls x*[^z]\n"
-"\n"
-"Cette fois-ci, c'est le shell et non grep qui interprête ce x*[^z]\n"
-"(qui est un wildcard et non une expression régulière). Et comme c'est\n"
-"le shell et non la commande ls qui fait le travail, on peut même\n"
-"écrire directement :\n"
-"\n"
-"  less x*[^z]\n"
-"\n"
-"Pour afficher le fichier avec la commande 'less' en une ligne.\n"
-"\n"
-"Pour l'étape suivante, exécutez (sur votre machine de travail) le script\n"
-"\n"
-"  $maindir_tilde/979b5c3/etape-F2.sh\n"
-"\n"
-"et laissez-vous guider par les instructions. Le chapitre 8 du\n"
-"polycopié devrait vous aider.\n"
 msgstr ""
 
 #: i18n-lib.sh:9

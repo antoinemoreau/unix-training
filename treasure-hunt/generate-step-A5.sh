@@ -69,7 +69,8 @@ suivante.
 
 Si vous préférez le langage Ada, un programme Ada se trouve dans le
 fichier etape_b1.adb dans le répertoire jeu-de-piste sur le compte de
-l'utilisateur \${main_user}. Compilez-le avec la commande :
+l'utilisateur \${main_user}. Copiez le fichier sur votre compte, puis
+compilez-le avec la commande :
 
   gnatmake etape_b1
 

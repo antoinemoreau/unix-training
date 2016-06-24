@@ -44,7 +44,7 @@ c'est une autre histoire.
 Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible
 depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).
 Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :
-introduction et programmation shell. Ouvrez l'outil « Documents » :
+introduction et programmation shell ». Ouvrez l'outil « Documents » :
 vous trouverez un document qui est l'étape A3 du jeu de piste.
 
 " | rotpipe
