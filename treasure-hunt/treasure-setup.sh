@@ -80,11 +80,12 @@ smtp_server=ensiens.imag.fr
 get_email_function=get_email_ensimag
 check_email_function=check_email_regex
 check_email_function_php=check_email_regex_php
-valid_email_regex='.@(imag.fr|.*grenoble-inp\.(fr|org)|inria.*\.fr|grenoble-em.com)$'
+valid_email_regex='.@(imag.fr|.*grenoble-inp\.(fr|org)|inria.*\.fr|grenoble-em.com|univ-grenoble-alpes.fr)$'
 # Example valid and invalid email addresses. Will be used to test the regexp.
 valid_email_examples='Matthieu.Moy@grenoble-inp.fr
 Foo@grenoble-inp.org Bar@grenoble-em.com boz@inria.fr
-x@inrialpes.fr y@ensimag.grenoble-inp.fr z@imag.fr'
+x@inrialpes.fr y@ensimag.grenoble-inp.fr z@imag.fr
+Foo.Bar@univ-grenoble-alpes.fr'
 invalid_email_examples='Foo.bar@gmail.com example@free.fr @imag.fr'
 # When prompting the user for an email address, mention the school and
 # the kind of email expected with these variables:
