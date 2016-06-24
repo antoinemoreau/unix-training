@@ -11,13 +11,16 @@ gettext "Bien, vous avez reussi a decoder le message.
 La solution la plus élégante était d'utiliser une redirection, comme
 ceci :
 
-  ./decoder < etape-E4.txt
+  ./decoder.py < etape-E4.txt
 
 Si on veut sauvegarder le résultat, on peut aussi écrire
 
-  ./decoder < etape-E4.txt > etape-E4-decodee.txt
+  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt
 
 puis regarder le contenu du fichier etape-E4-decodee.txt.
+
+(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé
+un langage autre que Python bien sûr).
 
 Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais
 il est doublement code : pour le decoder, il va falloir passer dans
@@ -29,7 +32,7 @@ compiler comme le premier.
 Vous devriez, en une ligne de commande, executer quelque chose comme
 cela :
 
-fichier ----> decoder -----> decoder_bis ----> affichage
+fichier ----> decoder.py -----> decoder_bis.py ----> affichage
 
 (en utilisant la notion de \"pipe\").
 " | decalepipe > $(gettext etape)-E3/$(gettext etape)-E4.txt

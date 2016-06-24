@@ -7,12 +7,15 @@
 mkdir -p $(gettext etape)-E3/
 cp decoder.adb decoder_bis.adb \
     decoder.c decoder_bis.c \
+    decoder.py decoder_bis.py \
     $(gettext etape)-E3/
 gettext "Jouons maintenant un peu avec les redirections.
 
-Vous trouverez dans cette archive un fichier decoder.adb. Compilez-le
-(si vous préférez le C, le programme decoder.c fait la même chose, à
-compiler avec gcc).
+Vous trouverez dans cette archive un fichier decoder.py. Rendez-le
+exécutable avec 'chmod +x' (si vous préférez le C, le programme
+decoder.c fait la même chose, à compiler avec gcc, et si vous préférez
+l'Ada, decoder.adb fait également la même chose, à compiler avec
+gnatmake).
 
 Ce fichier lit sur son entree une suite de caractères \"codee\", et
 affiche sur sa sortie une version \"decodee\" de cette suite de
@@ -29,4 +32,5 @@ en utilisant decoder.
 tar czvf $(gettext etape)-E3.tar.gz \
     $(gettext etape)-E3/*.txt \
     $(gettext etape)-E3/*.adb \
-    $(gettext etape)-E3/*.c
+    $(gettext etape)-E3/*.c \
+    $(gettext etape)-E3/*.py
