@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-24 11:01+0200\n"
+"POT-Creation-Date: 2016-06-24 17:39+0200\n"
 "PO-Revision-Date: 2013-08-05 18:17+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: generate-step-D3.sh:10 generate-step-D3.sh:107 generate-step-E11.sh:35
-#: generate-step-A5.sh:35 generate-step-A5.sh:99 upload-to-servers.sh:66
+#: generate-step-A5.sh:35 generate-step-A5.sh:100 upload-to-servers.sh:66
 #: upload-to-servers.sh:76 upload-to-servers.sh:88 upload-to-servers.sh:89
 #: generate-all.sh:26 generate-all.sh:27 generate-all.sh:28 generate-all.sh:31
 msgid "fr"
@@ -146,36 +146,37 @@ msgstr ""
 
 #: generate-step-C1.sh:7 generate-step-E1.sh:29 generate-step-E1.sh:31
 #: generate-step-E1.sh:32 generate-step-E6.sh:7 generate-step-E6.sh:8
-#: generate-step-E6.sh:9 generate-step-E13.sh:7 generate-step-E13.sh:19
-#: generate-step-E13.sh:73 generate-step-E13.sh:74 generate-step-E4.sh:7
-#: generate-step-E4.sh:38 generate-step-E11.sh:10 generate-step-E11.sh:11
-#: generate-step-E11.sh:39 generate-step-E11.sh:40 generate-step-E3.sh:7
-#: generate-step-E3.sh:11 generate-step-E3.sh:30 generate-step-E3.sh:32
-#: generate-step-E3.sh:33 generate-step-E3.sh:34 generate-step-E3.sh:35
-#: generate-step-E3.sh:36 generate-step-G2.sh:8 generate-step-G2.sh:69
-#: generate-step-D2.sh:44 generate-step-D2.sh:49 generate-step-D2.sh:51
-#: generate-step-D2.sh:53 generate-step-D2.sh:62 generate-step-D2.sh:67
-#: generate-step-D2.sh:69 generate-step-D2.sh:71 generate-step-D2.sh:94
-#: generate-step-D2.sh:99 generate-step-D2.sh:101 generate-step-D2.sh:103
-#: generate-step-E5.sh:31 generate-step-F2.sh:7 generate-step-C3.sh:35
-#: generate-step-A2.sh:24 generate-step-E9.sh:6 generate-step-E9.sh:29
-#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
-#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
-#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
-#: generate-step-E2.sh:17 generate-step-B1.sh:37 generate-step-B1.sh:39
-#: generate-step-B1.sh:54 generate-step-B1.sh:56 generate-step-B1.sh:69
-#: generate-step-B1.sh:71 generate-step-B1.sh:73 generate-step-E10.sh:7
-#: i18n-lib.sh:31 upload-to-servers.sh:65 upload-to-servers.sh:68
-#: upload-to-servers.sh:69 upload-to-servers.sh:70 upload-to-servers.sh:73
-#: upload-to-servers.sh:74 upload-to-servers.sh:75 upload-to-servers.sh:79
-#: upload-to-servers.sh:80 upload-to-servers.sh:81 upload-to-servers.sh:82
-#: upload-to-servers.sh:83 upload-to-servers.sh:84 upload-to-servers.sh:85
-#: upload-to-servers.sh:87 upload-to-servers.sh:91 upload-to-servers.sh:92
-#: upload-to-servers.sh:101 upload-to-servers.sh:102 upload-to-servers.sh:103
-#: upload-to-servers.sh:104 upload-to-servers.sh:105 upload-to-servers.sh:106
-#: upload-to-servers.sh:107 upload-to-servers.sh:108 upload-to-servers.sh:109
-#: upload-to-servers.sh:110 upload-to-servers.sh:111 upload-to-servers.sh:112
-#: upload-to-servers.sh:113
+#: generate-step-E6.sh:9 generate-step-G3.sh:8 generate-step-G3.sh:69
+#: generate-step-E13.sh:7 generate-step-E13.sh:19 generate-step-E13.sh:73
+#: generate-step-E13.sh:74 generate-step-E4.sh:7 generate-step-E4.sh:38
+#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
+#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
+#: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
+#: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
+#: generate-step-G2.sh:8 generate-step-G2.sh:45 generate-step-D2.sh:44
+#: generate-step-D2.sh:49 generate-step-D2.sh:51 generate-step-D2.sh:53
+#: generate-step-D2.sh:62 generate-step-D2.sh:67 generate-step-D2.sh:69
+#: generate-step-D2.sh:71 generate-step-D2.sh:94 generate-step-D2.sh:99
+#: generate-step-D2.sh:101 generate-step-D2.sh:103 generate-step-E5.sh:31
+#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-A2.sh:24
+#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-D1.sh:40
+#: generate-step-D1.sh:41 generate-step-D1.sh:42 generate-step-D1.sh:80
+#: generate-step-D1.sh:113 generate-step-D1.sh:115 generate-step-D1.sh:158
+#: generate-step-D1.sh:160 generate-step-D1.sh:162 generate-step-E2.sh:17
+#: generate-step-B1.sh:37 generate-step-B1.sh:39 generate-step-B1.sh:54
+#: generate-step-B1.sh:56 generate-step-B1.sh:69 generate-step-B1.sh:71
+#: generate-step-B1.sh:73 generate-step-E10.sh:7 i18n-lib.sh:31
+#: upload-to-servers.sh:65 upload-to-servers.sh:68 upload-to-servers.sh:69
+#: upload-to-servers.sh:70 upload-to-servers.sh:73 upload-to-servers.sh:74
+#: upload-to-servers.sh:75 upload-to-servers.sh:79 upload-to-servers.sh:80
+#: upload-to-servers.sh:81 upload-to-servers.sh:82 upload-to-servers.sh:83
+#: upload-to-servers.sh:84 upload-to-servers.sh:85 upload-to-servers.sh:87
+#: upload-to-servers.sh:91 upload-to-servers.sh:92 upload-to-servers.sh:93
+#: upload-to-servers.sh:94 upload-to-servers.sh:103 upload-to-servers.sh:104
+#: upload-to-servers.sh:105 upload-to-servers.sh:106 upload-to-servers.sh:107
+#: upload-to-servers.sh:108 upload-to-servers.sh:109 upload-to-servers.sh:110
+#: upload-to-servers.sh:111 upload-to-servers.sh:112 upload-to-servers.sh:113
+#: upload-to-servers.sh:114 upload-to-servers.sh:115
 msgid "etape"
 msgstr ""
 
@@ -325,6 +326,53 @@ msgid ""
 "\n"
 msgstr ""
 
+#: generate-step-G3.sh:16 generate-step-G2.sh:16
+msgid ""
+"Il semble que vous ne soyez pas connectes à la machine via SSH.\n"
+"\n"
+"Je refuse de m'exécuter dans ces conditions, désolé.\n"
+"Merci de vous connecter à cette machine via SSH, et je\n"
+"vous donnerai la solution.\n"
+"\n"
+"Si cette étape se trouve sur la même machine que votre machine de\n"
+"travail habituel, vous pouvez utiliser un PC individuel ou votre\n"
+"machine personnelle pour réaliser cette étape.\n"
+msgstr ""
+
+#: generate-step-G3.sh:26
+msgid ""
+"Vous n'avez pas activé l'affichage graphique avec SSH.\n"
+"\n"
+"Réessayez en utilisant l'option -X de SSH pour activer le 'X11 forwarding'."
+msgstr ""
+
+#: generate-step-G3.sh:35
+msgid ""
+"Cette étape termine la partie principale du jeu de piste.\n"
+"\n"
+"Les étapes qui suivent sont des étapes en plus, a priori plus\n"
+"difficiles. Si vous vous arretez-là et que vous avez lu le polycopié\n"
+"en entier, vous devriez avoir appris l'essentiel.\n"
+"\n"
+"Pour confirmer que vous êtes arrivés jusqu'ici, nous vous demandons\n"
+"d'ajouter un commentaire sur la page de discussion de la page « Jeu de\n"
+"piste » du Wiki, pour permettre à l'équipe enseignante d'avoir une\n"
+"idée du nombre d'étudiants qui sont arrivés au bout, et surtout pour\n"
+"savoir si ça vous a plu !\n"
+"\n"
+"La fenêtre dans laquelle s'affiche ce message est en fait le programme\n"
+"'less' qui tourne dans un terminal. Vous pouvez quitter en appuyant sur\n"
+"'q'.\n"
+"\n"
+"Si vous souhaitez faire la deuxième partie du jeu de piste,\n"
+"rendez-vous sur la page\n"
+"http://ensiwiki.ensimag.fr/index.php/TP_Unix_-_Jeu_de_piste\n"
+"et lisez l'énoncé de l'étape H1.\n"
+"\n"
+"Sinon, vous pourrez bien sûr y revenir plus tard, par exemple pendant\n"
+"le cours d'Unix avancé si vous êtes en 1A Ensimag.\n"
+msgstr ""
+
 #: generate-step-E13.sh:9
 msgid ""
 "Voila, vous terminez ainsi la partie E du jeu de piste.\n"
@@ -405,8 +453,8 @@ msgid ""
 "Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le\n"
 "compiler comme le premier.\n"
 "\n"
-"Vous devriez, en une ligne de commande, executer quelque chose comme\n"
-"cela :\n"
+"Vous devriez, en une (seule) ligne de commande, executer quelque chose\n"
+"comme cela :\n"
 "\n"
 "fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
 "\n"
@@ -463,51 +511,19 @@ msgid ""
 "en utilisant decoder.\n"
 msgstr ""
 
-#: generate-step-G2.sh:16
+#: generate-step-G2.sh:31
+#, sh-format
 msgid ""
-"Il semble que vous ne soyez pas connectes à la machine via SSH.\n"
+"Bien.\n"
 "\n"
-"Je refuse de m'exécuter dans ces conditions, désolé.\n"
-"Merci de vous connecter à cette machine via SSH, et je\n"
-"vous donnerai la solution.\n"
+"L'étape suivante est très similaire, c'est aussi un exécutable à\n"
+"lancer sur une machine distante. L'exécutable se trouve sur le\n"
+"serveur ${auxiliarymachine}, à l'emplacement :\n"
 "\n"
-"Si cette étape se trouve sur la même machine que votre machine de\n"
-"travail habituel, vous pouvez utiliser un PC individuel ou votre\n"
-"machine personnelle pour réaliser cette étape.\n"
-msgstr ""
-
-#: generate-step-G2.sh:26
-msgid ""
-"Vous n'avez pas activé l'affichage graphique avec SSH.\n"
+"  ~${auxiliary_user}/etape-G3.sh\n"
 "\n"
-"Réessayez en utilisant l'option -X de SSH pour activer le 'X11 forwarding'."
-msgstr ""
-
-#: generate-step-G2.sh:35
-msgid ""
-"Cette étape termine la partie principale du jeu de piste.\n"
-"\n"
-"Les étapes qui suivent sont des étapes en plus, a priori plus\n"
-"difficiles. Si vous vous arretez-là et que vous avez lu le polycopié\n"
-"en entier, vous devriez avoir appris l'essentiel.\n"
-"\n"
-"Pour confirmer que vous êtes arrivés jusqu'ici, nous vous demandons\n"
-"d'ajouter un commentaire sur la page de discussion de la page « Jeu de\n"
-"piste » du Wiki, pour permettre à l'équipe enseignante d'avoir une\n"
-"idée du nombre d'étudiants qui sont arrivés au bout, et surtout pour\n"
-"savoir si ça vous a plu !\n"
-"\n"
-"La fenêtre dans laquelle s'affiche ce message est en fait le programme\n"
-"'less' qui tourne dans un terminal. Vous pouvez quitter en appuyant sur\n"
-"'q'.\n"
-"\n"
-"Si vous souhaitez faire la deuxième partie du jeu de piste,\n"
-"rendez-vous sur la page\n"
-"http://ensiwiki.ensimag.fr/index.php/TP_Unix_-_Jeu_de_piste\n"
-"et lisez l'énoncé de l'étape H1.\n"
-"\n"
-"Sinon, vous pourrez bien sûr y revenir plus tard, par exemple pendant\n"
-"le cours d'Unix avancé si vous êtes en 1A Ensimag.\n"
+"La commande en question utilise un affichage graphique, donc vous\n"
+"risquez d'avoir besoin de l'option -X de la commande ssh.\n"
 msgstr ""
 
 #: generate-step-D2.sh:12
@@ -599,7 +615,8 @@ msgid ""
 "\n"
 "Si vous préférez le langage Ada, un programme Ada se trouve dans le\n"
 "fichier etape_b1.adb dans le répertoire jeu-de-piste sur le compte de\n"
-"l'utilisateur ${main_user}. Compilez-le avec la commande :\n"
+"l'utilisateur ${main_user}. Copiez le fichier sur votre compte, puis\n"
+"compilez-le avec la commande :\n"
 "\n"
 "  gnatmake etape_b1\n"
 "\n"
@@ -654,10 +671,10 @@ msgstr ""
 msgid ""
 "Bravo ! fin de l'étape...\n"
 "\n"
-"L'étape suivante se trouve sur le serveur ${auxiliarymachine}. Elle est\n"
+"L'étape suivante se trouve sur le serveur ${auxiliary_machine2}. Elle est\n"
 "dans le fichier\n"
 "\n"
-"  ~${auxiliary_user}/etape-G1.txt\n"
+"  ${auxiliary_path2}/etape-G1.txt\n"
 "\n"
 "Récupérez-la via sftp (cf.\n"
 "http://ensiwiki.ensimag.fr/index.php/Travailler_a_distance pour 1001\n"
@@ -759,7 +776,7 @@ msgid ""
 "Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible\n"
 "depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).\n"
 "Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :\n"
-"introduction et programmation shell. Ouvrez l'outil « Documents » :\n"
+"introduction et programmation shell ». Ouvrez l'outil « Documents » :\n"
 "vous trouverez un document qui est l'étape A3 du jeu de piste.\n"
 "\n"
 msgstr ""
