@@ -44,10 +44,10 @@ retry () {
 ok () {
     echo "$(gettext "Bravo ! fin de l'étape...
 
-L'étape suivante se trouve sur le serveur \${auxiliarymachine}. Elle est
+L'étape suivante se trouve sur le serveur \${auxiliary_machine2}. Elle est
 dans le fichier
 
-  ~\${auxiliary_user}/etape-G1.txt
+  \${auxiliary_path2}/etape-G1.txt
 
 Récupérez-la via sftp (cf.
 http://ensiwiki.ensimag.fr/index.php/Travailler_a_distance pour 1001

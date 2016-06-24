@@ -41,11 +41,17 @@ upload_user=$main_user
 
 # Other machine (server) on which students have access. It will be
 # used to practice various basic networking tools (SSH, sftp, ...).
-# Below are the machine name and the user on which this part will be
-# installed:
+# The first machine ($auxiliarymachine) should support 'ssh -X' (i.e.
+# have xterm and xauth installed). Below are the machine name and the
+# user on which this part will be installed:
 auxiliarymachine=pcserveur.ensimag.fr
 auxiliary_user=$main_user
 auxiliary_user_upload=$auxiliary_user
+
+# Yet another machine. This one is used only in text mode, nothing
+# particular needed on the server.
+auxiliary_machine2=depots.ensimag.fr
+auxiliary_path2=/depots/2015/jeu-de-piste/
 
 # The content of this directory should be uploaded to a website
 web_base=jeu-de-piste
@@ -145,6 +151,7 @@ esac
 variables="
 mainmachine maindir auxiliarymachine web web_url
 auxiliary_user
+auxiliary_machine2 auxiliary_path2
 demo_url demo_url_en spy_url
 main_user_home main_user main_user_home_tilde maindir_tilde
 upload_user
