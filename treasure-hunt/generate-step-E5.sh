@@ -6,6 +6,20 @@
 
 gettext "Bravo !
 
+La solution la plus simple était :
+
+  ./decoder.py < etape-E5.txt | ./decoder_bis.py
+
+Attention il faut bien distinguer les redirections vers/depuis les
+fichiers (< et >) et les pipes (|). Si nous avions écrit par exemple
+
+  ./decoder.py < etape-E5.txt > ./decoder_bis.py
+
+nous aurions envoyé la sortie de decoder.py vers le *fichier*
+decoder_bis.py au lieu d'exécuter la commande decoder_bis.py. Ça
+n'aurait bien sûr pas marché, et en plus nous aurions écrasé le
+fichier decoder_bis.py !
+
 L'etape suivante est accessible depuis votre machine de travail, dans
 le repertoire
 
