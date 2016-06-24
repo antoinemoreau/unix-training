@@ -8,7 +8,14 @@ exam_header('Treasure Hunt monitoring');
 
 echo '<script src="./sorttable.js"></script>';
 
-echo '<p>Click on table headers to sort.</p>';
+echo '<p>';
+echo 'Click on table headers to sort. ';
+if (isset($_GET['picture'])) {
+	echo '<a href="?">Click here to disable pictures</a>. ';
+} else {
+	echo '<a href="?picture">Click here to enable pictures</a>. ';
+}
+echo '</p>';
 
 // http://www.php.net/manual/en/function.mysql-query.php#81348
 // $format = tableau pour formatter l'affichage.
@@ -82,6 +89,11 @@ LEFT JOIN hunt_access'. $exam_suffix .' as '. $step .'
 	}
 }
 
+$stu_url_fmt = '<a href="https://intranet.ensimag.fr/Zenith2/Utilisateur/index?login=%s">%s</a>';
+if (isset($_GET['picture'])) {
+	$stu_url_fmt .= '<img src="https://intranet.ensimag.fr/zenith/photos/%s.jpg">';
+}
+
 echo '<h2>Registered students accesses</h2>';
 
 $query = 'SELECT reference.*'. $step_fields .'
@@ -89,7 +101,7 @@ FROM hunt_student'. $exam_suffix .' AS reference'. $step_join .'
 GROUP BY reference.login;';
 // echo '<pre>'. $query .'</pre>';
 $result = exam_query($query);
-echo_result($result, array('login' => '<a href="https://intranet.ensimag.fr/Zenith2/Utilisateur/index?login=%s">%s</a>'), True);
+echo_result($result, array('login' => $stu_url_fmt), True);
 
 echo '<h2>Unregistered students accesses</h2>';
 
@@ -102,7 +114,7 @@ FROM (SELECT DISTINCT login
 GROUP BY reference.login;';
 // echo '<pre>'. $query .'</pre>';
 $result = exam_query($query);
-echo_result($result, array('login' => '<a href="https://intranet.ensimag.fr/Zenith2/Utilisateur/index?login=%s">%s</a>'), True);
+echo_result($result, array('login' => $stu_url_fmt), True);
 
 exam_footer();
 ?>
