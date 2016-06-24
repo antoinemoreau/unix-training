@@ -23,47 +23,23 @@ Si cette étape se trouve sur la même machine que votre machine de
 travail habituel, vous pouvez utiliser un PC individuel ou votre
 machine personnelle pour réaliser cette étape.
 " | rotpipe)"
-[ -z "\$DISPLAY" ] && die_rotpipe "$(gettext "Vous n'avez pas activé l'affichage graphique avec SSH.
-
-Réessayez en utilisant l'option -X de SSH pour activer le 'X11 forwarding'." \
-	| rotpipe)"
 EOF
 
 printf "%s" '
 echo '\"
 
-gettext "Cette étape termine la partie principale du jeu de piste.
+gettext "Bien.
 
-Les étapes qui suivent sont des étapes en plus, a priori plus
-difficiles. Si vous vous arretez-là et que vous avez lu le polycopié
-en entier, vous devriez avoir appris l'essentiel.
+L'étape suivante est très similaire, c'est aussi un exécutable à
+lancer sur une machine distante. L'exécutable se trouve sur le
+serveur \${auxiliarymachine}, à l'emplacement :
 
-Pour confirmer que vous êtes arrivés jusqu'ici, nous vous demandons
-d'ajouter un commentaire sur la page de discussion de la page « Jeu de
-piste » du Wiki, pour permettre à l'équipe enseignante d'avoir une
-idée du nombre d'étudiants qui sont arrivés au bout, et surtout pour
-savoir si ça vous a plu !
+  ~\${auxiliary_user}/etape-G3.sh
 
-La fenêtre dans laquelle s'affiche ce message est en fait le programme
-'less' qui tourne dans un terminal. Vous pouvez quitter en appuyant sur
-'q'.
+La commande en question utilise un affichage graphique, donc vous
+risquez d'avoir besoin de l'option -X de la commande ssh.
+" | envsubst | rotpipe
 
-Si vous souhaitez faire la deuxième partie du jeu de piste,
-rendez-vous sur la page
-http://ensiwiki.ensimag.fr/index.php/TP_Unix_-_Jeu_de_piste
-et lisez l'énoncé de l'étape H1.
-
-Sinon, vous pourrez bien sûr y revenir plus tard, par exemple pendant
-le cours d'Unix avancé si vous êtes en 1A Ensimag.
-" | rotpipe
-
-printf "%s" \"'| unrotpipe > /tmp/tmp-G2.$$
-
-'"$(monitor_step_cmd G2)"'
-
-LC_ALL=en_US.UTF-8 LESS= xterm -e less /tmp/tmp-G2.$$ || \
-LC_ALL=en_US.UTF-8 LESS= gnome-terminal -e less /tmp/tmp-G2.$$
-rm -f /tmp/tmp-G2.$$
-'
+printf "%s" \"'| unrotpipe'
 
 chmod +x $(gettext etape)-G2.sh

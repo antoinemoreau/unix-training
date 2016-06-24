@@ -42,6 +42,7 @@ generate_all () {
     ./generate-step-F2.sh
 
     ./generate-step-G2.sh
+    ./generate-step-G3.sh
 
     ./generate-step-H2.sh
     ./generate-step-H5.sh

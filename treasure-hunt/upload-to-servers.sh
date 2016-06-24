@@ -90,6 +90,8 @@ upload_lang () {
 
     rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"
     ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/$(gettext etape)-G2.sh; chmod 644 $main_user_home_tilde/$(gettext etape)-G1.txt"
+    rsync $(gettext etape)-G3.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"
+    ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/$(gettext etape)-G3.sh"
 }
 
 multilingual_do upload_lang
