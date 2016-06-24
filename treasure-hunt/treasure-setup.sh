@@ -52,6 +52,7 @@ auxiliary_user_upload=$auxiliary_user
 # particular needed on the server.
 auxiliary_machine2=depots.ensimag.fr
 auxiliary_path2=/depots/2015/jeu-de-piste/
+auxiliary_user_upload2=$auxiliary_user_upload
 
 # The content of this directory should be uploaded to a website
 web_base=jeu-de-piste
@@ -107,6 +108,7 @@ send_email_with_php_baseurl=$web_url
 spy_url=http://www-verimag.imag.fr/~moy/monitoring-jdp
 
 recompute () {
+    auxiliary_user_upload2=$auxiliary_user_upload
     main_user_home_upload=$main_user_home
     maindir=$main_user_home/$maindir_base
     maindir_upload=$main_user_home_upload/$maindir_base

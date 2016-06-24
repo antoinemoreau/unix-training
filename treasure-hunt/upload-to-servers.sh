@@ -75,7 +75,7 @@ upload_lang () {
     rsync $(gettext etape)_d2-2-{c,ada,py}.txt "$dir"
     rsync text-editor-$(gettext fr).php "$web"/4ba3/
 
-    ssh "$upload_user@$mainmachine" "cd \"$maindir_upload/\" && mkdir -p ./oaue/ ./kmcv/ ./kmcvoaue/ ./123654/ ./979b5c3/"
+    ssh "$upload_user@$mainmachine" "cd \"$maindir_upload/\" && mkdir -p ./oaue/ ./kmcv/ ./kmcvoaue/ ./123654/ ./979b5c3/ ./FqM6IhHP/"
     rsync $(gettext etape)-E1 "$dir"/oaue/
     rsync dot-$(gettext etape)-E2.txt "$dir"/kmcv/.$(gettext etape)-E2.txt
     rsync $(gettext etape)-E3.tar.gz "$web"
@@ -88,10 +88,10 @@ upload_lang () {
     mkdir -p "$web"/"$demo_exam_name"-"$(gettext fr)"/
     rsync -r ./"$demo_exam_name"-"$(gettext fr)"/ "$web"/"$demo_exam_name"-"$(gettext fr)"/
 
-    rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"
-    ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/$(gettext etape)-G2.sh; chmod 644 $main_user_home_tilde/$(gettext etape)-G1.txt"
-    rsync $(gettext etape)-G3.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"
-    ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/$(gettext etape)-G3.sh"
+    rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload2@$auxiliary_machine2":"$auxiliary_path2"
+    ssh "$auxiliary_user_upload2@$auxiliary_machine2" "chmod 755 $auxiliary_path2/$(gettext etape)-G2.sh; chmod 644 $auxiliary_path2/$(gettext etape)-G1.txt"
+    rsync $(gettext etape)-G3.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"/jeu-de-piste/FqM6IhHP/
+    ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/jeu-de-piste/FqM6IhHP/$(gettext etape)-G3.sh"
 }
 
 multilingual_do upload_lang

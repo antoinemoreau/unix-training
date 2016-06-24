@@ -34,7 +34,7 @@ L'étape suivante est très similaire, c'est aussi un exécutable à
 lancer sur une machine distante. L'exécutable se trouve sur le
 serveur \${auxiliarymachine}, à l'emplacement :
 
-  ~\${auxiliary_user}/etape-G3.sh
+  ~\${auxiliary_user}/jeu-de-piste/FqM6IhHP/etape-G3.sh
 
 La commande en question utilise un affichage graphique, donc vous
 risquez d'avoir besoin de l'option -X de la commande ssh.
