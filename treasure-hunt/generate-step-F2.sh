@@ -24,6 +24,33 @@ base64 -di <<EOF | exec /bin/bash -s'
 base64 <<EOF
 #!/bin/bash
 
+if ls /no-such-file-d81f70f6-3a33-11e6-9ff6-1803732951ab 2>&1 | grep -q -i 'aucun fichier'
+then
+    gettext "Ce script refuse de s'exécuter dans un environnement configuré
+en français. Configurez votre environnement en anglais (voir les documentations
+fournies par les enseignants) et recommancez.
+
+Oui, je suis un peu dur, avec vous, mais c'est une bonne habitude pour
+un informaticien de travailler avec des logiciels en anglais et de
+s'habituer à lire les documentations en anglais : autant s'y mettre
+tout de suite !
+"
+    exit 1
+elif ls /no-such-file-d81f70f6-3a33-11e6-9ff6-1803732951ab 2>&1 | grep -q -i 'no such file'
+then
+    gettext "Parfait, votre environnement parle anglais, continuons ...
+"
+    echo
+else
+    gettext "Votre environnement est configuré dans une langue que je ne connais
+pas, ou bien il y a un bug dans le jeu de piste. Voici les informations sur
+la configuration (commande 'locale') :
+"
+    locale
+    gettext "Appuyez sur Entrée pour continuer"
+    read
+fi
+
 # execute 'exec 4<&1' before exec'ing this script!
 
 retry () {

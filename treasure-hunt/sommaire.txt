@@ -51,15 +51,17 @@ E13: Une archive tar créée avec --mode 000, les étudiants doivent
 Chapitre 8 : Bash
 F1: le seul fichier commençant par un x, contenant un c, et terminant
     par autre chose qu'un z' (x*c*[^z])
-F2: Control-z, Control-d
+F2: locale française
+F3: Control-z, Control-d
 
 Idées à faire :
 F3: regarder le contenu d'un fichier texte appelé *.txt (quote)
 
 Chapitre 9 : accès distant
-G1: sftp sur pcserveur (Chap 9)
-G2: ssh -X sur pcserveur, executer un binaire qui donne le résultat
-      dans une fenetre X11 (à base de system("xterm -e"); si besoin).
+G1: sftp sur depots.ensimag.fr (Chap 9)
+G2: ssh sur depots.ensimag.fr
+G2: ssh -X sur pcserveur, executable qui donne le résultat
+      dans une fenetre X11 (à base de system("xterm -e");).
 
 Étapes bonnus :
 H1: telnet (réseau) => DIFFICILE pour le stage de rentrée. Faisable

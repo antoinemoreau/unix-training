@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-24 19:02+0200\n"
-"PO-Revision-Date: 2016-06-24 19:02+0200\n"
+"POT-Creation-Date: 2016-06-24 20:05+0200\n"
+"PO-Revision-Date: 2016-06-24 20:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -194,19 +194,19 @@ msgstr ""
 #: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
 #: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
 #: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
-#: generate-step-G2.sh:8 generate-step-G2.sh:45 generate-step-D2.sh:44
-#: generate-step-D2.sh:49 generate-step-D2.sh:51 generate-step-D2.sh:53
-#: generate-step-D2.sh:62 generate-step-D2.sh:67 generate-step-D2.sh:69
-#: generate-step-D2.sh:71 generate-step-D2.sh:94 generate-step-D2.sh:99
-#: generate-step-D2.sh:101 generate-step-D2.sh:103 generate-step-E5.sh:31
-#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-A2.sh:24
-#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-D1.sh:40
-#: generate-step-D1.sh:41 generate-step-D1.sh:42 generate-step-D1.sh:80
-#: generate-step-D1.sh:113 generate-step-D1.sh:115 generate-step-D1.sh:158
-#: generate-step-D1.sh:160 generate-step-D1.sh:162 generate-step-E2.sh:17
-#: generate-step-B1.sh:37 generate-step-B1.sh:39 generate-step-B1.sh:54
-#: generate-step-B1.sh:56 generate-step-B1.sh:69 generate-step-B1.sh:71
-#: generate-step-B1.sh:73 generate-step-E10.sh:7 i18n-lib.sh:31
+#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-G2.sh:8
+#: generate-step-G2.sh:45 generate-step-D2.sh:44 generate-step-D2.sh:49
+#: generate-step-D2.sh:51 generate-step-D2.sh:53 generate-step-D2.sh:62
+#: generate-step-D2.sh:67 generate-step-D2.sh:69 generate-step-D2.sh:71
+#: generate-step-D2.sh:94 generate-step-D2.sh:99 generate-step-D2.sh:101
+#: generate-step-D2.sh:103 generate-step-A2.sh:24 generate-step-E5.sh:31
+#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-E10.sh:7
+#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
+#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
+#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
+#: generate-step-E2.sh:17 generate-step-B1.sh:37 generate-step-B1.sh:39
+#: generate-step-B1.sh:54 generate-step-B1.sh:56 generate-step-B1.sh:69
+#: generate-step-B1.sh:71 generate-step-B1.sh:73 i18n-lib.sh:31
 #: upload-to-servers.sh:65 upload-to-servers.sh:68 upload-to-servers.sh:69
 #: upload-to-servers.sh:70 upload-to-servers.sh:73 upload-to-servers.sh:74
 #: upload-to-servers.sh:75 upload-to-servers.sh:79 upload-to-servers.sh:80
@@ -817,6 +817,15 @@ msgstr ""
 "An encoded message can be found in file step-E4.txt. Decode it using\n"
 "the program 'decoder'.\n"
 
+#: generate-step-E9.sh:23
+msgid "Etape"
+msgstr "Step"
+
+#: generate-step-E9.sh:30
+#, sh-format
+msgid "Quel est votre login ${school}? :"
+msgstr "What is your ${school} login? :"
+
 #: generate-step-G2.sh:31
 #, sh-format
 msgid ""
@@ -998,6 +1007,56 @@ msgstr ""
 "same directory, in a file named step_b1.c (to be compiled with gcc).\n"
 "\n"
 
+#: generate-step-A2.sh:26
+msgid ""
+"Voila, vous avez résolu l'etape A1.\n"
+"\n"
+"Pour l'étape suivante (A2), la voici, mais elle est encodée en rot13.\n"
+"\n"
+"Au point où vous en êtes, vous devriez être capables de trouver (en\n"
+"quelques secondes) ce qu'est rot13, et un moyen de le décoder\n"
+"facilement.\n"
+"\n"
+msgstr ""
+"Here it is, you've just solved step A1.\n"
+"\n"
+"For the next step (A2), here it is, but it is encoded in rot13.\n"
+"\n"
+"At this stage, you should already be able to find (in a few seconds)\n"
+"out what rot13 is, and an easy way to decode it.\n"
+"\n"
+
+#: generate-step-A2.sh:36
+msgid ""
+"Voila, le rot13 est decode.\n"
+"\n"
+"Si vous etes malins, vous avez sans doute remarque que le web regorge\n"
+"de codeur/decodeur rot13 en ligne, donc, un bon moteur de recherche a\n"
+"la main, on trouve rapidement son bonheur (et c'etait bien le but de\n"
+"l'exercice !). Les Emacsiens auront prefere M-x rot13-region RET, mais\n"
+"c'est une autre histoire.\n"
+"\n"
+"Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible\n"
+"depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).\n"
+"Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :\n"
+"introduction et programmation shell ». Ouvrez l'outil « Documents » :\n"
+"vous trouverez un document qui est l'étape A3 du jeu de piste.\n"
+"\n"
+msgstr ""
+"Here it is, rot13 is decoded.\n"
+"\n"
+"If you're clever, you already noticed that the web is full of online\n"
+"encoder/decoder for rot13. Hence, equiped with a good search engine,\n"
+"one easily finds a solution (and that was indeed the point of the\n"
+"exercice). Emacs-users may have prefered M-x rot13-region RET, but\n"
+"that's another story.\n"
+"\n"
+"We now leave EnsiWiki for Chamilo. Chamilo can be accessed from the\n"
+"Ensimag intranet (https://intranet.ensimag.fr/). Go there and find the\n"
+"course \"Ensimag 3MMUNIX Unix : introduction et programmation shell\".\n"
+"Open the tool \"Documents\", you'll find one document wich is step A3 of\n"
+"the hunt.\n"
+
 #: generate-step-E5.sh:7
 #, sh-format
 msgid ""
@@ -1048,15 +1107,67 @@ msgstr ""
 "Instructions are in the only file of this directory (and its\n"
 "subdirectories) whose name ends with .txt.\n"
 
-#: generate-step-F2.sh:35
+#: generate-step-F2.sh:28
+msgid "Parfait"
+msgstr ""
+
+#: generate-step-F2.sh:32
+msgid ""
+"Ce script refuse de s'exécuter dans un environnement configuré\n"
+"en français. Configurez votre environnement en anglais (voir les "
+"documentations\n"
+"fournies par les enseignants) et recommancez.\n"
+"\n"
+"Oui, je suis un peu dur, avec vous, mais c'est une bonne habitude pour\n"
+"un informaticien de travailler avec des logiciels en anglais et de\n"
+"s'habituer à lire les documentations en anglais : autant s'y mettre\n"
+"tout de suite !\n"
+msgstr ""
+"This script refuses to execute in an environment configured in French.\n"
+"After all, you're playing this game in english, why would you want\n"
+"your computer to talk to you in French?\n"
+"\n"
+"Please, change the configuration of your account (locale) to English.\n"
+"\n"
+"One way to do this is to log out to get back to the login screen, then\n"
+"choose english language from the login screen (it may be necessary to\n"
+"do it between the time you enter your login and the time you enter the\n"
+"password).\n"
+"\n"
+"Alternatively, you can add these lines to your ~/.bashrc and\n"
+"~/.profile files:\n"
+"\n"
+"export LC_ALL=en_US.UTF-8\n"
+"export LANG=en_US.UTF-8\n"
+"export LANGUAGE=en_US.UTF-8\n"
+
+#: generate-step-F2.sh:44
+msgid "Parfait, votre environnement parle anglais, continuons ...\n"
+msgstr "Perfect, your environment is configured in English. Let's continue...\n"
+
+#: generate-step-F2.sh:48
+msgid ""
+"Votre environnement est configuré dans une langue que je ne connais\n"
+"pas, ou bien il y a un bug dans le jeu de piste. Voici les informations sur\n"
+"la configuration (commande 'locale') :\n"
+msgstr ""
+"Your environment is configured in a language I don't know about, or\n"
+"there's a bug in the treasure hunt. Here are some information about\n"
+"your configuration (command 'locale'):\n"
+
+#: generate-step-F2.sh:53
+msgid "Appuyez sur Entrée pour continuer"
+msgstr "Press Enter to continue"
+
+#: generate-step-F2.sh:65
 msgid "Non ..."
 msgstr "No ..."
 
-#: generate-step-F2.sh:36
+#: generate-step-F2.sh:66
 msgid "Rejoue !"
 msgstr "Same player, soot again"
 
-#: generate-step-F2.sh:45
+#: generate-step-F2.sh:75
 #, sh-format
 msgid ""
 "Bravo ! fin de l'étape...\n"
@@ -1081,15 +1192,15 @@ msgstr ""
 "http://ensiwiki.ensimag.fr/index.php/Travailler_a_distance for 1001\n"
 "ways to do this) to continue.\n"
 
-#: generate-step-F2.sh:60
+#: generate-step-F2.sh:90
 msgid "cette action envoie un caractere de fin de fichier au processus"
 msgstr "this action sends an end-of-file character to the process"
 
-#: generate-step-F2.sh:64
+#: generate-step-F2.sh:94
 msgid "cette action aurait pu tuer le processus"
 msgstr "this action could have killed the process"
 
-#: generate-step-F2.sh:73
+#: generate-step-F2.sh:103
 msgid ""
 "Ok, je me suspends. Relance-moi en avant-plan pour continuer.\n"
 "A tout de suite ..."
@@ -1097,7 +1208,7 @@ msgstr ""
 "OK, I'm suspending myself. Bring me back in foreground to continue.\n"
 "See you soon..."
 
-#: generate-step-F2.sh:81
+#: generate-step-F2.sh:111
 msgid ""
 "Me revoila. J'attends maintenant un caractere de fin de fichier.\n"
 "Si la commande avait été lancée avec une entree redirigee\n"
@@ -1115,7 +1226,7 @@ msgstr ""
 "input for step-F2.sh is the keyboard. We can simulate an end of file\n"
 "by typing Control-d.\n"
 
-#: generate-step-F2.sh:92
+#: generate-step-F2.sh:122
 msgid "Suspends moi..."
 msgstr "Suspend me..."
 
@@ -1191,64 +1302,101 @@ msgstr ""
 msgid "etape-C3.png générée"
 msgstr "step-C3.png generated"
 
-#: generate-step-A2.sh:26
+#: generate-step-E10.sh:9
 msgid ""
-"Voila, vous avez résolu l'etape A1.\n"
+"Voila donc l'etape E10.\n"
 "\n"
-"Pour l'étape suivante (A2), la voici, mais elle est encodée en rot13.\n"
+"Bon, les instructions sont bien dans ce fichier, mais elles sont\n"
+"melangees avec des tas d'autres lignes qui n'ont rien a voir.\n"
 "\n"
-"Au point où vous en êtes, vous devriez être capables de trouver (en\n"
-"quelques secondes) ce qu'est rot13, et un moyen de le décoder\n"
-"facilement.\n"
+"Ne gardez que les lignes qui contiennent la chaine ETAPE-E10 pour\n"
+"avoir les bonnes instructions.\n"
+msgstr ""
+"Here is step E10.\n"
+"\n"
+"Well, the instructions are indeed in this file, but they're mixed with\n"
+"tons of other completely unrelated lines.\n"
+"\n"
+"Keep only lines containing STEP-E10 to get the right instructions.\n"
+
+#: generate-step-E10.sh:18
+msgid ""
+"Pour l'etape suivante\n"
+"les instructions\n"
+"se trouvent\n"
+"dans le fichier\n"
+"etape-E11.txt\n"
+"dans le\n"
+"meme repertoire\n"
+"que le fichier\n"
+"de l'etape\n"
+"E10.\n"
+"\n"
+"Pour l'obtenir\n"
+"il suffit donc\n"
+"dans votre navigateur\n"
+"d'editer l'URL de\n"
+"l'etape E10 et de\n"
+"remplacer etape-E10.txt\n"
+"par etape-E11.txt\n"
+"\n"
+"(enfin, pour telecharger des fichiers\n"
+"rapidement, il y a aussi wget:\n"
+"\n"
+"wget http://blabla.com/fichier\n"
+"\n"
+"va telecharger le fichier dans le\n"
+"répertoire courant)\n"
+"\n"
+"par contre, cette etape est encore\n"
+"polluee par des lignes inutiles.\n"
+"En fait, les lignes pertinentes sont celles\n"
+"qui sont dans etape-E11.txt\n"
+"mais pas dans etape-E11-bis.txt\n"
+"(etape-E11-bis.txt se trouve dans\n"
+"le meme repertoire que les deux\n"
+"autres fichiers)\n"
+"\n"
+"La commande diff devrait vous aider.\n"
+"\n"
+"Les plus 'Geek' d'entre vous s'en sortiront\n"
+"avec seulement la commande grep, ceci dit.\n"
 "\n"
 msgstr ""
-"Here it is, you've just solved step A1.\n"
+"To get to the next step,\n"
+"the instructions are\n"
+"in the file\n"
+"step-E11.txt\n"
+"in the same directory\n"
+"as the one for step E10.\n"
 "\n"
-"For the next step (A2), here it is, but it is encoded in rot13.\n"
+"To get it, you can therefore\n"
+"simply change the URL in your\n"
+"browser, replacing step-E10.txt\n"
+"with step-E11.txt.\n"
 "\n"
-"At this stage, you should already be able to find (in a few seconds)\n"
-"out what rot13 is, and an easy way to decode it.\n"
+"(well, to download files quickly,\n"
+"there is also wget:\n"
 "\n"
+"wget 'http://blabla.com/some/file.txt'\n"
+"\n"
+"to download 'file.txt' in the current\n"
+"directory)\n"
+"\n"
+"Once more, this step is mixed with garbage\n"
+"lines. The relevant lines are those in\n"
+"step-E11.txt, but not in step-E11-bis.txt\n"
+"(step-E11-bis.txt is in the same\n"
+"directory as step-E11.txt)\n"
+"\n"
+"The 'diff' command should help you.\n"
+"\n"
+"The geekest students will find a solution with a single 'grep'\n"
+"command, that said...\n"
 
-#: generate-step-A2.sh:36
-msgid ""
-"Voila, le rot13 est decode.\n"
-"\n"
-"Si vous etes malins, vous avez sans doute remarque que le web regorge\n"
-"de codeur/decodeur rot13 en ligne, donc, un bon moteur de recherche a\n"
-"la main, on trouve rapidement son bonheur (et c'etait bien le but de\n"
-"l'exercice !). Les Emacsiens auront prefere M-x rot13-region RET, mais\n"
-"c'est une autre histoire.\n"
-"\n"
-"Nous quittons maintenant EnsiWiki pour Chamilo. Chamilo est accessible\n"
-"depuis l'accueil de l'intranet Ensimag (https://intranet.ensimag.fr/).\n"
-"Allez-y, et trouvez le cours Ensimag « Ensimag 3MMUNIX Unix :\n"
-"introduction et programmation shell ». Ouvrez l'outil « Documents » :\n"
-"vous trouverez un document qui est l'étape A3 du jeu de piste.\n"
-"\n"
-msgstr ""
-"Here it is, rot13 is decoded.\n"
-"\n"
-"If you're clever, you already noticed that the web is full of online\n"
-"encoder/decoder for rot13. Hence, equiped with a good search engine,\n"
-"one easily finds a solution (and that was indeed the point of the\n"
-"exercice). Emacs-users may have prefered M-x rot13-region RET, but\n"
-"that's another story.\n"
-"\n"
-"We now leave EnsiWiki for Chamilo. Chamilo can be accessed from the\n"
-"Ensimag intranet (https://intranet.ensimag.fr/). Go there and find the\n"
-"course \"Ensimag 3MMUNIX Unix : introduction et programmation shell\".\n"
-"Open the tool \"Documents\", you'll find one document wich is step A3 of\n"
-"the hunt.\n"
-
-#: generate-step-E9.sh:23
-msgid "Etape"
-msgstr "Step"
-
-#: generate-step-E9.sh:30
-#, sh-format
-msgid "Quel est votre login ${school}? :"
-msgstr "What is your ${school} login? :"
+#: generate-step-E10.sh:60
+msgid "ETAPE-E10"
+msgstr "STEP-E10"
 
 #: generate-step-D1.sh:9
 msgid ""
@@ -1442,102 +1590,6 @@ msgstr ""
 "Source file for step B1.\n"
 "This program must be in a file with .py extension.\n"
 "Execute it with the command python3 to continue.\n"
-
-#: generate-step-E10.sh:9
-msgid ""
-"Voila donc l'etape E10.\n"
-"\n"
-"Bon, les instructions sont bien dans ce fichier, mais elles sont\n"
-"melangees avec des tas d'autres lignes qui n'ont rien a voir.\n"
-"\n"
-"Ne gardez que les lignes qui contiennent la chaine ETAPE-E10 pour\n"
-"avoir les bonnes instructions.\n"
-msgstr ""
-"Here is step E10.\n"
-"\n"
-"Well, the instructions are indeed in this file, but they're mixed with\n"
-"tons of other completely unrelated lines.\n"
-"\n"
-"Keep only lines containing STEP-E10 to get the right instructions.\n"
-
-#: generate-step-E10.sh:18
-msgid ""
-"Pour l'etape suivante\n"
-"les instructions\n"
-"se trouvent\n"
-"dans le fichier\n"
-"etape-E11.txt\n"
-"dans le\n"
-"meme repertoire\n"
-"que le fichier\n"
-"de l'etape\n"
-"E10.\n"
-"\n"
-"Pour l'obtenir\n"
-"il suffit donc\n"
-"dans votre navigateur\n"
-"d'editer l'URL de\n"
-"l'etape E10 et de\n"
-"remplacer etape-E10.txt\n"
-"par etape-E11.txt\n"
-"\n"
-"(enfin, pour telecharger des fichiers\n"
-"rapidement, il y a aussi wget:\n"
-"\n"
-"wget http://blabla.com/fichier\n"
-"\n"
-"va telecharger le fichier dans le\n"
-"répertoire courant)\n"
-"\n"
-"par contre, cette etape est encore\n"
-"polluee par des lignes inutiles.\n"
-"En fait, les lignes pertinentes sont celles\n"
-"qui sont dans etape-E11.txt\n"
-"mais pas dans etape-E11-bis.txt\n"
-"(etape-E11-bis.txt se trouve dans\n"
-"le meme repertoire que les deux\n"
-"autres fichiers)\n"
-"\n"
-"La commande diff devrait vous aider.\n"
-"\n"
-"Les plus 'Geek' d'entre vous s'en sortiront\n"
-"avec seulement la commande grep, ceci dit.\n"
-"\n"
-msgstr ""
-"To get to the next step,\n"
-"the instructions are\n"
-"in the file\n"
-"step-E11.txt\n"
-"in the same directory\n"
-"as the one for step E10.\n"
-"\n"
-"To get it, you can therefore\n"
-"simply change the URL in your\n"
-"browser, replacing step-E10.txt\n"
-"with step-E11.txt.\n"
-"\n"
-"(well, to download files quickly,\n"
-"there is also wget:\n"
-"\n"
-"wget 'http://blabla.com/some/file.txt'\n"
-"\n"
-"to download 'file.txt' in the current\n"
-"directory)\n"
-"\n"
-"Once more, this step is mixed with garbage\n"
-"lines. The relevant lines are those in\n"
-"step-E11.txt, but not in step-E11-bis.txt\n"
-"(step-E11-bis.txt is in the same\n"
-"directory as step-E11.txt)\n"
-"\n"
-"The 'diff' command should help you.\n"
-"\n"
-"The geekest students will find a solution with a single 'grep'\n"
-"command, that said...\n"
-
-#: generate-step-E10.sh:60
-msgid "ETAPE-E10"
-msgstr "STEP-E10"
 
 #: i18n-lib.sh:9
 msgid "Generating step using locale:"
