@@ -7,14 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-24 20:05+0200\n"
-"PO-Revision-Date: 2016-06-24 20:15+0200\n"
+"POT-Creation-Date: 2016-06-25 11:13+0200\n"
+"PO-Revision-Date: 2016-06-25 11:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: generate-step-E4.sh:7 generate-step-E4.sh:38 generate-step-C1.sh:7
+#: generate-step-E1.sh:29 generate-step-E1.sh:31 generate-step-E1.sh:32
+#: generate-step-E6.sh:7 generate-step-E6.sh:8 generate-step-E6.sh:9
+#: generate-step-G3.sh:8 generate-step-G3.sh:69 generate-step-E13.sh:7
+#: generate-step-E13.sh:19 generate-step-E13.sh:73 generate-step-E13.sh:74
+#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
+#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
+#: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
+#: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
+#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-G2.sh:8
+#: generate-step-G2.sh:45 generate-step-D2.sh:44 generate-step-D2.sh:49
+#: generate-step-D2.sh:51 generate-step-D2.sh:53 generate-step-D2.sh:62
+#: generate-step-D2.sh:67 generate-step-D2.sh:69 generate-step-D2.sh:71
+#: generate-step-D2.sh:94 generate-step-D2.sh:99 generate-step-D2.sh:101
+#: generate-step-D2.sh:103 generate-step-A2.sh:24 generate-step-E5.sh:31
+#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-E10.sh:7
+#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
+#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
+#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
+#: generate-step-B2.sh:7 generate-step-E2.sh:17 generate-step-B1.sh:30
+#: generate-step-B1.sh:32 generate-step-B1.sh:47 generate-step-B1.sh:49
+#: generate-step-B1.sh:62 generate-step-B1.sh:64 generate-step-B1.sh:66
+#: i18n-lib.sh:31 upload-to-servers.sh:65 upload-to-servers.sh:68
+#: upload-to-servers.sh:69 upload-to-servers.sh:70 upload-to-servers.sh:73
+#: upload-to-servers.sh:74 upload-to-servers.sh:75 upload-to-servers.sh:79
+#: upload-to-servers.sh:80 upload-to-servers.sh:81 upload-to-servers.sh:82
+#: upload-to-servers.sh:83 upload-to-servers.sh:84 upload-to-servers.sh:85
+#: upload-to-servers.sh:87 upload-to-servers.sh:91 upload-to-servers.sh:92
+#: upload-to-servers.sh:93 upload-to-servers.sh:94 upload-to-servers.sh:103
+#: upload-to-servers.sh:104 upload-to-servers.sh:105 upload-to-servers.sh:106
+#: upload-to-servers.sh:107 upload-to-servers.sh:108 upload-to-servers.sh:109
+#: upload-to-servers.sh:110 upload-to-servers.sh:111 upload-to-servers.sh:112
+#: upload-to-servers.sh:113 upload-to-servers.sh:114 upload-to-servers.sh:115
+msgid "etape"
+msgstr "step"
+
+#: generate-step-E4.sh:9
+msgid ""
+"Bien, vous avez reussi a decoder le message.\n"
+"\n"
+"La solution la plus élégante était d'utiliser une redirection, comme\n"
+"ceci :\n"
+"\n"
+"  ./decoder.py < etape-E4.txt\n"
+"\n"
+"Si on veut sauvegarder le résultat, on peut aussi écrire\n"
+"\n"
+"  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt\n"
+"\n"
+"puis regarder le contenu du fichier etape-E4-decodee.txt.\n"
+"\n"
+"(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé\n"
+"un langage autre que Python bien sûr).\n"
+"\n"
+"Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais\n"
+"il est doublement code : pour le decoder, il va falloir passer dans\n"
+"deux filtres differents.\n"
+"\n"
+"Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le\n"
+"compiler comme le premier.\n"
+"\n"
+"Vous devriez, en une (seule) ligne de commande, executer quelque chose\n"
+"comme cela :\n"
+"\n"
+"fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
+"\n"
+"(en utilisant la notion de \"pipe\").\n"
+msgstr ""
+"Well done, you've decoded the message.\n"
+"\n"
+"The most elegant solution was to use a redirect, like this:\n"
+"\n"
+"  ./decoder.py < step-E4.txt\n"
+"\n"
+"If we wanted to keep a backup of the output, we could also write\n"
+"\n"
+"  ./decoder.py < step-E4.txt > step-E4-decoded.txt\n"
+"\n"
+"and read the content of file step-E4-decoded.txt.\n"
+"\n"
+"(Remove the .py extensions in the above commands if you use a language\n"
+"other than Python)\n"
+"\n"
+"The next message is in step-E5.txt, but it is doubly-encoded: to\n"
+"decode it, you'll have to run it through two different filters.\n"
+"\n"
+"The second filter is called 'decoder_bis', you'll have to compile it\n"
+"like the first one.\n"
+"\n"
+"You should, then, be able to execute a (single) command-line looking like "
+"this:\n"
+"\n"
+"file ----> decoder ----> decoder_bis ----> display\n"
+"\n"
+"(using the notion of 'pipe')\n"
 
 #: generate-step-D3.sh:10 generate-step-D3.sh:107 generate-step-E11.sh:35
 #: generate-step-A5.sh:35 generate-step-A5.sh:100 upload-to-servers.sh:66
@@ -184,42 +280,6 @@ msgstr ""
 "<a href=\"http://ensiwiki.ensimag.fr/index.php/"
 "Premiers_pas_avec_Emacs_et_Python\">Premiers pas avec Emacs et Python</a>\n"
 "(sorry, no English version yet) on EnsiWiki"
-
-#: generate-step-C1.sh:7 generate-step-E1.sh:29 generate-step-E1.sh:31
-#: generate-step-E1.sh:32 generate-step-E6.sh:7 generate-step-E6.sh:8
-#: generate-step-E6.sh:9 generate-step-G3.sh:8 generate-step-G3.sh:69
-#: generate-step-E13.sh:7 generate-step-E13.sh:19 generate-step-E13.sh:73
-#: generate-step-E13.sh:74 generate-step-E4.sh:7 generate-step-E4.sh:38
-#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
-#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
-#: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
-#: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
-#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-G2.sh:8
-#: generate-step-G2.sh:45 generate-step-D2.sh:44 generate-step-D2.sh:49
-#: generate-step-D2.sh:51 generate-step-D2.sh:53 generate-step-D2.sh:62
-#: generate-step-D2.sh:67 generate-step-D2.sh:69 generate-step-D2.sh:71
-#: generate-step-D2.sh:94 generate-step-D2.sh:99 generate-step-D2.sh:101
-#: generate-step-D2.sh:103 generate-step-A2.sh:24 generate-step-E5.sh:31
-#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-E10.sh:7
-#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
-#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
-#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
-#: generate-step-E2.sh:17 generate-step-B1.sh:37 generate-step-B1.sh:39
-#: generate-step-B1.sh:54 generate-step-B1.sh:56 generate-step-B1.sh:69
-#: generate-step-B1.sh:71 generate-step-B1.sh:73 i18n-lib.sh:31
-#: upload-to-servers.sh:65 upload-to-servers.sh:68 upload-to-servers.sh:69
-#: upload-to-servers.sh:70 upload-to-servers.sh:73 upload-to-servers.sh:74
-#: upload-to-servers.sh:75 upload-to-servers.sh:79 upload-to-servers.sh:80
-#: upload-to-servers.sh:81 upload-to-servers.sh:82 upload-to-servers.sh:83
-#: upload-to-servers.sh:84 upload-to-servers.sh:85 upload-to-servers.sh:87
-#: upload-to-servers.sh:91 upload-to-servers.sh:92 upload-to-servers.sh:93
-#: upload-to-servers.sh:94 upload-to-servers.sh:103 upload-to-servers.sh:104
-#: upload-to-servers.sh:105 upload-to-servers.sh:106 upload-to-servers.sh:107
-#: upload-to-servers.sh:108 upload-to-servers.sh:109 upload-to-servers.sh:110
-#: upload-to-servers.sh:111 upload-to-servers.sh:112 upload-to-servers.sh:113
-#: upload-to-servers.sh:114 upload-to-servers.sh:115
-msgid "etape"
-msgstr "step"
 
 #: generate-step-C1.sh:19
 #, sh-format
@@ -670,66 +730,6 @@ msgstr ""
 "and let the script guide you. Chapter 8 of the booklet should help\n"
 "you.\n"
 
-#: generate-step-E4.sh:9
-msgid ""
-"Bien, vous avez reussi a decoder le message.\n"
-"\n"
-"La solution la plus élégante était d'utiliser une redirection, comme\n"
-"ceci :\n"
-"\n"
-"  ./decoder.py < etape-E4.txt\n"
-"\n"
-"Si on veut sauvegarder le résultat, on peut aussi écrire\n"
-"\n"
-"  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt\n"
-"\n"
-"puis regarder le contenu du fichier etape-E4-decodee.txt.\n"
-"\n"
-"(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé\n"
-"un langage autre que Python bien sûr).\n"
-"\n"
-"Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais\n"
-"il est doublement code : pour le decoder, il va falloir passer dans\n"
-"deux filtres differents.\n"
-"\n"
-"Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le\n"
-"compiler comme le premier.\n"
-"\n"
-"Vous devriez, en une (seule) ligne de commande, executer quelque chose\n"
-"comme cela :\n"
-"\n"
-"fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
-"\n"
-"(en utilisant la notion de \"pipe\").\n"
-msgstr ""
-"Well done, you've decoded the message.\n"
-"\n"
-"The most elegant solution was to use a redirect, like this:\n"
-"\n"
-"  ./decoder.py < step-E4.txt\n"
-"\n"
-"If we wanted to keep a backup of the output, we could also write\n"
-"\n"
-"  ./decoder.py < step-E4.txt > step-E4-decoded.txt\n"
-"\n"
-"and read the content of file step-E4-decoded.txt.\n"
-"\n"
-"(Remove the .py extensions in the above commands if you use a language\n"
-"other than Python)\n"
-"\n"
-"The next message is in step-E5.txt, but it is doubly-encoded: to\n"
-"decode it, you'll have to run it through two different filters.\n"
-"\n"
-"The second filter is called 'decoder_bis', you'll have to compile it\n"
-"like the first one.\n"
-"\n"
-"You should, then, be able to execute a (single) command-line looking like "
-"this:\n"
-"\n"
-"file ----> decoder ----> decoder_bis ----> display\n"
-"\n"
-"(using the notion of 'pipe')\n"
-
 #: generate-step-E11.sh:13
 #, sh-format
 msgid ""
@@ -1107,11 +1107,7 @@ msgstr ""
 "Instructions are in the only file of this directory (and its\n"
 "subdirectories) whose name ends with .txt.\n"
 
-#: generate-step-F2.sh:28
-msgid "Parfait"
-msgstr ""
-
-#: generate-step-F2.sh:32
+#: generate-step-F2.sh:29
 msgid ""
 "Ce script refuse de s'exécuter dans un environnement configuré\n"
 "en français. Configurez votre environnement en anglais (voir les "
@@ -1141,11 +1137,12 @@ msgstr ""
 "export LANG=en_US.UTF-8\n"
 "export LANGUAGE=en_US.UTF-8\n"
 
-#: generate-step-F2.sh:44
+#: generate-step-F2.sh:41
 msgid "Parfait, votre environnement parle anglais, continuons ...\n"
-msgstr "Perfect, your environment is configured in English. Let's continue...\n"
+msgstr ""
+"Perfect, your environment is configured in English. Let's continue...\n"
 
-#: generate-step-F2.sh:48
+#: generate-step-F2.sh:45
 msgid ""
 "Votre environnement est configuré dans une langue que je ne connais\n"
 "pas, ou bien il y a un bug dans le jeu de piste. Voici les informations sur\n"
@@ -1155,19 +1152,19 @@ msgstr ""
 "there's a bug in the treasure hunt. Here are some information about\n"
 "your configuration (command 'locale'):\n"
 
-#: generate-step-F2.sh:53
+#: generate-step-F2.sh:50
 msgid "Appuyez sur Entrée pour continuer"
 msgstr "Press Enter to continue"
 
-#: generate-step-F2.sh:65
+#: generate-step-F2.sh:62
 msgid "Non ..."
 msgstr "No ..."
 
-#: generate-step-F2.sh:66
+#: generate-step-F2.sh:63
 msgid "Rejoue !"
 msgstr "Same player, soot again"
 
-#: generate-step-F2.sh:75
+#: generate-step-F2.sh:72
 #, sh-format
 msgid ""
 "Bravo ! fin de l'étape...\n"
@@ -1192,15 +1189,15 @@ msgstr ""
 "http://ensiwiki.ensimag.fr/index.php/Travailler_a_distance for 1001\n"
 "ways to do this) to continue.\n"
 
-#: generate-step-F2.sh:90
+#: generate-step-F2.sh:87
 msgid "cette action envoie un caractere de fin de fichier au processus"
 msgstr "this action sends an end-of-file character to the process"
 
-#: generate-step-F2.sh:94
+#: generate-step-F2.sh:91
 msgid "cette action aurait pu tuer le processus"
 msgstr "this action could have killed the process"
 
-#: generate-step-F2.sh:103
+#: generate-step-F2.sh:100
 msgid ""
 "Ok, je me suspends. Relance-moi en avant-plan pour continuer.\n"
 "A tout de suite ..."
@@ -1208,7 +1205,7 @@ msgstr ""
 "OK, I'm suspending myself. Bring me back in foreground to continue.\n"
 "See you soon..."
 
-#: generate-step-F2.sh:111
+#: generate-step-F2.sh:108
 msgid ""
 "Me revoila. J'attends maintenant un caractere de fin de fichier.\n"
 "Si la commande avait été lancée avec une entree redirigee\n"
@@ -1226,7 +1223,7 @@ msgstr ""
 "input for step-F2.sh is the keyboard. We can simulate an end of file\n"
 "by typing Control-d.\n"
 
-#: generate-step-F2.sh:122
+#: generate-step-F2.sh:119
 msgid "Suspends moi..."
 msgstr "Suspend me..."
 
@@ -1499,37 +1496,37 @@ msgstr "start of code"
 msgid "fin du code"
 msgstr "end of code"
 
-#: generate-step-E2.sh:7
-#, sh-format
+#: generate-step-B2.sh:26
 msgid ""
-"Bien joué !\n"
+"Entrez ci-dessous le mot de passe.\n"
 "\n"
-"Les fichiers cachés sont simplement ceux dont le nom commence par un\n"
-"point, on peut les manipuler comme les autres, mais \"ls\" ne les\n"
-"affiche pas. Par contre, \"ls -a\" les affiche.\n"
-"\n"
-"Les étapes suivantes se trouvent dans une archive TAR compressée,\n"
-"disponible ici :\n"
-"\n"
-"$web_url/etape-E3.tar.gz\n"
+"Ce mot de passe vous est donné dans le polycopié « Initiation à Unix,\n"
+"L'environnement de travail à l'Ensimag », chapitre 4. Si vous n'avez\n"
+"pas encore lu le polycopié jusque là, il est temps d'avancer sur la\n"
+"lecture de ce document, vous continuerez le jeu de piste après.\n"
 msgstr ""
-"Well done !\n"
+"Enter the password below.\n"
 "\n"
-"Hidden files are simply those whose names start with a dot, they can\n"
-"be manipulated just like any others, but \"ls\" does not show them by\n"
-"default. On the other hand, \"ls -a\" does show them.\n"
+"The password is normally given in the booklet \"Initiation à Unix,\n"
+"L'environnement de travail à l'Ensimag\", chapter 4. If you can read\n"
+"french and you didn't read the booklet up to this point, it's time to\n"
+"do so, you'll get back to the treasure hunt afterwards.\n"
 "\n"
-"The next steps are inside a compressed TAR archive, available here:\n"
-"\n"
-"$web_url/step-E3.tar.gz\n"
+"If you don't read french, let's cheat a little: the password is\n"
+"jeu2piste ;-).\n"
 
-#: generate-step-B1.sh:10
+#: generate-step-B2.sh:37
+msgid "Mot de passe : "
+msgstr "Password: "
+
+#: generate-step-B2.sh:40
+msgid "Au revoir\n"
+msgstr "Bye\n"
+
+#: generate-step-B2.sh:49
 #, sh-format
 msgid ""
-"Bonjour,\n"
-"\n"
-"Si vous lisez ceci, c'est que vous avez reussi l'etape B1\n"
-"du jeu de piste.\n"
+"Très bien.\n"
 "\n"
 "L'etape suivante se trouve dans le fichier.\n"
 "$web_url/etape-C1.tex\n"
@@ -1555,9 +1552,53 @@ msgstr ""
 "\n"
 "  pdflatex step-C1.tex\n"
 "\n"
-"to get a PDF file.\n"
+"to get a PDF file, that you can then open with the appropriate tool.\n"
 
-#: generate-step-B1.sh:29
+#: generate-step-E2.sh:7
+#, sh-format
+msgid ""
+"Bien joué !\n"
+"\n"
+"Les fichiers cachés sont simplement ceux dont le nom commence par un\n"
+"point, on peut les manipuler comme les autres, mais \"ls\" ne les\n"
+"affiche pas. Par contre, \"ls -a\" les affiche.\n"
+"\n"
+"Les étapes suivantes se trouvent dans une archive TAR compressée,\n"
+"disponible ici :\n"
+"\n"
+"$web_url/etape-E3.tar.gz\n"
+msgstr ""
+"Well done !\n"
+"\n"
+"Hidden files are simply those whose names start with a dot, they can\n"
+"be manipulated just like any others, but \"ls\" does not show them by\n"
+"default. On the other hand, \"ls -a\" does show them.\n"
+"\n"
+"The next steps are inside a compressed TAR archive, available here:\n"
+"\n"
+"$web_url/step-E3.tar.gz\n"
+
+#: generate-step-B1.sh:10
+msgid ""
+"Bonjour,\n"
+"\n"
+"Si vous lisez ceci, c'est que vous avez reussi l'etape B1\n"
+"du jeu de piste.\n"
+"\n"
+"L'étape suivante est un script à exécuter, il s'appelle etape-B2.sh et\n"
+"se trouve dans le même répertoire que les fichiers de l'étape B1 que\n"
+"vous venez de terminer. Exécutez ce script.\n"
+"\n"
+msgstr ""
+"Hi,\n"
+"\n"
+"If you can read this, it means you just solved step B1.\n"
+"\n"
+"Next step is again a script to execute, it's called step-B2.sh and is\n"
+"located in the same directory as the files of step B1 you just\n"
+"finished. Execute this script.\n"
+
+#: generate-step-B1.sh:22
 msgid ""
 "Fichier source pour l'etape B1.\n"
 "Compilez-le et executez-le pour continuer.\n"
@@ -1566,7 +1607,7 @@ msgstr ""
 "Source file for step B1.\n"
 "Compile and execute it to continue.\n"
 
-#: generate-step-B1.sh:43
+#: generate-step-B1.sh:36
 msgid ""
 "Fichier source pour l'etape B1.\n"
 "Ce programme doit etre dans un fichier etape_b1.adb\n"
@@ -1577,11 +1618,11 @@ msgstr ""
 "This program must be in a file etape_b1.adb\n"
 "Compile and execute it to continue.\n"
 
-#: generate-step-B1.sh:49
+#: generate-step-B1.sh:42
 msgid "procedure Etape_B1 is"
 msgstr "procedure Step_B1 is"
 
-#: generate-step-B1.sh:61
+#: generate-step-B1.sh:54
 msgid ""
 "Fichier source pour l'étape B1.\n"
 "Ce programme doit être dans un fichier avec l'extension .py.\n"
