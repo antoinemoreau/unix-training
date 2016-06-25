@@ -12,17 +12,10 @@ body=$(gettext "Bonjour,
 Si vous lisez ceci, c'est que vous avez reussi l'etape B1
 du jeu de piste.
 
-L'etape suivante se trouve dans le fichier.
-\$web_url/etape-C1.tex
+L'étape suivante est un script à exécuter, il s'appelle etape-B2.sh et
+se trouve dans le même répertoire que les fichiers de l'étape B1 que
+vous venez de terminer. Exécutez ce script.
 
-Cette fois-ci, c'est un fichier LaTeX. LaTeX est un format de fichier
-qui permet de faire de jolis documents avec une mise en page
-automatique. Vous pouvez compiler ce fichier avec la commande
-
-  pdflatex etape-C1.tex
-
-pour obtenir un fichier PDF, que vous ouvrirez ensuite avec le
-logiciel approprie.
 " | envsubst)
 
 (

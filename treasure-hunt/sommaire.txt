@@ -19,6 +19,7 @@ A5: script qui envoie un mail à l'étudiant, avec les instructions dans
 
 Chapitre 4 : b-a-ba
 B1: compilation de programme Ada. (Chap 4 ou Chap 6)
+B2: mot de passe trouvé dans le poly
 
 Chapitre 5 : Applications utiles
 C1: compilation de LaTeX. (Chap 5)
