@@ -42,6 +42,14 @@ if [ "$(command -v exam_welcome)" != exam_welcome ]; then
     }
 fi
 
+if [ "$(command -v exam_setup_php)" != exam_setup_php ]; then
+    # Called wihin the php/ directory after installing basic source
+    # files.
+    exam_setup_php () {
+	:
+    }
+fi
+
 if [ "$(command -v exam_extra_config)" != exam_extra_config ]; then
     exam_extra_config () {
 	echo "// define exam_extra_config() in your subject script to add"
@@ -213,6 +221,11 @@ exam_config_php () {
 exam_install_php () {
     (cd "$EXAM_DIR"; git ls-files php | tar cf - -T -) | \
 	(cd "$outdir"; tar xf -)
+    echo "Executing exam_setup_php ..."
+    if ! (cd "$outdir"/php; exam_setup_php); then
+	die "Error executing exam_setup_php"
+    fi
+    echo "Executing exam_setup_php ... done."
     if [ "$exam_footer_include" != "" ]; then
 	if [ ! -r "$source_dir/$exam_footer_include" ]; then
 	    die "$source_dir/$exam_footer_include does not exist"
