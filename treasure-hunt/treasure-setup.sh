@@ -51,7 +51,7 @@ auxiliary_user_upload=$auxiliary_user
 # Yet another machine. This one is used only in text mode, nothing
 # particular needed on the server.
 auxiliary_machine2=depots.ensimag.fr
-auxiliary_path2=/depots/2015/jeu-de-piste/
+auxiliary_path2=/depots/2016/jeu-de-piste/
 auxiliary_user_upload2=$auxiliary_user_upload
 
 # The content of this directory should be uploaded to a website
