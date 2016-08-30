@@ -44,7 +44,7 @@ partie du TP 'Jeu de piste'.
 
 L'étape suivante est une exécution de programme Python (si vous
 préférez le C ou l'Ada, voir ci-dessous). Le programme se trouve dans
-le fichier etape_b2.py dans le répertoire jeu-de-piste sur le compte
+le fichier etape_b1.py dans le répertoire jeu-de-piste sur le compte
 de l'utilisateur \${main_user}.
 
 Vous n'avez pas le droit d'utiliser la commande 'ls' dans ce

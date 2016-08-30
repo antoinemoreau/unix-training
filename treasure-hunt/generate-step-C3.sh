@@ -18,16 +18,18 @@ Nous pouvons maintenant passer à la partie sur les éditeurs de textes.
 
 Vous trouverez l'étape suivante dans le fichier
 
-\$web_url/abc/etape_d1.adb
+\$web_url/abc/etape_d1.py
 
-Si vous préférez le C à l'Ada, vous pouvez aussi utiliser
+Si vous préférez le C ou l'Ada, vous pouvez aussi utiliser
 
 \$web_url/abc/etape_d1.c
+ou \$web_url/abc/etape_d1.ada
 
-Malheureusement, cette fois-ci, le fichier n'est pas directement compilable. Il
-faudra corriger quelques erreurs de syntaxes.
+Malheureusement, cette fois-ci, le fichier n'est pas directement executable
+(ou compilable pour les fichiers C et Ada).
+Il faudra corriger quelques erreurs de syntaxes.
 
-Il est conseillé d'utiliser Emacs (ou un autre bon éditeur de texte) pour cette
+Il est conseillé d'utiliser Emacs ou Atom (ou un autre bon éditeur de texte) pour cette
 partie : avec la commande Goto Line décrite sur le Wiki, vous pourrez trouver
 l'endroit de chaque erreur de syntaxe en un clin d'oeil.
 

@@ -26,8 +26,9 @@ Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais
 il est doublement code : pour le decoder, il va falloir passer dans
 deux filtres differents.
 
-Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le
-compiler comme le premier.
+Le deuxième filtre s'appelle \"decoder_bis\", il va falloir effectuer
+les mêmes opérations que précédemment (le rendre exécutable pour
+le fichier python ou le compiler pour les versions C et Ada).
 
 Vous devriez, en une (seule) ligne de commande, executer quelque chose
 comme cela :
