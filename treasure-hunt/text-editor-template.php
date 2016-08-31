@@ -13,7 +13,7 @@ $prog_shebang = '';
 $languages = array('ada', 'c', 'python');
 $languages_names = array('ada' => 'Ada', 'c' => 'C', 'python' => 'Python'); 
 
-$language = 'ada';
+$language = 'python';
 if (isset($_GET['language']) && isset($languages_names[$_GET['language']])) {
 	$language = $_GET['language'];
 }
