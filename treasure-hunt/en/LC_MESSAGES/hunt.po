@@ -7,110 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-25 11:13+0200\n"
-"PO-Revision-Date: 2016-06-25 11:18+0200\n"
+"POT-Creation-Date: 2016-08-31 08:57+0200\n"
+"PO-Revision-Date: 2016-08-31 09:02+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: generate-step-E4.sh:7 generate-step-E4.sh:38 generate-step-C1.sh:7
-#: generate-step-E1.sh:29 generate-step-E1.sh:31 generate-step-E1.sh:32
-#: generate-step-E6.sh:7 generate-step-E6.sh:8 generate-step-E6.sh:9
-#: generate-step-G3.sh:8 generate-step-G3.sh:69 generate-step-E13.sh:7
-#: generate-step-E13.sh:19 generate-step-E13.sh:73 generate-step-E13.sh:74
-#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
-#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
-#: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
-#: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
-#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-G2.sh:8
-#: generate-step-G2.sh:45 generate-step-D2.sh:44 generate-step-D2.sh:49
-#: generate-step-D2.sh:51 generate-step-D2.sh:53 generate-step-D2.sh:62
-#: generate-step-D2.sh:67 generate-step-D2.sh:69 generate-step-D2.sh:71
-#: generate-step-D2.sh:94 generate-step-D2.sh:99 generate-step-D2.sh:101
-#: generate-step-D2.sh:103 generate-step-A2.sh:24 generate-step-E5.sh:31
-#: generate-step-F2.sh:7 generate-step-C3.sh:35 generate-step-E10.sh:7
-#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
-#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
-#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
-#: generate-step-B2.sh:7 generate-step-E2.sh:17 generate-step-B1.sh:30
-#: generate-step-B1.sh:32 generate-step-B1.sh:47 generate-step-B1.sh:49
-#: generate-step-B1.sh:62 generate-step-B1.sh:64 generate-step-B1.sh:66
-#: i18n-lib.sh:31 upload-to-servers.sh:65 upload-to-servers.sh:68
-#: upload-to-servers.sh:69 upload-to-servers.sh:70 upload-to-servers.sh:73
-#: upload-to-servers.sh:74 upload-to-servers.sh:75 upload-to-servers.sh:79
-#: upload-to-servers.sh:80 upload-to-servers.sh:81 upload-to-servers.sh:82
-#: upload-to-servers.sh:83 upload-to-servers.sh:84 upload-to-servers.sh:85
-#: upload-to-servers.sh:87 upload-to-servers.sh:91 upload-to-servers.sh:92
-#: upload-to-servers.sh:93 upload-to-servers.sh:94 upload-to-servers.sh:103
-#: upload-to-servers.sh:104 upload-to-servers.sh:105 upload-to-servers.sh:106
-#: upload-to-servers.sh:107 upload-to-servers.sh:108 upload-to-servers.sh:109
-#: upload-to-servers.sh:110 upload-to-servers.sh:111 upload-to-servers.sh:112
-#: upload-to-servers.sh:113 upload-to-servers.sh:114 upload-to-servers.sh:115
-msgid "etape"
-msgstr "step"
-
-#: generate-step-E4.sh:9
-msgid ""
-"Bien, vous avez reussi a decoder le message.\n"
-"\n"
-"La solution la plus élégante était d'utiliser une redirection, comme\n"
-"ceci :\n"
-"\n"
-"  ./decoder.py < etape-E4.txt\n"
-"\n"
-"Si on veut sauvegarder le résultat, on peut aussi écrire\n"
-"\n"
-"  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt\n"
-"\n"
-"puis regarder le contenu du fichier etape-E4-decodee.txt.\n"
-"\n"
-"(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé\n"
-"un langage autre que Python bien sûr).\n"
-"\n"
-"Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais\n"
-"il est doublement code : pour le decoder, il va falloir passer dans\n"
-"deux filtres differents.\n"
-"\n"
-"Le deuxieme filtre s'appelle \"decoder_bis\", il va falloir le\n"
-"compiler comme le premier.\n"
-"\n"
-"Vous devriez, en une (seule) ligne de commande, executer quelque chose\n"
-"comme cela :\n"
-"\n"
-"fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
-"\n"
-"(en utilisant la notion de \"pipe\").\n"
-msgstr ""
-"Well done, you've decoded the message.\n"
-"\n"
-"The most elegant solution was to use a redirect, like this:\n"
-"\n"
-"  ./decoder.py < step-E4.txt\n"
-"\n"
-"If we wanted to keep a backup of the output, we could also write\n"
-"\n"
-"  ./decoder.py < step-E4.txt > step-E4-decoded.txt\n"
-"\n"
-"and read the content of file step-E4-decoded.txt.\n"
-"\n"
-"(Remove the .py extensions in the above commands if you use a language\n"
-"other than Python)\n"
-"\n"
-"The next message is in step-E5.txt, but it is doubly-encoded: to\n"
-"decode it, you'll have to run it through two different filters.\n"
-"\n"
-"The second filter is called 'decoder_bis', you'll have to compile it\n"
-"like the first one.\n"
-"\n"
-"You should, then, be able to execute a (single) command-line looking like "
-"this:\n"
-"\n"
-"file ----> decoder ----> decoder_bis ----> display\n"
-"\n"
-"(using the notion of 'pipe')\n"
 
 #: generate-step-D3.sh:10 generate-step-D3.sh:107 generate-step-E11.sh:35
 #: generate-step-A5.sh:35 generate-step-A5.sh:100 upload-to-servers.sh:66
@@ -280,6 +184,42 @@ msgstr ""
 "<a href=\"http://ensiwiki.ensimag.fr/index.php/"
 "Premiers_pas_avec_Emacs_et_Python\">Premiers pas avec Emacs et Python</a>\n"
 "(sorry, no English version yet) on EnsiWiki"
+
+#: generate-step-C1.sh:7 generate-step-E1.sh:29 generate-step-E1.sh:31
+#: generate-step-E1.sh:32 generate-step-E6.sh:7 generate-step-E6.sh:8
+#: generate-step-E6.sh:9 generate-step-G3.sh:8 generate-step-G3.sh:69
+#: generate-step-E13.sh:7 generate-step-E13.sh:19 generate-step-E13.sh:73
+#: generate-step-E13.sh:74 generate-step-E4.sh:7 generate-step-E4.sh:39
+#: generate-step-E11.sh:10 generate-step-E11.sh:11 generate-step-E11.sh:39
+#: generate-step-E11.sh:40 generate-step-E3.sh:7 generate-step-E3.sh:11
+#: generate-step-E3.sh:30 generate-step-E3.sh:32 generate-step-E3.sh:33
+#: generate-step-E3.sh:34 generate-step-E3.sh:35 generate-step-E3.sh:36
+#: generate-step-E9.sh:6 generate-step-E9.sh:29 generate-step-G2.sh:8
+#: generate-step-G2.sh:45 generate-step-D2.sh:44 generate-step-D2.sh:49
+#: generate-step-D2.sh:51 generate-step-D2.sh:53 generate-step-D2.sh:62
+#: generate-step-D2.sh:67 generate-step-D2.sh:69 generate-step-D2.sh:71
+#: generate-step-D2.sh:94 generate-step-D2.sh:99 generate-step-D2.sh:101
+#: generate-step-D2.sh:103 generate-step-A2.sh:24 generate-step-E5.sh:31
+#: generate-step-F2.sh:7 generate-step-C3.sh:37 generate-step-E10.sh:7
+#: generate-step-D1.sh:40 generate-step-D1.sh:41 generate-step-D1.sh:42
+#: generate-step-D1.sh:80 generate-step-D1.sh:113 generate-step-D1.sh:115
+#: generate-step-D1.sh:158 generate-step-D1.sh:160 generate-step-D1.sh:162
+#: generate-step-B2.sh:7 generate-step-E2.sh:17 generate-step-B1.sh:30
+#: generate-step-B1.sh:32 generate-step-B1.sh:47 generate-step-B1.sh:49
+#: generate-step-B1.sh:62 generate-step-B1.sh:64 generate-step-B1.sh:66
+#: i18n-lib.sh:31 upload-to-servers.sh:65 upload-to-servers.sh:68
+#: upload-to-servers.sh:69 upload-to-servers.sh:70 upload-to-servers.sh:73
+#: upload-to-servers.sh:74 upload-to-servers.sh:75 upload-to-servers.sh:79
+#: upload-to-servers.sh:80 upload-to-servers.sh:81 upload-to-servers.sh:82
+#: upload-to-servers.sh:83 upload-to-servers.sh:84 upload-to-servers.sh:85
+#: upload-to-servers.sh:87 upload-to-servers.sh:91 upload-to-servers.sh:92
+#: upload-to-servers.sh:93 upload-to-servers.sh:94 upload-to-servers.sh:103
+#: upload-to-servers.sh:104 upload-to-servers.sh:105 upload-to-servers.sh:106
+#: upload-to-servers.sh:107 upload-to-servers.sh:108 upload-to-servers.sh:109
+#: upload-to-servers.sh:110 upload-to-servers.sh:111 upload-to-servers.sh:112
+#: upload-to-servers.sh:113 upload-to-servers.sh:114 upload-to-servers.sh:115
+msgid "etape"
+msgstr "step"
 
 #: generate-step-C1.sh:19
 #, sh-format
@@ -730,6 +670,67 @@ msgstr ""
 "and let the script guide you. Chapter 8 of the booklet should help\n"
 "you.\n"
 
+#: generate-step-E4.sh:9
+msgid ""
+"Bien, vous avez reussi a decoder le message.\n"
+"\n"
+"La solution la plus élégante était d'utiliser une redirection, comme\n"
+"ceci :\n"
+"\n"
+"  ./decoder.py < etape-E4.txt\n"
+"\n"
+"Si on veut sauvegarder le résultat, on peut aussi écrire\n"
+"\n"
+"  ./decoder.py < etape-E4.txt > etape-E4-decodee.txt\n"
+"\n"
+"puis regarder le contenu du fichier etape-E4-decodee.txt.\n"
+"\n"
+"(Envelez les '.py' dans les commandes ci-dessus si vous avez utilisé\n"
+"un langage autre que Python bien sûr).\n"
+"\n"
+"Pour l'etape suivante, le message se trouve dans etape-E5.txt, mais\n"
+"il est doublement code : pour le decoder, il va falloir passer dans\n"
+"deux filtres differents.\n"
+"\n"
+"Le deuxième filtre s'appelle \"decoder_bis\", il va falloir effectuer\n"
+"les mêmes opérations que précédemment (le rendre exécutable pour\n"
+"le fichier python ou le compiler pour les versions C et Ada).\n"
+"\n"
+"Vous devriez, en une (seule) ligne de commande, executer quelque chose\n"
+"comme cela :\n"
+"\n"
+"fichier ----> decoder.py -----> decoder_bis.py ----> affichage\n"
+"\n"
+"(en utilisant la notion de \"pipe\").\n"
+msgstr ""
+"Well done, you've decoded the message.\n"
+"\n"
+"The most elegant solution was to use a redirect, like this:\n"
+"\n"
+"  ./decoder.py < step-E4.txt\n"
+"\n"
+"If we wanted to keep a backup of the output, we could also write\n"
+"\n"
+"  ./decoder.py < step-E4.txt > step-E4-decoded.txt\n"
+"\n"
+"and read the content of file step-E4-decoded.txt.\n"
+"\n"
+"(Remove the .py extensions in the above commands if you use a language\n"
+"other than Python)\n"
+"\n"
+"The next message is in step-E5.txt, but it is doubly-encoded: to\n"
+"decode it, you'll have to run it through two different filters.\n"
+"\n"
+"The second filter is called 'decoder_bis', you'll have to do the same\n"
+"as for decoder.py (make it executable for Python, compile it for C and\n"
+"Ada).\n"
+"\n"
+"You should, then, be able to execute a (single) command-line looking like this:\n"
+"\n"
+"file ----> decoder ----> decoder_bis ----> display\n"
+"\n"
+"(using the notion of 'pipe')\n"
+
 #: generate-step-E11.sh:13
 #, sh-format
 msgid ""
@@ -927,7 +928,7 @@ msgid ""
 "\n"
 "L'étape suivante est une exécution de programme Python (si vous\n"
 "préférez le C ou l'Ada, voir ci-dessous). Le programme se trouve dans\n"
-"le fichier etape_b2.py dans le répertoire jeu-de-piste sur le compte\n"
+"le fichier etape_b1.py dans le répertoire jeu-de-piste sur le compte\n"
 "de l'utilisateur ${main_user}.\n"
 "\n"
 "Vous n'avez pas le droit d'utiliser la commande 'ls' dans ce\n"
@@ -989,7 +990,7 @@ msgstr ""
 "Then come back to your home directory and execute the file using the\n"
 "command:\n"
 "\n"
-"  python3 step_b2.py\n"
+"  python3 step_b1.py\n"
 "\n"
 "The program will give you instructions to go to the next step.\n"
 "\n"
@@ -1245,18 +1246,19 @@ msgid ""
 "\n"
 "Vous trouverez l'étape suivante dans le fichier\n"
 "\n"
-"$web_url/abc/etape_d1.adb\n"
+"$web_url/abc/etape_d1.py\n"
 "\n"
-"Si vous préférez le C à l'Ada, vous pouvez aussi utiliser\n"
+"Si vous préférez le C ou l'Ada, vous pouvez aussi utiliser\n"
 "\n"
 "$web_url/abc/etape_d1.c\n"
+"ou $web_url/abc/etape_d1.ada\n"
 "\n"
-"Malheureusement, cette fois-ci, le fichier n'est pas directement compilable. "
-"Il\n"
-"faudra corriger quelques erreurs de syntaxes.\n"
+"Malheureusement, cette fois-ci, le fichier n'est pas directement executable\n"
+"(ou compilable pour les fichiers C et Ada).\n"
+"Il faudra corriger quelques erreurs de syntaxes.\n"
 "\n"
-"Il est conseillé d'utiliser Emacs (ou un autre bon éditeur de texte) pour "
-"cette\n"
+"Il est conseillé d'utiliser Emacs ou Atom (ou un autre bon éditeur de texte) "
+"pour cette\n"
 "partie : avec la commande Goto Line décrite sur le Wiki, vous pourrez "
 "trouver\n"
 "l'endroit de chaque erreur de syntaxe en un clin d'oeil.\n"
@@ -1268,34 +1270,31 @@ msgstr ""
 "One can edit it with The Gimp (command gimp), view it with the Eye of Gnome\n"
 "(command eog), for example.\n"
 "\n"
-"If you're curious, you may have noticed that this image is similar to the "
-"one\n"
-"produced by a2ps. This is not a coincidence, it has been generated with "
-"a2ps,\n"
+"If you're curious, you may have noticed that this image is similar to the one\n"
+"produced by a2ps. This is not a coincidence, it has been generated with a2ps,\n"
 "and convert to make it a PNG image.\n"
 "\n"
 "We can now start the part on text editting.\n"
 "\n"
 "You'll find the instructions in the file\n"
 "\n"
-"$web_url/abc/step_d1.adb\n"
+"$web_url/abc/etape_d1.py\n"
 "\n"
-"If you prefer using the C language instead, use:\n"
+"If you prefer using the C or Ada languages instead, use:\n"
 "\n"
 "$web_url/abc/step_d1.c\n"
+"$web_url/abc/step_d1.adb\n"
 "\n"
-"Unfortunately, this file isn't compilable as-is. You'll have to fix a few\n"
-"syntax errors.\n"
+"Unfortunately, this file isn't executable (or compilable for C or Ada)\n"
+"as-is. You'll have to fix a few syntax errors.\n"
 "\n"
-"It is recommanded to use Emacs (or whatever good text editor you prefer) "
-"for\n"
-"this part. With the command \"goto-line\" described on the Wiki (french), "
-"you'll\n"
+"It is recommanded to use Atom or Emacs (or whatever good text editor you prefer) for\n"
+"this part. With the command \"goto-line\" described on the Wiki (french), you'll\n"
 "be able to find the places of each syntax error in the twinkling of an eye.\n"
 "\n"
 "Practice a bit to do this quickly, you will need it soon...\n"
 
-#: generate-step-C3.sh:37
+#: generate-step-C3.sh:39
 msgid "etape-C3.png générée"
 msgstr "step-C3.png generated"
 
