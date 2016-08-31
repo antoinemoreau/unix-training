@@ -39,7 +39,9 @@ Et le dernier est ici :
 ./generate-step-D2.sh
 part_d2_ada=$(sed 's/"/""/g' $(gettext etape)_d2-3-ada.txt)
 part_d2_c=$(sed 's/"/\"/g' $(gettext etape)_d2-3-c.txt)
-part_d2_py=$(python_escape_string < $(gettext etape)_d2-3-py.txt)
+# No need to escape, since we use python_obfuscate_text which does the
+# escaping.
+part_d2_py=$(cat $(gettext etape)_d2-3-py.txt)
 
 part3=$(gettext "A vous de faire les copier-coller pour remettre le tout ensemble")
 
