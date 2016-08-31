@@ -15,8 +15,9 @@ Assemblez-les puis compilez le programme.
 ")
 
 # Pas d'accent sur la fin du texte, le copier-coller ne marcherait pas
-# forcément.
-body=$(gettext "Visiblement, le copier-coller a marché !
+# forcément et l'obfuscation + txt2odt n'est pas robuste aux accents
+# (découpage possible d'un caractère multi-byte au milieu).
+body=$(gettext "Visiblement, le copier-coller a marche !
 
 La suite se trouve ici :
 
