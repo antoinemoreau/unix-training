@@ -12,7 +12,7 @@ file=text-editor-$(gettext fr).php
 echo '<?php' >"$file"
 
 title=$(gettext "Etape D3: édition de texte")
-instructions=$(gettext "Ci-dessous un programme %s à compiler (autres versions : %s),
+instructions=$(gettext "Ci-dessous un programme %s à exécuter (autres versions à compiler : %s),
 avec plusieurs problèmes :
 <ul>
 <li>L'ensemble du programme est commenté, il faudra donc supprimer les <code>%s</code> en début de ligne</li>
@@ -30,7 +30,7 @@ Si ce n'est pas déjà fait, lisez jusqu'au bout la page
 the_answer_is=$(gettext "La réponse est :")
 invalid_answer=$(gettext 'Réponse incorrecte : "%s" (en %01.1f secondes).')
 you_took=$(gettext "Vous avez pris %01.1f secondes, et il fallait terminer en moins de %d, désolé. Je génère un nouveau programme.")
-correctly_compiled=$(gettext "Programme compilé correctement en %01.1f secondes.")
+correctly_compiled=$(gettext "Programme exécuté correctement en %01.1f secondes.")
 next_step=$(gettext "L'étape suivante se trouve dans le fichier
 
 \$maindir_tilde/oaue/etape-E1
@@ -46,7 +46,7 @@ copier) le fichier pour lui donner l'extension habituelle pour ce type
 de fichier.
 " | envsubst)
 useless_comment=$(gettext "Ceci est un vrai commentaire inutile.")
-enter_value_here=$(gettext "Entrez la sortie du programme compilé ici :")
+enter_value_here=$(gettext "Entrez la sortie de l'exécution du programme ici :")
 click_here_to_reset=$(gettext "Cliquez ici pour générer un nouveau programme :")
 remaining_text=$(gettext "Il reste %d secondes.")
 was_correct=$(gettext "Pour information, votre réponse \"%s\" était correcte. Soyez plus rapide la prochaine fois.")
