@@ -11,7 +11,7 @@ HUNT_DIR=$(pwd)
 
 header=$(gettext "Fichier source pour l'etape D2.
 Le programme est coupé en 3 morceaux.
-Assemblez-les puis compilez le programme.
+Assemblez-les puis exécutez le programme (après l'avoir compilé si besoin).
 ")
 
 # Pas d'accent sur la fin du texte, le copier-coller ne marcherait pas
