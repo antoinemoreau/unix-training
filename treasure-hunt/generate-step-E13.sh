@@ -15,7 +15,7 @@ C'est le seul fichier dont le nom commence par x, et terminant par
 autre chose qu'un z.
 
 La solution est très simple si on sait ce qu'est un wildcard (le
-polycopié vous l'apprendra si vous ne le savez pas déjà).
+guide vous l'apprendra si vous ne le savez pas déjà).
 " > $(gettext etape)-E13.txt
 
 
@@ -65,7 +65,7 @@ Pour l'étape suivante, exécutez (sur votre machine de travail) le script
   \$maindir_tilde/979b5c3/etape-F2.sh
 
 et laissez-vous guider par les instructions. Le chapitre 8 du
-polycopié devrait vous aider.
+guide devrait vous aider.
 " | envsubst > xabcdefg1
 
 cd ..
