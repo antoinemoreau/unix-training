@@ -25,9 +25,9 @@ p=''
 cat << NESTEDEOF
 $(gettext "Entrez ci-dessous le mot de passe.
 
-Ce mot de passe vous est donné dans le polycopié « Initiation à Unix,
+Ce mot de passe vous est donné dans le guide « Initiation à Unix,
 L'environnement de travail à l'Ensimag », chapitre 4. Si vous n'avez
-pas encore lu le polycopié jusque là, il est temps d'avancer sur la
+pas encore lu le guide jusque là, il est temps d'avancer sur la
 lecture de ce document, vous continuerez le jeu de piste après.
 ")
 NESTEDEOF

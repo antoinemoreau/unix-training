@@ -59,9 +59,9 @@ commande xargs.
 
 Cette etape est tres difficile, n'hesitez pas a demander de l'aide a
 votre enseignant ou a vos collegues. Certains exercices de la fin du
-chapitre 7 du polycopié ont été fait pour vous guider sur cette étape,
+chapitre 7 du guide ont été fait pour vous guider sur cette étape,
 si vous ne les avez pas encore fait, il est temps d'avancer sur la
-lecture du polycopié.
+lecture du guide.
 " | envsubst \
     > "$E7_dir"/$(uuid | sed 's/....$//').txt
 

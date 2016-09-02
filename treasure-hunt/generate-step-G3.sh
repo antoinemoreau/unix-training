@@ -35,7 +35,7 @@ echo '\"
 gettext "Cette étape termine la partie principale du jeu de piste.
 
 Les étapes qui suivent sont des étapes en plus, a priori plus
-difficiles. Si vous vous arretez-là et que vous avez lu le polycopié
+difficiles. Si vous vous arretez là et que vous avez lu le guide
 en entier, vous devriez avoir appris l'essentiel.
 
 Pour confirmer que vous êtes arrivés jusqu'ici, nous vous demandons
