@@ -50,10 +50,10 @@ void dprint(char *str)
 int main(void)
 {
 	char line[512];
-	gets(line);
+	fgets(line, 512, stdin);
 	while (!feof(stdin)) {
 		dprint(line);
-		gets(line);
+		fgets(line, 512, stdin);
 	}
 	return 0;
 }
