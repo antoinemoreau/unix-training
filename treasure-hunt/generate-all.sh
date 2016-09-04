@@ -11,6 +11,7 @@ generate_all () {
     ./generate-step-A5.sh
     
     ./generate-step-B1.sh
+    ./generate-step-B2.sh
 
     ./generate-step-C1.sh
     ./generate-step-C3.sh
