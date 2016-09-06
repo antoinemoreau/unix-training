@@ -96,7 +96,7 @@ Foo.Bar@univ-grenoble-alpes.fr'
 invalid_email_examples='Foo.bar@gmail.com example@free.fr @imag.fr'
 # When prompting the user for an email address, mention the school and
 # the kind of email expected with these variables:
-example_email=Prenom.Nom@ensimag.grenoble-inp.fr
+example_email=Prenom.Nom@grenoble-inp.org
 school=Ensimag
 # If machines have no way to send email themselves, you can use a PHP
 # script to send emails. Set send_email_with_php to 'yes' if you want
