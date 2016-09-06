@@ -6,8 +6,6 @@ include_once './inc/authentication.php';
 exam_connect_maybe();
 exam_header('Treasure Hunt monitoring');
 
-echo '<script src="./sorttable.js"></script>';
-
 echo '<p>';
 echo 'Click on table headers to sort. ';
 if (isset($_GET['picture'])) {
