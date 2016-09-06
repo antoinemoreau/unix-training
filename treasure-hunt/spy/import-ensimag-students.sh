@@ -1,14 +1,20 @@
 #! /bin/sh
 
-absyear=2015
+absyear=2016
 groups="ori_ast2a 1a_g1 1a_g2 1a_g3 1a_g4 1a_g5 1a_g6 1a_g7 1a_g8 1aa phelma ri_ech"
 
 
 get_group () {
     togrep='.*href="\([^"]*\.csv\)".*'
-    wget 'https://intranet.ensimag.fr/Zenith2/getGroupsCoursCsv?name='$1'_'$absyear -O - | \
+    wget 'https://intranet.ensimag.fr/Zenith2/Groupe/getGroupsCoursCsv?name='$1'_'$absyear -O - | \
 	grep '^[0-9]'
 }
+
+echo
+echo "Enter your database password when prompted"
+echo
+
+sleep 1
 
 for group in $groups; do
     get_group "$group" | ./import-students.sh --group $group --apply
