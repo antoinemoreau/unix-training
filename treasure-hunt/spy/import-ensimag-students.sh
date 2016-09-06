@@ -1,7 +1,7 @@
 #! /bin/sh
 
 absyear=2016
-groups="ori_ast2a 1a_g1 1a_g2 1a_g3 1a_g4 1a_g5 1a_g6 1a_g7 1a_g8 1aa phelma ri_ech"
+groups="ori_ast2a 1a_g1 1a_g2 1a_g3 1a_g4 1a_g5 1a_g6 1a_g7 1a_g8 1aa phelma ri_ech ri_dd"
 
 
 get_group () {
