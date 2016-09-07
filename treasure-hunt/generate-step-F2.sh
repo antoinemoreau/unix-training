@@ -21,6 +21,9 @@ exec 4<&1
 base64 -di <<EOF | exec /bin/bash -s'
 
 # Encode script (note we should take care that it does not generate any dollar sign).
+# "echo $(...)" is not a Useless Use of Echo: $(...) is interpreted at
+# generation time, unlike echo which is executed when running the
+# generated script.
 base64 <<EOF
 #!/bin/bash
 
