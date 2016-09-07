@@ -53,6 +53,29 @@ auxiliary_user_upload=$auxiliary_user
 auxiliary_machine2=depots.ensimag.fr
 auxiliary_path2=/depots/2016/jeu-de-piste/
 auxiliary_user_upload2=$auxiliary_user_upload
+auxiliary_machine2_advice_fr="
+Vous devriez avoir un compte sur $auxiliary_machine2, mais
+votre mot de passe n'est pas forcément initialisé. Si vous
+n'arrivez pas à vous connecter, ré-initialisez le mot de passe
+depuis la page
+
+https://intranet.ensimag.fr/passwords/
+
+(Vous devriez avoir un compte \"Serveur 'depots.ensimag.fr'
+(Mercurial, Git, SVN...)\" qui apparait dans la liste. Si ce
+n'est pas le cas, demandez à votre enseignant).
+"
+
+auxiliary_machine2_advice_en="
+You should have an account on $auxiliary_machine2, but your
+password may not be initialized. If you cannot connect, reset
+your password from the following page:
+
+https://intranet.ensimag.fr/passwords/
+
+In principle, you should see an account \"Serveur 'depots.ensimag.fr'
+(Mercurial, Git, SVN...)\" in the list. If not, ask your teacher.
+"
 
 # The content of this directory should be uploaded to a website
 web_base=jeu-de-piste
@@ -154,6 +177,7 @@ variables="
 mainmachine maindir auxiliarymachine web web_url
 auxiliary_user
 auxiliary_machine2 auxiliary_path2
+auxiliary_machine2_advice_en auxiliary_machine2_advice_fr
 demo_url demo_url_en spy_url
 main_user_home main_user main_user_home_tilde maindir_tilde
 upload_user

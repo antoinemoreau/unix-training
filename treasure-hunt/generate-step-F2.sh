@@ -81,8 +81,9 @@ dans le fichier
 
 Récupérez-la via sftp (cf.
 http://ensiwiki.ensimag.fr/index.php/Travailler_a_distance pour 1001
-façons de faire cela) pour continuer.
-" | envsubst)"
+façons de faire cela) pour continuer." | envsubst)"
+    echo "$(gettext "\${auxiliary_machine2_advice_$(gettext fr)}" | 
+envsubst | sed 's/"/\\"/g')"
     exit 0;
 }
 
