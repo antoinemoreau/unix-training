@@ -58,7 +58,8 @@ enter_nickname=$(gettext "Entrez un pseudo ici qui apparaitra dans le highscore 
 try_again=$(gettext "Pour réessayer, cliquez ici :")
 doc_ada=$(gettext '<a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Ada">Premiers pas avec Emacs et Ada</a>
 sur EnsiWiki')
-doc_python=$(gettext '<a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Python">Premiers pas avec Emacs et Python</a>
+doc_python=$(gettext '<a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Atom_et_Python">Premiers pas avec Atom et Python</a>
+(ou <a href="http://ensiwiki.ensimag.fr/index.php/Premiers_pas_avec_Emacs_et_Python">Premiers pas avec Emacs et Python</a>)
 sur EnsiWiki')
 doc_c=$doc_ada
 
