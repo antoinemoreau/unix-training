@@ -75,6 +75,7 @@ python_shebang_docstring() {
     if [ -n "$1" ]; then
 	printf '"""\n%s\n"""\n\n' "$1"
     fi
+    printf '%s\n' '# pylint: disable=exec-used,invalid-name'
 }
 
 python_header() {
