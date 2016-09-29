@@ -75,7 +75,12 @@ python_shebang_docstring() {
     if [ -n "$1" ]; then
 	printf '"""\n%s\n"""\n\n' "$1"
     fi
+    printf '%s\n' '# We are writing purposely unreadable code.'
+    printf '%s\n' "# Don't let Pylint complain about it:"
     printf '%s\n' '# pylint: disable=exec-used,invalid-name'
+    printf '%s\n' '# pylint: disable=using-constant-test,redefined-outer-name'
+    printf '%s\n' '# pylint: disable=blacklisted-name,missing-docstring'
+    echo
 }
 
 python_header() {
