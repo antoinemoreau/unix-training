@@ -12,7 +12,7 @@ txt2odt () {
 	-e 's@<@&lt;@g;' \
 	-e 's@>@&gt;@g;' \
 	-e 's@\n@<text:line-break/>@;' \
-	-e 's@( +)@"<text:s text:c=\"".length($1)."\"/>"@eg;' \
+	-e 's@(  +)@"<text:s text:c=\"".length($1)."\"/>"@eg;' \
 	-e 's@\\@\\\\@g;' \
 	-e 's@/@\\/@g;' \
     )
