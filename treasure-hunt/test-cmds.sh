@@ -24,6 +24,7 @@ check pdflatex texlive-latex-base
 check gcc
 check perl
 check rsync
+check uuid
 
 if [ -n "$packages_to_install" ]; then
     echo
