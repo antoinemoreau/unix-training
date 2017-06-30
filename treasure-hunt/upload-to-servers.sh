@@ -24,7 +24,7 @@ echo "Don't forget to put step A5 on the wiki ..."
 echo "Don't forget to put step H1 on the wiki ..."
 
 check () {
-    eval "[ -z \"\$${1}\" ] && die '\$$1 unset'"
+    eval "[ -z \"\$${1}\" ] && die '\$$1 unset' || true"
 }
 
 check web
@@ -38,15 +38,24 @@ check main_user_home_upload
 
 set -x
 
-rm -fr "$web"
-mkdir -p "$web"
+# NFS de matthieu
+# TODO en rsync
+# rm -fr "$web"
+# mkdir -p "$web"
+rm -fr tmpweb
+mkdir -p tmpweb
 
-echo 'AddCharset UTF-8 .txt' > "$web"/.htaccess
-
+# echo 'AddCharset UTF-8 .txt' > "$web"/.htaccess
+echo 'AddCharset UTF-8 .txt' > tmpweb/.htaccess
+rsync tmpweb/.htaccess "$web"
 nolisting='<html><head><title>Interdit</title></head><body>Directory listing denied, sorry.</body></html>'
-mkdir -p "$web"/yntsf/
-echo "$nolisting" > "$web"/index.html
-echo "$nolisting" > "$web"/yntsf/index.html
+mkdir -p tmpweb/yntsf/
+echo "$nolisting" > tmpweb/index.html
+echo "$nolisting" > tmpweb/yntsf/index.html
+
+rsync tmpweb/index.html "$web"
+rsync -a tmpweb/yntsf "$web"
+
 
 dir="$upload_user"@"$mainmachine":"$maindir_upload"
 
@@ -56,6 +65,7 @@ ssh "$upload_user@$mainmachine" "rm -fr \"$maindir_upload\"; mkdir -p \"$maindir
 todo "chmod -R ugo+r \"$maindir_upload\"/"
 todo "chmod 711 \"$maindir_upload\"/"
 todo "find \"$maindir_upload\"/ -type d -exec chmod ugo+x {} \;"
+exit 0
 
 upload_lang () {
     rsync $(gettext jeu-de-piste.sh) "$upload_user@$mainmachine":"$main_user_home_upload"/$(gettext jeu-de-piste.sh)

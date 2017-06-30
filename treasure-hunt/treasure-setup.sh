@@ -79,10 +79,11 @@ In principle, you should see an account \"Serveur 'depots.ensimag.fr'
 
 # The content of this directory should be uploaded to a website
 web_base=jeu-de-piste
-web=$HOME/WWW/$web_base
+web=mounie@lig-enseignement.imag.fr:/var/www/lig-enseignement/$web_base/
 
 # Public URL of the website
-web_url=http://www-verimag.imag.fr/~moy/$web_base
+# TODO: mettre mon répertoire sur intra-id
+web_url=http://lig-enseignement.imag.fr/$web_base
 
 # Demo version of the exam, accessible to students (french and english
 # versions).
@@ -92,7 +93,7 @@ web_url=http://www-verimag.imag.fr/~moy/$web_base
 # script will be ../exam-expl/$demo_exam_name-$(gettext fr).sh.
 
 # Version in use at Ensimag
-demo_exam_name=demo-exam-ensimag2014
+demo_exam_name=demo-exam-ensimag
 # Another Ensimag-free version
 # demo_exam_name=simple-demo
 
@@ -102,8 +103,8 @@ demo_url=$web_url
 
 # One step sends an email to the user. The following variables
 # configure how the email will be sent:
-from_addr=Matthieu.Moy@imag.fr
-smtp_server=ensiens.imag.fr
+from_addr=Gregory.Mounie@imag.fr
+smtp_server=ens.ensimag.fr
 # and these two configure how the email will be prompted obtained from
 # $LOGNAME and possibly by prompting the user. They are defined in
 # mail-lib-runtime.sh (and generate-step-A5.sh for check_email_function_php).
@@ -140,7 +141,7 @@ recompute () {
 
 # I upload the game on multiple machines, with slightly different rules
 case "$mainmachine" in
-    ensiens|ensiens.imag.fr)
+    ens|ens.ensimag.fr)
 	: nothing
 	;;
     129.88.240.211|ensipc*|ensipc*.imag.fr|pcserveur|pcserveur.ensimag.fr)
@@ -149,8 +150,8 @@ case "$mainmachine" in
 	# ProxyCommand ssh -q ensiens.imag.fr nc %h 22
 	main_user=jdpunix
 	main_user_home=/matieres/3MMUNIX/
-	upload_user=moy
-	auxiliary_user_upload=moy
+	upload_user=mounieg
+	auxiliary_user_upload=mounieg
 	recompute
 	;;
     anie.imag.fr)
