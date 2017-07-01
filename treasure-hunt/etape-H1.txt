@@ -14,7 +14,7 @@ Utilisez l'outil de votre choix pour le recuperer.
 Une solution est de se connecter sur le serveur, sur le port 80, et
 d'envoyer la requete
 
-HEAD http://lig-enseignement.imag.fr/lig-enseignement/jeu-de-piste/dxz/etape-H2/ HTTP/1.1
+HEAD /jeu-de-piste/dxz/etape-H2/ HTTP/1.1
 Host: lig-enseignement.imag.fr
 
 (suivie de deux retours charriots)
