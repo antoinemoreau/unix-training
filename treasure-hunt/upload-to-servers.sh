@@ -65,7 +65,6 @@ ssh "$upload_user@$mainmachine" "rm -fr \"$maindir_upload\"; mkdir -p \"$maindir
 todo "chmod -R ugo+r \"$maindir_upload\"/"
 todo "chmod 711 \"$maindir_upload\"/"
 todo "find \"$maindir_upload\"/ -type d -exec chmod ugo+x {} \;"
-exit 0
 
 upload_lang () {
     rsync $(gettext jeu-de-piste.sh) "$upload_user@$mainmachine":"$main_user_home_upload"/$(gettext jeu-de-piste.sh)
@@ -79,7 +78,10 @@ upload_lang () {
     rsync $(gettext etape)-C1.tex "$web"
     rsync $(gettext etape)-C2.odt $(gettext etape)-C3.png "$dir"
 
-    mkdir -p "$web"/abc/ "$web"/4ba3/
+    mkdir -p tmpweb/abc/ tmpweb/4ba3/
+    rsync -a tmpweb/abc "$web"/ 
+    rsync -a tmpweb/4ba3 "$web"/
+    
     rsync $(gettext etape)_d1.{c,adb,py} "$web"/abc/
     rsync $(gettext etape)_d2-1-{c,ada,py}.odt "$web"
     rsync $(gettext etape)_d2-2-{c,ada,py}.txt "$dir"
@@ -95,22 +97,31 @@ upload_lang () {
     rsync $(gettext etape)-F2.sh "$dir"/979b5c3/$(gettext etape)-F2.sh
     # todo does not work here, we're in a subshell
     ssh "$upload_user@$mainmachine" "chmod 755 \"$maindir_upload\"/979b5c3/$(gettext etape)-F2.sh"
-    mkdir -p "$web"/"$demo_exam_name"-"$(gettext fr)"/
+    mkdir -p tmpweb/"$demo_exam_name"-"$(gettext fr)"/
+    rsync -a tmpweb/"$demo_exam_name"-"$(gettext fr)" "$web"
+    
     rsync -r ./"$demo_exam_name"-"$(gettext fr)"/ "$web"/"$demo_exam_name"-"$(gettext fr)"/
 
-    rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload2@$auxiliary_machine2":"$auxiliary_path2"
-    ssh "$auxiliary_user_upload2@$auxiliary_machine2" "chmod 755 $auxiliary_path2/$(gettext etape)-G2.sh; chmod 644 $auxiliary_path2/$(gettext etape)-G1.txt"
+    # attente dépots 2017
+    # rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload2@$auxiliary_machine2":"$auxiliary_path2"
+    # ssh "$auxiliary_user_upload2@$auxiliary_machine2" "chmod 755 $auxiliary_path2/$(gettext etape)-G2.sh; chmod 644 $auxiliary_path2/$(gettext etape)-G1.txt"
     rsync $(gettext etape)-G3.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"/jeu-de-piste/FqM6IhHP/
     ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/jeu-de-piste/FqM6IhHP/$(gettext etape)-G3.sh"
 }
 
 multilingual_do upload_lang
 
+
 # Not yet translated.
 old_LANG=$LANG
 LANG=fr_FR@UTF-8
 ssh "$upload_user@$mainmachine" "cd \"$maindir_upload/\" && mkdir ./aeiouy/ ./dntsoaue/ ./qyxrd/"
-mkdir -p "$web"/dxz/ "$web"/aeiouy/ "$web"/lasuite/ "$web"/$(gettext etape)-H4/
+mkdir -p tmpweb/dxz/ tmpweb/aeiouy/ tmpweb/lasuite/ tmpweb/$(gettext etape)-H4/
+rsync -a tmpweb/dxz "$web"
+rsync -a tmpweb/aeiouy "$web"
+rsync -a tmpweb/lasuite "$web"
+rsync -a tmpweb/$(gettext etape)-H4 "$web"
+
 rsync -r $(gettext etape)-H1.txt "$web"/lasuite/
 rsync -r $(gettext etape)-H2/ "$web"/dxz/$(gettext etape)-H2/
 rsync -r $(gettext etape)-H3.txt "$web"/aeiouy/$(gettext etape)-H3.txt
