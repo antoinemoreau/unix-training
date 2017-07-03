@@ -102,9 +102,8 @@ upload_lang () {
     
     rsync -r ./"$demo_exam_name"-"$(gettext fr)"/ "$web"/"$demo_exam_name"-"$(gettext fr)"/
 
-    # attente dépots 2017
-    # rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload2@$auxiliary_machine2":"$auxiliary_path2"
-    # ssh "$auxiliary_user_upload2@$auxiliary_machine2" "chmod 755 $auxiliary_path2/$(gettext etape)-G2.sh; chmod 644 $auxiliary_path2/$(gettext etape)-G1.txt"
+    rsync $(gettext etape)-G1.txt $(gettext etape)-G2.sh "$auxiliary_user_upload2@$auxiliary_machine2":"$auxiliary_path2"
+    ssh "$auxiliary_user_upload2@$auxiliary_machine2" "chmod 755 $auxiliary_path2/$(gettext etape)-G2.sh; chmod 644 $auxiliary_path2/$(gettext etape)-G1.txt"
     rsync $(gettext etape)-G3.sh "$auxiliary_user_upload@$auxiliarymachine":"$main_user_home_tilde"/jeu-de-piste/FqM6IhHP/
     ssh "$auxiliary_user_upload@$auxiliarymachine" "chmod 755 $main_user_home_tilde/jeu-de-piste/FqM6IhHP/$(gettext etape)-G3.sh"
 }
