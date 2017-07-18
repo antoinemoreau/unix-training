@@ -7,7 +7,7 @@ stage unix avancé, vous devriez pouvoir en venir à bout.
 Pour l'etape suivante, on va faire un peu de reseau. La reponse se
 trouve dans les en-tetes HTTP envoyes par la page
 
-http://lig-enseignement/jeu-de-piste/dxz/etape-H2/
+http://lig-enseignement.imag.fr/jeu-de-piste/dxz/etape-H2/
 
 Utilisez l'outil de votre choix pour le recuperer.
 
