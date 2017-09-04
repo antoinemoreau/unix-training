@@ -15,7 +15,7 @@ Si tout cela vous a plu, vous pouvez faire deux choses :
 vous en doutez bien, tout cela est automatisé, et les scripts sont
 assez amusants.
 
-* Faire vos propres étapes, et les soumettre à Matthieu.Moy@imag.fr,
+* Faire vos propres étapes, et les soumettre à Gregory.Mounie@imag.fr,
 ça pourrait bien être un premier pas vers la célébrité ;-).
 
 Concrètement, le code source du jeu de piste est disponible à l'URL
