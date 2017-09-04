@@ -7,7 +7,7 @@ mkdir -p etape-H2/
 cat > etape-H2/index.php <<EOF
 <?php
 
-header("X-Etape-Suivante: $web_url/aeiouy/etape-H3.txt");
+header("X-Etape-Suivante: $web_url/aeiouy/etape-H3.txt.utf8");
 
 ?>
 
